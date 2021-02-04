@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HomeScreen.unity
+    guid: 582cb456db757fd4f97c6cbd714b769b
+  - enabled: 1
+    path: Assets/Scenes/TransitionUIScene.unity
+    guid: 5a0d37327a434a14981b717cc2bd2e80
+  - enabled: 1
+    path: Assets/Scenes/SelectCharacterScene.unity
+    guid: aae1433462608bf47a99a01f6b99fd23
+  - enabled: 1
+    path: Assets/Scenes/DebitCardPayGame.unity
+    guid: c5103140a4ef9174e893ec7618c1c0ee
+  - enabled: 1
+    path: Assets/Scenes/CashDesk.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Living Room.unity
+    guid: 010501e37e13c974d86b4f60472d934f
+  - enabled: 1
+    path: Assets/Scenes/Bank.unity
+    guid: 0cca75ed65e93734fb36abebd3523c03
+  - enabled: 1
+    path: Assets/Scenes/StudyRoom.unity
+    guid: c85fa64f1683ead4e8edb257e9382c33
+  - enabled: 1
+    path: Assets/Scenes/MailOrderingGame.unity
+    guid: 9064b1729d4750a42aca49aaca672514
+  - enabled: 1
+    path: Assets/Scenes/Kitchen.unity
+    guid: 28b755a23de53c349ae245ae11dce7d5
+  - enabled: 1
+    path: Assets/Scenes/FruitDepartment.unity
+    guid: b9e74ab229edc4c479fe6def236f017a
+  - enabled: 1
+    path: Assets/Scenes/BreadDepartment.unity
+    guid: d1286feb0ef55ab4298c50bff3c36bf0
+  - enabled: 1
+    path: Assets/Scenes/DairyDepartment.unity
+    guid: 1665a5f67e10bc849af78d303906b83c
+  - enabled: 1
+    path: Assets/Scenes/Hallway.unity
+    guid: 0f1eb4e5dfa644048a8a6efb865d4f0a
+  - enabled: 1
+    path: Assets/Scenes/GameHall.unity
+    guid: 6656d18dd26303b4f8c0ae356746251b
+  - enabled: 1
+    path: Assets/Scenes/MailPickingGame.unity
+    guid: 805f00368f5a02c47947d141537bab18
+  m_configObjects: {}

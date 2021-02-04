@@ -1,0 +1,144 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FemaleIdleAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: d328024b1ae8f7046b1e0d84d72947b8, type: 3}
+    totalSpriteSurfaceArea: 3987984
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 97e39820449a7da4f90d1517d0d989b9, type: 3}
+  - {fileID: 21300000, guid: f0dbbd309831b9a429f83e44f524deb3, type: 3}
+  - {fileID: 21300000, guid: 2d912950e7fa027498c5f863917a4122, type: 3}
+  - {fileID: 21300000, guid: c7512fd090605de45bf0531df7e24a0d, type: 3}
+  - {fileID: 21300000, guid: 1afde011ecb3f2944b1a829c9ba4fa74, type: 3}
+  - {fileID: 21300000, guid: 7dec9921c9def404abf039fa905026ad, type: 3}
+  - {fileID: 21300000, guid: e7a968610ff2f1e4d8f94380f6fb8f80, type: 3}
+  - {fileID: 21300000, guid: 5b956f02b2ae3434992cdf69817c1448, type: 3}
+  - {fileID: 21300000, guid: a3b41b23bda5ff945bd032f5cfe8b219, type: 3}
+  - {fileID: 21300000, guid: 1409a70425b5aba4ea2c3076df1ece3a, type: 3}
+  - {fileID: 21300000, guid: b0b30d1485c9b3546b094fcc9e60caa9, type: 3}
+  - {fileID: 21300000, guid: 82e5b3441bf9127448a6c4ec0f81d3f6, type: 3}
+  - {fileID: 21300000, guid: 84b3e564d32c6fb4c821be180b4e2596, type: 3}
+  - {fileID: 21300000, guid: e8216075c3e5f9144bdc7bfbbad73a50, type: 3}
+  - {fileID: 21300000, guid: ed26e94658a7dd54fa81be82d3db2eb4, type: 3}
+  - {fileID: 21300000, guid: 9243bb86b312d8d419019fc6012e264b, type: 3}
+  - {fileID: 21300000, guid: 406b101763bf0af4ca55c6e0590ce25d, type: 3}
+  - {fileID: 21300000, guid: cd8e55370ada2ed46b51fffcdacd711a, type: 3}
+  - {fileID: 21300000, guid: e7f80f375dff76a41a35616c5f83270a, type: 3}
+  - {fileID: 21300000, guid: 10a6ce67da440404f9cd8b379ade0ed5, type: 3}
+  - {fileID: 21300000, guid: 6901f8776efa3034584a94eb14130efe, type: 3}
+  - {fileID: 21300000, guid: 8f14c097677e25445bbdc0d71a94027f, type: 3}
+  - {fileID: 21300000, guid: c88c1dc7b59120744a618cb0119bdc29, type: 3}
+  - {fileID: 21300000, guid: 18d3f7f74f781f240b4f7dcd963f3278, type: 3}
+  - {fileID: 21300000, guid: aefcb618a02d7f74d8e9dc19c604e9bb, type: 3}
+  - {fileID: 21300000, guid: 0e0f166871934a0489c8315cbecd927e, type: 3}
+  - {fileID: 21300000, guid: 0c92dd78fcaa98242b15ad8e3db7e340, type: 3}
+  - {fileID: 21300000, guid: ea35b3e8513d00c4f9a415123330666c, type: 3}
+  - {fileID: 21300000, guid: d9b562f9cb173fd47a99fbefd45fc668, type: 3}
+  - {fileID: 21300000, guid: 046709f9add9407438c52b54ad1bed83, type: 3}
+  - {fileID: 21300000, guid: 0d798a2a37e1e654994643098379ab7b, type: 3}
+  - {fileID: 21300000, guid: d0f6e8da6b49e19408c9b8b88a21b7b8, type: 3}
+  - {fileID: 21300000, guid: b240930b4faae3f4db8b78264f344e5d, type: 3}
+  - {fileID: 21300000, guid: 2378ba1b5bc71e642a3d075802715c64, type: 3}
+  - {fileID: 21300000, guid: bfe9b73b86d533740916a607dc864651, type: 3}
+  - {fileID: 21300000, guid: b3a40d4bc3e960a4b9e05be356169e27, type: 3}
+  - {fileID: 21300000, guid: 5e8bae8b0f1a2ae469416882096d1683, type: 3}
+  - {fileID: 21300000, guid: 6ae6909b031cbd149a317e3760e27050, type: 3}
+  - {fileID: 21300000, guid: 4e74d1ab4fabed141be34813e48fbad8, type: 3}
+  - {fileID: 21300000, guid: 2606420c4dbe4e543b4cba8e3d0d7d65, type: 3}
+  - {fileID: 21300000, guid: b2c9e60c86ff407449c036641f37551c, type: 3}
+  - {fileID: 21300000, guid: 166b1e7c7838c4740aae2e67223224fc, type: 3}
+  - {fileID: 21300000, guid: ad30129cb6835284e9847eb48df04f21, type: 3}
+  - {fileID: 21300000, guid: 7f5dc8cce9673c04f88edc2561926a26, type: 3}
+  - {fileID: 21300000, guid: 4420ef0da47b91a499cbca905b0dca19, type: 3}
+  - {fileID: 21300000, guid: 8a548a3d2ec966a48bf7156ab1c765c2, type: 3}
+  - {fileID: 21300000, guid: 03ce391e87d3b7f4493a76a11b625f48, type: 3}
+  - {fileID: 21300000, guid: 7b84333edf4334648aeb2723171772a8, type: 3}
+  - {fileID: 21300000, guid: 8238d8ae1b963ad44b7e5ea5afbcfd19, type: 3}
+  - {fileID: 21300000, guid: 99e5f4be8356e994f87fde364a7e0df2, type: 3}
+  - {fileID: 21300000, guid: aa0fca8f9c553f0408cbd9a798bd2c42, type: 3}
+  - {fileID: 21300000, guid: 59b39bbf734ec18488669d4c393c31ef, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CharacterFemaleanimation_Idle0025
+  - CharacterFemaleanimation_Idle0031
+  - CharacterFemaleanimation_Idle0039
+  - CharacterFemaleanimation_Idle0038
+  - CharacterFemaleanimation_Idle0010
+  - CharacterFemaleanimation_Idle0046
+  - CharacterFemaleanimation_Idle0036
+  - CharacterFemaleanimation_Idle0051
+  - CharacterFemaleanimation_Idle0043
+  - CharacterFemaleanimation_Idle0023
+  - CharacterFemaleanimation_Idle0016
+  - CharacterFemaleanimation_Idle0045
+  - CharacterFemaleanimation_Idle0028
+  - CharacterFemaleanimation_Idle0030
+  - CharacterFemaleanimation_Idle0014
+  - CharacterFemaleanimation_Idle0033
+  - CharacterFemaleanimation_Idle0003
+  - CharacterFemaleanimation_Idle0002
+  - CharacterFemaleanimation_Idle0041
+  - CharacterFemaleanimation_Idle0034
+  - CharacterFemaleanimation_Idle0029
+  - CharacterFemaleanimation_Idle0013
+  - CharacterFemaleanimation_Idle0004
+  - CharacterFemaleanimation_Idle0015
+  - CharacterFemaleanimation_Idle0032
+  - CharacterFemaleanimation_Idle0035
+  - CharacterFemaleanimation_Idle0007
+  - CharacterFemaleanimation_Idle0001
+  - CharacterFemaleanimation_Idle0027
+  - CharacterFemaleanimation_Idle0037
+  - CharacterFemaleanimation_Idle0017
+  - CharacterFemaleanimation_Idle0050
+  - CharacterFemaleanimation_Idle0048
+  - CharacterFemaleanimation_Idle0021
+  - CharacterFemaleanimation_Idle0011
+  - CharacterFemaleanimation_Idle0026
+  - CharacterFemaleanimation_Idle0047
+  - CharacterFemaleanimation_Idle0012
+  - CharacterFemaleanimation_Idle0049
+  - CharacterFemaleanimation_Idle0008
+  - CharacterFemaleanimation_Idle0005
+  - CharacterFemaleanimation_Idle0019
+  - CharacterFemaleanimation_Idle0052
+  - CharacterFemaleanimation_Idle0018
+  - CharacterFemaleanimation_Idle0009
+  - CharacterFemaleanimation_Idle0040
+  - CharacterFemaleanimation_Idle0042
+  - CharacterFemaleanimation_Idle0022
+  - CharacterFemaleanimation_Idle0020
+  - CharacterFemaleanimation_Idle0024
+  - CharacterFemaleanimation_Idle0006
+  - CharacterFemaleanimation_Idle0044
+  m_Tag: FemaleIdleAtlas
+  m_IsVariant: 0

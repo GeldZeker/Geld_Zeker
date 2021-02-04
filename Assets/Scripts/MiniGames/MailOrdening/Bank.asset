@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c26f00f951d14524595a0defd20f0288, type: 3}
+  m_Name: Bank
+  m_EditorClassIdentifier: 
+  mailType: 0
+  tab:
+    front: {fileID: 21300000, guid: be9c7c6d111aa1845a293625b3e26ae4, type: 3}
+    back: {fileID: 21300000, guid: c44d1e9691219734fb2b2b16c8bf8938, type: 3}
+  paper:
+  - front: {fileID: 21300000, guid: 0331cbb0c92458946a06a833ad6dbb9f, type: 3}
+    back: {fileID: 21300000, guid: 5c7bf723cd26d1d48993ff642aaafa67, type: 3}
+  - front: {fileID: 21300000, guid: 459865db82f990e4ba2cda7469b0d919, type: 3}
+    back: {fileID: 21300000, guid: 5c7bf723cd26d1d48993ff642aaafa67, type: 3}
+  - front: {fileID: 21300000, guid: 0331cbb0c92458946a06a833ad6dbb9f, type: 3}
+    back: {fileID: 21300000, guid: 5c7bf723cd26d1d48993ff642aaafa67, type: 3}

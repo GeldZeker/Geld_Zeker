@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a66126eb32ea8894b865e47611d5523d, type: 3}
+  m_Name: CreateAccount
+  m_EditorClassIdentifier: 
+  startLeft: 1
+  leftCharacter: {fileID: 11400000, guid: 19ff1167bbd2caa47aac33c18bd922d3, type: 2}
+  rightCharacter: {fileID: 11400000, guid: 85ca8326f2a2c4f419469d148d7818b8, type: 2}
+  monologues:
+  - Line: Goedendag!
+    IsLast: 1
+  - Line: Goedendag! Kan ik u helpen?
+    IsLast: 1
+  - Line: 'Ik heb een afspraak. '
+    IsLast: 0
+  - Line: Ik wil een rekening openen.
+    IsLast: 1
+  - Line: Dat is goed! Ik zal u in mijn computer zetten.
+    IsLast: 0
+  - Line: 'U staat er nu in. '
+    IsLast: 0
+  - Line: U zal een brief krijgen.
+    IsLast: 0
+  - Line: In de brief staat uw pincode.
+    IsLast: 1
+  - Line: "Ok\xE9. Fijne dag!"
+    IsLast: 0

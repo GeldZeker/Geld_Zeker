@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MaleCharacterIdle
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 9217a8c61320c1d42b0adb0f58d79491, type: 3}
+    totalSpriteSurfaceArea: 4064676
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b1a78140c0022ac4ca0a80795ee4b88e, type: 3}
+  - {fileID: 21300000, guid: 9e711911fd10e4742955c793abc53bf0, type: 3}
+  - {fileID: 21300000, guid: 09ed23419a08e2546b31feb6e4ff9b92, type: 3}
+  - {fileID: 21300000, guid: e586bfd2415e8204c9fd651b639732b2, type: 3}
+  - {fileID: 21300000, guid: e45ba84393ad3a542acac42c0bbfa465, type: 3}
+  - {fileID: 21300000, guid: db075f4307d0905409b887715e02d94a, type: 3}
+  - {fileID: 21300000, guid: 20ce6e537a7c1b64c8dbfc937c67a662, type: 3}
+  - {fileID: 21300000, guid: e26e6673a12127a4ea14fd7280e19c9e, type: 3}
+  - {fileID: 21300000, guid: e4a142a380204ff40a30059db86ce7f7, type: 3}
+  - {fileID: 21300000, guid: fcfc2db3d06e7844c94cfe3b8a219935, type: 3}
+  - {fileID: 21300000, guid: 3d12deb3df3e5a6468e7b8c516c24bf1, type: 3}
+  - {fileID: 21300000, guid: 20de6e24ddb252645a1d6c56d641e703, type: 3}
+  - {fileID: 21300000, guid: 59eadfc401ecf8f459ec1ca28fb374f6, type: 3}
+  - {fileID: 21300000, guid: 1d6c5105f77435049a3a1d1290774b1a, type: 3}
+  - {fileID: 21300000, guid: c1921055170b7d54fa4437812956f24a, type: 3}
+  - {fileID: 21300000, guid: ac529975465dbbf40b39d463fd10a6d0, type: 3}
+  - {fileID: 21300000, guid: bd3e38858f5e4a64293ac33b36f3716b, type: 3}
+  - {fileID: 21300000, guid: ded00b956ee444f48bfd922a077b8765, type: 3}
+  - {fileID: 21300000, guid: 85441be5f082c384d8ca836c0f300f06, type: 3}
+  - {fileID: 21300000, guid: 104a4f769651b504eae7541f5d67e053, type: 3}
+  - {fileID: 21300000, guid: 14e3e0a600013184f9ed3e859adc4c58, type: 3}
+  - {fileID: 21300000, guid: 1631d8c6cae1c814d8428d574fb82c0b, type: 3}
+  - {fileID: 21300000, guid: 84ac88e6715dea7469f16cf4af00921a, type: 3}
+  - {fileID: 21300000, guid: 9d4e0c3700cdc204b9757291efa3d5d2, type: 3}
+  - {fileID: 21300000, guid: 2fe3a46798f4913438db0f3369bb4ad6, type: 3}
+  - {fileID: 21300000, guid: d06beaa7f7fc6094ba32c5e9b25c3249, type: 3}
+  - {fileID: 21300000, guid: fb4af21876350c449a53e1860ded07ec, type: 3}
+  - {fileID: 21300000, guid: 8f667438096b3c14d93f3c73ed277920, type: 3}
+  - {fileID: 21300000, guid: f351dd385c0572644888d0bc243941ef, type: 3}
+  - {fileID: 21300000, guid: 2de8a968d0ac6d044bc320275eaea124, type: 3}
+  - {fileID: 21300000, guid: d3c58ba8c61b2b145b9a636415eec3fd, type: 3}
+  - {fileID: 21300000, guid: b0573c09448c03547a8f102f41614650, type: 3}
+  - {fileID: 21300000, guid: 4b5a42390224f2e43be06fb9abd20611, type: 3}
+  - {fileID: 21300000, guid: 395de5a9fac2fc34eba84035526e1470, type: 3}
+  - {fileID: 21300000, guid: 4fc5f8b99f36bdb4cb66f862bd55b995, type: 3}
+  - {fileID: 21300000, guid: d64ad86af51ed2d4b9078f72e993e957, type: 3}
+  - {fileID: 21300000, guid: 4d99d6daf54128848a25cd3417fefeac, type: 3}
+  - {fileID: 21300000, guid: 64a416fa233f86b4aba5583186e383ac, type: 3}
+  - {fileID: 21300000, guid: 4e03a33bf9cf26d45ae2db4cbae01e40, type: 3}
+  - {fileID: 21300000, guid: f22db19c440001a41a413f2c3c628768, type: 3}
+  - {fileID: 21300000, guid: 80dd9f9c4b08cd94ea51679cc460fb63, type: 3}
+  - {fileID: 21300000, guid: 67e553ac7bc05ef40903b0f78664e45b, type: 3}
+  - {fileID: 21300000, guid: 2a4238cc8a92cef4c8c1adb306770d9a, type: 3}
+  - {fileID: 21300000, guid: f9070ecccb51e4a49aaeeca34e224ccd, type: 3}
+  - {fileID: 21300000, guid: 604a120d5149c444d9b1cf66b6952f16, type: 3}
+  - {fileID: 21300000, guid: ae66ec0de74d8af4a8f7fcf6f91909d5, type: 3}
+  - {fileID: 21300000, guid: 10cb632d3a8c396439cf040763443960, type: 3}
+  - {fileID: 21300000, guid: 960b069df5949374a911e8dc7b99fbb7, type: 3}
+  - {fileID: 21300000, guid: 100805bd08b2b3a478368a0e296f105f, type: 3}
+  - {fileID: 21300000, guid: 6b17335ec819b6e4c8f429060829fdfe, type: 3}
+  - {fileID: 21300000, guid: c8f0dc6e6b9e73449b76c3c70ad6d45c, type: 3}
+  - {fileID: 21300000, guid: 3ceb728e88acca34c8e2595197c93439, type: 3}
+  - {fileID: 21300000, guid: 63fe79ffe0a27c84f83c47d6f22b81e2, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - CharacterMaleAnimation_idle0001
+  - CharacterMaleAnimation_idle0019
+  - CharacterMaleAnimation_idle0008
+  - CharacterMaleAnimation_idle0013
+  - CharacterMaleAnimation_idle0049
+  - CharacterMaleAnimation_idle0051
+  - CharacterMaleAnimation_idle0037
+  - CharacterMaleAnimation_idle0023
+  - CharacterMaleAnimation_idle0028
+  - CharacterMaleAnimation_idle0039
+  - CharacterMaleAnimation_idle0027
+  - CharacterMaleAnimation_idle0006
+  - CharacterMaleAnimation_idle0043
+  - CharacterMaleAnimation_idle0041
+  - CharacterMaleAnimation_idle0015
+  - CharacterMaleAnimation_idle0005
+  - CharacterMaleAnimation_idle0021
+  - CharacterMaleAnimation_idle0030
+  - CharacterMaleAnimation_idle0035
+  - CharacterMaleAnimation_idle0034
+  - CharacterMaleAnimation_idle0050
+  - CharacterMaleAnimation_idle0010
+  - CharacterMaleAnimation_idle0052
+  - CharacterMaleAnimation_idle0044
+  - CharacterMaleAnimation_idle0016
+  - CharacterMaleAnimation_idle0047
+  - CharacterMaleAnimation_idle0032
+  - CharacterMaleAnimation_idle0031
+  - CharacterMaleAnimation_idle0053
+  - CharacterMaleAnimation_idle0029
+  - CharacterMaleAnimation_idle0014
+  - CharacterMaleAnimation_idle0007
+  - CharacterMaleAnimation_idle0025
+  - CharacterMaleAnimation_idle0046
+  - CharacterMaleAnimation_idle0011
+  - CharacterMaleAnimation_idle0040
+  - CharacterMaleAnimation_idle0012
+  - CharacterMaleAnimation_idle0048
+  - CharacterMaleAnimation_idle0042
+  - CharacterMaleAnimation_idle0036
+  - CharacterMaleAnimation_idle0017
+  - CharacterMaleAnimation_idle0033
+  - CharacterMaleAnimation_idle0009
+  - CharacterMaleAnimation_idle0022
+  - CharacterMaleAnimation_idle0018
+  - CharacterMaleAnimation_idle0038
+  - CharacterMaleAnimation_idle0026
+  - CharacterMaleAnimation_idle0024
+  - CharacterMaleAnimation_idle0045
+  - CharacterMaleAnimation_idle0020
+  - CharacterMaleAnimation_idle0004
+  - CharacterMaleAnimation_idle0003
+  - CharacterMaleAnimation_idle0002
+  m_Tag: MaleCharacterIdle
+  m_IsVariant: 0

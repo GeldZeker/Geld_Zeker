@@ -1,0 +1,521 @@
+fileFormatVersion: 2
+guid: 998b390f4681077489e46d5b3352964e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1355464266687763924
+    second: Partypopper_AnimationSpritesheet@2x_0
+  - first:
+      213: -5322403333530984473
+    second: Partypopper_AnimationSpritesheet@2x_1
+  - first:
+      213: -2075623531509706642
+    second: Partypopper_AnimationSpritesheet@2x_2
+  - first:
+      213: -5654739934680843182
+    second: Partypopper_AnimationSpritesheet@2x_3
+  - first:
+      213: 7479187951679428654
+    second: Partypopper_AnimationSpritesheet@2x_4
+  - first:
+      213: -4526850220334130893
+    second: Partypopper_AnimationSpritesheet@2x_5
+  - first:
+      213: 8320058944919289057
+    second: Partypopper_AnimationSpritesheet@2x_6
+  - first:
+      213: 1508524815049093220
+    second: Partypopper_AnimationSpritesheet@2x_7
+  - first:
+      213: -4088566294292373847
+    second: Partypopper_AnimationSpritesheet@2x_8
+  - first:
+      213: -4959238912891392839
+    second: Partypopper_AnimationSpritesheet@2x_9
+  - first:
+      213: 2561028260227273729
+    second: Partypopper_AnimationSpritesheet@2x_10
+  - first:
+      213: 5149245850175766972
+    second: Partypopper_AnimationSpritesheet@2x_11
+  - first:
+      213: 3638264472433578809
+    second: Partypopper_AnimationSpritesheet@2x_12
+  - first:
+      213: -3399998040390715145
+    second: Partypopper_AnimationSpritesheet@2x_13
+  - first:
+      213: -1377190470378385616
+    second: Partypopper_AnimationSpritesheet@2x_14
+  - first:
+      213: -1412409627277498610
+    second: Partypopper_AnimationSpritesheet@2x_0
+  - first:
+      213: -1646427378149400591
+    second: Partypopper_AnimationSpritesheet@2x_1
+  - first:
+      213: -3620175580217802953
+    second: Partypopper_AnimationSpritesheet@2x_2
+  - first:
+      213: -388537757755118796
+    second: Partypopper_AnimationSpritesheet@2x_3
+  - first:
+      213: -6840198173447215170
+    second: Partypopper_AnimationSpritesheet@2x_4
+  - first:
+      213: -7950238786331084059
+    second: Partypopper_AnimationSpritesheet@2x_5
+  - first:
+      213: 8458274824640109001
+    second: Partypopper_AnimationSpritesheet@2x_6
+  - first:
+      213: 3706755858168869728
+    second: Partypopper_AnimationSpritesheet@2x_7
+  - first:
+      213: 6673861750727952582
+    second: Partypopper_AnimationSpritesheet@2x_8
+  - first:
+      213: 5794537282020766820
+    second: Partypopper_AnimationSpritesheet@2x_9
+  - first:
+      213: -9156125903228480329
+    second: Partypopper_AnimationSpritesheet@2x_10
+  - first:
+      213: 4017142280325897715
+    second: Partypopper_AnimationSpritesheet@2x_11
+  - first:
+      213: -1500081739607947032
+    second: Partypopper_AnimationSpritesheet@2x_12
+  - first:
+      213: 2890829885510658142
+    second: Partypopper_AnimationSpritesheet@2x_13
+  - first:
+      213: 4449122235358498511
+    second: Partypopper_AnimationSpritesheet@2x_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 769.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0768c06dec166ce0800000000000000
+      internalID: -1412409627277498610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 769.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ff5de0d507b629e0800000000000000
+      internalID: -1646427378149400591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 769.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ff2948d7d82cdc0800000000000000
+      internalID: -3620175580217802953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 769.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43bed27c7f2ab9af0800000000000000
+      internalID: -388537757755118796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 513.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7276e800cb211a0800000000000000
+      internalID: -6840198173447215170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 513.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eaf33d22f31ba190800000000000000
+      internalID: -7950238786331084059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 513.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c99d4f9324d16570800000000000000
+      internalID: 8458274824640109001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 513.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063f04350da017330800000000000000
+      internalID: 3706755858168869728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 257.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8c43417e15e9c50800000000000000
+      internalID: 6673861750727952582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 257.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 464fa9c05f45a6050800000000000000
+      internalID: 5794537282020766820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 257.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b450539008eee080800000000000000
+      internalID: -9156125903228480329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 257.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fd1707ce91cfb730800000000000000
+      internalID: 4017142280325897715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e84e980b93ae2be0800000000000000
+      internalID: -1500081739607947032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5822ffe67a4e1820800000000000000
+      internalID: 2890829885510658142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Partypopper_AnimationSpritesheet@2x_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1.5
+        width: 256.75
+        height: 256.5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcec5d0c9157ebd30800000000000000
+      internalID: 4449122235358498511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

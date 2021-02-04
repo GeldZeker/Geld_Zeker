@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PotPlantAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 2
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 4d4f061cd87a5784fb2ee73cfcd15573, type: 3}
+    totalSpriteSurfaceArea: 818912
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: b4f85a30be885dd4884bfcf277aecb6a, type: 3}
+  - {fileID: 21300000, guid: 67d8735081567454aa51b78611a42556, type: 3}
+  - {fileID: 21300000, guid: 9153cb90a4eb9d3439b3020f8a789026, type: 3}
+  - {fileID: 21300000, guid: 1de80861bbec6af479a17b62cc061ebf, type: 3}
+  - {fileID: 21300000, guid: 6454fc7162aa0e648b53cdb8af080e61, type: 3}
+  - {fileID: 21300000, guid: 3e660ab161ea032409e1920b0da01697, type: 3}
+  - {fileID: 21300000, guid: 59e3a842ff106dd4a81b16a104b899f0, type: 3}
+  - {fileID: 21300000, guid: 86e84d5262271e94e88e283e7002cfe8, type: 3}
+  - {fileID: 21300000, guid: e273bb24d027dd8429bec4f4adc85ad9, type: 3}
+  - {fileID: 21300000, guid: 64cabe44e312e3d40b530d23b7f7f086, type: 3}
+  - {fileID: 21300000, guid: 6f43095452de5e340b7044fd0496ea37, type: 3}
+  - {fileID: 21300000, guid: 6c0add94b342c9b4981812a3610cab31, type: 3}
+  - {fileID: 21300000, guid: 3d1f52a45517c7547807dd534a0d2d0d, type: 3}
+  - {fileID: 21300000, guid: d2468df55e1e81f41a0b1a912f75050f, type: 3}
+  - {fileID: 21300000, guid: ec3fba364353da846a0da007d1efe4b5, type: 3}
+  - {fileID: 21300000, guid: dcc395c6754ea4348915124e321fa931, type: 3}
+  - {fileID: 21300000, guid: e99f04e7eaa134a469c83a85eb59b102, type: 3}
+  - {fileID: 21300000, guid: c0363b096b758864492199630de18291, type: 3}
+  - {fileID: 21300000, guid: 6d0f550aab676184c94a631a189a5089, type: 3}
+  - {fileID: 21300000, guid: 4163301ac108e884180db08d4589c79f, type: 3}
+  - {fileID: 21300000, guid: e81e151a87ad59e4694c4f0d1c527d10, type: 3}
+  - {fileID: 21300000, guid: 4d94232b8e9930c42ae0fe9d761806a1, type: 3}
+  - {fileID: 21300000, guid: 99fae77b2860cd047b149bc1da7c5336, type: 3}
+  - {fileID: 21300000, guid: a99affeb80109654b85809b2158b0e58, type: 3}
+  - {fileID: 21300000, guid: 0a9f6a1cd429a8f4286cf336b4794d7f, type: 3}
+  - {fileID: 21300000, guid: 66362a8cc82e8c346afa3b7f2de58f5c, type: 3}
+  - {fileID: 21300000, guid: 3896665d77c0f224bba32bbce490b7ad, type: 3}
+  - {fileID: 21300000, guid: a524ea9d236b484418b5459eb7c8689c, type: 3}
+  - {fileID: 21300000, guid: 9b07258e55911094daf7b63296f1fb82, type: 3}
+  - {fileID: 21300000, guid: 29934cde9a882a746b82abd67f8b55a2, type: 3}
+  - {fileID: 21300000, guid: 9f67cfbf8d7ba16468461dadc7516fd5, type: 3}
+  - {fileID: 21300000, guid: c98e7bfffb2c6174086a356494f63f70, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - PotPlant0031
+  - PotPlant0023
+  - PotPlant0022
+  - PotPlant0012
+  - PotPlant0009
+  - PotPlant0006
+  - PotPlant0008
+  - PotPlant0018
+  - PotPlant0026
+  - PotPlant0004
+  - PotPlant0032
+  - PotPlant0002
+  - PotPlant0015
+  - PotPlant0011
+  - PotPlant0030
+  - PotPlant0020
+  - PotPlant0001
+  - PotPlant0029
+  - PotPlant0007
+  - PotPlant0005
+  - PotPlant0003
+  - PotPlant0024
+  - PotPlant0025
+  - PotPlant0021
+  - PotPlant0027
+  - PotPlant0017
+  - PotPlant0014
+  - PotPlant0010
+  - PotPlant0016
+  - PotPlant0019
+  - PotPlant0013
+  - PotPlant0028
+  m_Tag: PotPlantAtlas
+  m_IsVariant: 0

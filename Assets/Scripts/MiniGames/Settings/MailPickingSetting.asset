@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39252d8a1ea86e04fbb942a7c27eaaed, type: 3}
+  m_Name: MailPickingSetting
+  m_EditorClassIdentifier: 
+  nameOfScene: MailPickingGame
+  type: 2
+  minigameMode: 0
+  progression:
+    IsCompletedInStoryMode: 0
+    DifficultySettings:
+    - Type: 0
+      Completed: 0
+    - Type: 1
+      Completed: 0
+    - Type: 2
+      Completed: 0
+  difficulty: 0
+  easyAmountOfLayers: 1
+  easySameEnvelopes: 0
+  mediumAmountOfLayers: 2
+  mediumSameEnvelopes: 0
+  hardAmountOfLayers: 2
+  hardSameEnvelopes: 1

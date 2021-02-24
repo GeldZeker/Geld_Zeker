@@ -1,0 +1,9 @@
+var namespace_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings =
+[
+    [ "DebitCardPaySetting", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_debit_card_pay_setting.html", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_debit_card_pay_setting" ],
+    [ "LoadMiniGameAfterDialogue", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_load_mini_game_after_dialogue.html", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_load_mini_game_after_dialogue" ],
+    [ "LoadMiniGameButton", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_load_mini_game_button.html", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_load_mini_game_button" ],
+    [ "MailOrderSetting", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mail_order_setting.html", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mail_order_setting" ],
+    [ "MiniGameSetting", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mini_game_setting.html", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mini_game_setting" ],
+    [ "MiniGameSettingAsset", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mini_game_setting_asset.html", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mini_game_setting_asset" ]
+];

@@ -1,0 +1,5 @@
+var struct_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mini_game_setting_1_1_progression_1_1_difficulty_setting =
+[
+    [ "Completed", "struct_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mini_game_setting_1_1_progression_1_1_difficulty_setting.html#a42cd7b72cad07491d9e552a4c670b6f6", null ],
+    [ "Type", "struct_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_mini_game_setting_1_1_progression_1_1_difficulty_setting.html#a81026ee09fc9d607243ed61871859b00", null ]
+];

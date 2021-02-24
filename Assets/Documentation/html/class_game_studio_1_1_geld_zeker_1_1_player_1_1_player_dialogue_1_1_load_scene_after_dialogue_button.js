@@ -1,0 +1,4 @@
+var class_game_studio_1_1_geld_zeker_1_1_player_1_1_player_dialogue_1_1_load_scene_after_dialogue_button =
+[
+    [ "OnDialogueFinish", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_player_dialogue_1_1_load_scene_after_dialogue_button.html#ab3a948a0835c3ba72d72dddf18bb3584", null ]
+];

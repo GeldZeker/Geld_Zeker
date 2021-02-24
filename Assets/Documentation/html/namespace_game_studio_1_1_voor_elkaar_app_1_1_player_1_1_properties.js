@@ -1,0 +1,8 @@
+var namespace_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties =
+[
+    [ "BooleanProperty", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_boolean_property.html", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_boolean_property" ],
+    [ "PlayerGenderProperty", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_player_gender_property.html", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_player_gender_property" ],
+    [ "PlayerProperties", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_player_properties.html", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_player_properties" ],
+    [ "PlayerProperty", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_player_property.html", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_player_property" ],
+    [ "PlayerPropertyManager", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_player_property_manager.html", "class_game_studio_1_1_voor_elkaar_app_1_1_player_1_1_properties_1_1_player_property_manager" ]
+];

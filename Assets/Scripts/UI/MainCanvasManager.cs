@@ -67,7 +67,8 @@ namespace GameStudio.GeldZeker.UI
         protected override void OnDestroy()
         {
             base.OnDestroy();
-
+            // END Session
+            TimeController.instance.DisplaySessionTime();
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BankPostOrdering
   m_EditorClassIdentifier: 
   description: Orden de post van de bank
-  isDoneOnce: 0
+  isDoneOnce: 1

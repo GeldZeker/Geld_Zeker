@@ -27,6 +27,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         private void OnAppClicked()
         {
+            hasAccountProperty.UpdateValue(true, false);
             MainCanvasManager.Instance.OpenCellPhoneScreen(hasAccountProperty.Value ? CellPhoneScreen.BankAccount : CellPhoneScreen.BankAppointment);
         }
     }

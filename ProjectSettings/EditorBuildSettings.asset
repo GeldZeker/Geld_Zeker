@@ -53,4 +53,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MailPickingGame.unity
     guid: 805f00368f5a02c47947d141537bab18
+  - enabled: 1
+    path: Assets/Scenes/BankClosed.unity
+    guid: ec1268ecbb9a04b41869993e051858fa
   m_configObjects: {}

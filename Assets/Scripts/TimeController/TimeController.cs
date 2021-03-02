@@ -45,7 +45,7 @@ public class TimeController : MonoBehaviour
     public void BeginTimer()
     {
         timerGoing = true;
-        elapsedTime = (360 * 58) + 0f;
+        elapsedTime = (3600 * 5) + 0f;
 
         StartCoroutine(UpdateTimer());
     }

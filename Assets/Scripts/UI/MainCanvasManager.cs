@@ -68,7 +68,7 @@ namespace GameStudio.GeldZeker.UI
         {
             base.OnDestroy();
             // END Session
-            TimeController.instance.DisplaySessionTime();
+            TimeController.instance.EndTimer();
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 

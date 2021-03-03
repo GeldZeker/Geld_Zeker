@@ -12,11 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41e62439e7183e24792c2f21271b51da, type: 3}
   m_Name: Mail
   m_EditorClassIdentifier: 
-  mailList:
-  - Type: 0
-    PickedUp: 1
-    SortedOut: 1
-    Ordened: 1
+  mailList: []
   sprites:
   - Type: 0
     Sprite: {fileID: 21300000, guid: 0331cbb0c92458946a06a833ad6dbb9f, type: 3}

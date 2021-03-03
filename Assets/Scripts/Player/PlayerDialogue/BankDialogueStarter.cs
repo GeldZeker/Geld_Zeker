@@ -74,6 +74,8 @@ namespace GameStudio.GeldZeker.Player.PlayerDialogue
                 DoOnceTask holdBankAccountDialogue = createbankAccountQuest.GetTask<DoOnceTask>("BankAccountGesprek");
                 holdBankAccountDialogue.SetDoneOnce();
             }
+
+            PlayerPropertyManager.Instance.GetProperty<BooleanProperty>("Heeft Bankrekening").UpdateValue(true, false);
         }
 
         [System.Serializable]

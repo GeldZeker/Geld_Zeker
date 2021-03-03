@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75ec5663a3257304782f554a2d3ad417, type: 3}
   m_Name: Happiness
   m_EditorClassIdentifier: 
-  percentage: 90
+  percentage: 50
   depletion: 1

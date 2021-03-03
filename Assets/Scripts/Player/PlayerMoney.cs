@@ -57,8 +57,14 @@ public class PlayerMoney : MonoBehaviour
         }
     }
 
+    /// <summary> Method to save the player money when the app is exited. </summary>
+    public void SaveMoneyOnExit()
+    {
+        SaveToFile();
+    }
+
     /// <summary> Method used to save player money to a local storage. </summary>
-    public void SaveToFile()
+    private void SaveToFile()
     {
         GameFileSystem.SaveToFile(MONEY_PATH, money);
     }

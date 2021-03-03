@@ -9,7 +9,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
     {
         [Header("References")]
         [SerializeField]
-        private BooleanProperty hasAccountProperty = null;
+        public BooleanProperty hasAccountProperty = null;
 
         protected override void Awake()
         {
@@ -27,7 +27,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         private void OnAppClicked()
         {
-            hasAccountProperty.UpdateValue(true, false);
+            hasAccountProperty = (BooleanProperty)PlayerPropertyManager.Instance.GetProperty("Heeft Bankrekening");
             MainCanvasManager.Instance.OpenCellPhoneScreen(hasAccountProperty.Value ? CellPhoneScreen.BankAccount : CellPhoneScreen.BankAppointment);
         }
     }

@@ -28,12 +28,6 @@ public class PlayerMoney : MonoBehaviour
         moneyText.text = money.ToString();
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        
-    }
-
     /// <summary> Method to add money to the banking account. </summary>
     private void addMoney()
     {

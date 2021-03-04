@@ -66,7 +66,23 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                 }
                 else
                 {
-                    SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                    switch (nameOfScene)
+                    {
+                        case "Bank":
+                            {
+                                if (TimeController.instance.latestDayNightCyclePart == "n") SceneTransitionSystem.Instance.Transition(nameOfTransition, "BankClosed", loadSceneMode);
+                                else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                            }
+                            break;
+                        case "FruitDepartment":
+                            {
+                                if (TimeController.instance.latestDayNightCyclePart == "n") SceneTransitionSystem.Instance.Transition(nameOfTransition, "ShopClosed", loadSceneMode);
+                                else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                            }
+                            break;
+                        default: SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                            break;
+                    }
                 }
             }
         }

@@ -68,6 +68,8 @@ namespace GameStudio.GeldZeker.UI
         {
             base.OnDestroy();
             PlayerMoney.Instance.SaveMoneyOnExit();
+            // END Session
+            TimeController.instance.EndTimer();
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 

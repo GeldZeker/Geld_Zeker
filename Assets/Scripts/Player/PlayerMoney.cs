@@ -22,14 +22,14 @@ public class PlayerMoney : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         LoadFromFile();
         moneyText.text = money.ToString();
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }

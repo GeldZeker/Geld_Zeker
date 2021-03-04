@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e9579aa13918b44b22aa189ee46ff2, type: 3}
   m_Name: Heeft Bankrekening
   m_EditorClassIdentifier: 
-  booleanValue: 0
+  booleanValue: 1

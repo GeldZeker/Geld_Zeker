@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class PlayerMoney : MonoBehaviour
 {
     [SerializeField]
-    public static PlayerMoney Instance;
+    public static PlayerMoney instance;
 
     [SerializeField]
     private double money;
@@ -39,7 +39,7 @@ public class PlayerMoney : MonoBehaviour
     {
         money += 10.00;
         moneyText.text = money.ToString();
-        Debug.Log("10 euro bijgeschreven");
+        //Debug.Log("10 euro bijgeschreven");
     }
 
     /// <summary> Method to remove money from the banking account of the player. </summary>
@@ -48,12 +48,12 @@ public class PlayerMoney : MonoBehaviour
         /// <summary> Check if player has enough money. </summary>
         if (money - 10.00 < 0)
         {
-            Debug.Log("Niet genoeg geld op de bank!");
+            //Debug.Log("Niet genoeg geld op de bank!");
         } else
         {
             money -= 10.00;
             moneyText.text = money.ToString();
-            Debug.Log("10 euro afgeschreven");
+            //Debug.Log("10 euro afgeschreven");
         }
     }
 

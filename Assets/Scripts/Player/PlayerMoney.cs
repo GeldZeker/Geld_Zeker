@@ -18,7 +18,7 @@ public class PlayerMoney : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        instance = this;
     }
 
     // Start is called before the first frame update

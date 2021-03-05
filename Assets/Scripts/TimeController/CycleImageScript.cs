@@ -5,10 +5,10 @@ using UnityEngine;
 public class CycleImageScript : MonoBehaviour
 {
     [SerializeField]
-    private GameObject dayImage;
+    private GameObject dayImage = null;
 
     [SerializeField]
-    private GameObject nightImage;
+    private GameObject nightImage = null;
 
     // Update is called once per frame
     void Update()

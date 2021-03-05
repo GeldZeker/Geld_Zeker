@@ -30,7 +30,7 @@ public class TimeController : MonoBehaviour
     [ReadOnly]
     private bool timerGoing;
 
-    private TimeSpan dayNightCycleTime;
+    public TimeSpan dayNightCycleTime;
 
     private double elapsedSecondsRL;
 

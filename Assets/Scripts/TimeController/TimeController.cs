@@ -1,5 +1,4 @@
 ﻿using GameStudio.GeldZeker.Player;
-using TTimmermans.Utilities.ReadOnlyAttribute;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,20 +13,16 @@ public class TimeController : MonoBehaviour
 
     [Header("In-game Time")]
     [SerializeField]
-    [ReadOnly]
     private string timeCounter;
 
     [SerializeField]
-    [ReadOnly]
     private float elapsedTime;
 
     [SerializeField]
-    [ReadOnly]
     public string latestDayNightCyclePart;
 
     [Header("Settings")]
     [SerializeField]
-    [ReadOnly]
     private bool timerGoing;
 
     public TimeSpan dayNightCycleTime;

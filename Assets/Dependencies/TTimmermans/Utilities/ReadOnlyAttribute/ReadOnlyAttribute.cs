@@ -1,4 +1,4 @@
-﻿using UnityEditor;
+﻿/*using UnityEditor;
 using UnityEngine;
 
 namespace TTimmermans.Utilities.ReadOnlyAttribute
@@ -22,4 +22,4 @@ namespace TTimmermans.Utilities.ReadOnlyAttribute
             }
         }
     }
-}
+}*/

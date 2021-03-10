@@ -64,6 +64,7 @@ public class TimeController : SingletonBehaviour<TimeController>
         EndTimer();
     }
 
+    /// <summary>Starts the timer.</summary>
     public void BeginTimer()
     {
         LoadDateTimeClosed();
@@ -73,13 +74,14 @@ public class TimeController : SingletonBehaviour<TimeController>
         StartCoroutine(UpdateTimer());
     }
 
+    /// <summary>Ends the timer.</summary>
     public void EndTimer()
     {
-        Debug.Log("Latest Decimal Time: " + latestDecimalTime);
         timerGoing = false;
         SaveDateTimeClosed();
     }
 
+    /// <summary>Updates the timer.</summary>
     private IEnumerator UpdateTimer()
     {
         while (timerGoing)
@@ -113,6 +115,7 @@ public class TimeController : SingletonBehaviour<TimeController>
         }
     }
 
+    /// <summary>Converts a time string to double in decimal numbers.</summary>
     private double TimeStringToDouble(string timeString, int cutOff1, int cutOff2)
     {
         double decimalHours = Convert.ToDouble(timeString.Split(':')[cutOff1]);
@@ -122,10 +125,12 @@ public class TimeController : SingletonBehaviour<TimeController>
         return decimalTime;
     }
 
+    /// <summary>Loads the latest datatime from file on previous app close.</summary>
     private void LoadDateTimeClosed()
     {
         if (GameFileSystem.LoadFromFile(FILE_DateTime, out long outValueDateTime))
         {
+            Debug.Log(outValueDateTime);
             DateTime lastDateTimeClosed = DateTime.FromFileTime(outValueDateTime);
             elapsedSecondsRL = (DateTime.Now - lastDateTimeClosed).TotalSeconds;
         }
@@ -137,7 +142,7 @@ public class TimeController : SingletonBehaviour<TimeController>
                 DateTime lastInGameTimeClosed = DateTime.FromFileTime(outValueInGameTime);
                 double decimalIG = lastInGameTimeClosed.Hour + (lastInGameTimeClosed.Minute * 0.01);
 
-                TimeSpan convertedTime = TimeSpan.FromSeconds(elapsedSecondsRL * 60);
+                TimeSpan convertedTime = TimeSpan.FromSeconds(elapsedSecondsRL);
                 string convertedTimeStr = convertedTime.ToString("hh':'mm");
                 double decimalTime = TimeStringToDouble(convertedTimeStr, 0, 1);
 
@@ -156,7 +161,6 @@ public class TimeController : SingletonBehaviour<TimeController>
     {
         DateTime inGameTime = new DateTime(1900, 12, 12).AddHours(latestDecimalTime);
         GameFileSystem.SaveToFile(FILE_InGameTime, inGameTime.ToFileTime());
-        GameFileSystem.SaveToFile(FILE_DateTime, DateTime.Now.ToFileTime());
     }
 
     public void ResetDateTime()

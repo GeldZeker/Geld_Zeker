@@ -25,7 +25,7 @@ public class PlayerMoney : MonoBehaviour
     private void Start()
     {
         LoadFromFile();
-        moneyText.text = money.ToString();
+        //moneyText.text = money.ToString();
     }
 
     /// <summary> Method to add money to the banking account. </summary>

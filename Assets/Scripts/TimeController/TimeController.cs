@@ -1,6 +1,5 @@
 ﻿using BWolf.Behaviours.SingletonBehaviours;
 using GameStudio.GeldZeker.Player;
-using GameStudio.GeldZeker.Player.Tamagotchi;
 using GameStudio.GeldZeker.SceneTransitioning;
 using System;
 using System.Collections;
@@ -72,7 +71,7 @@ public class TimeController : SingletonBehaviour<TimeController>
     /// <summary>Starts the timer.</summary>
     public void BeginTimer()
     {
-        if (isDuplicate)
+        if (timerGoing)
         {
             return;
         }
@@ -138,12 +137,6 @@ public class TimeController : SingletonBehaviour<TimeController>
     /// <summary>Loads the latest datatime from file on previous app close.</summary>
     private void LoadDateTimeClosed()
     {
-        /*if (GameFileSystem.LoadFromFile(FILE_DateTime, out long outValueDateTime))
-        {
-            DateTime lastDateTimeClosed = DateTime.FromFileTime(outValueDateTime);
-            elapsedSecondsRL = (DateTime.Now - lastDateTimeClosed).TotalSeconds;
-        }*/
-
         if (GameFileSystem.LoadFromFile(FILE_InGameTime, out long[] outValue))
         {
             long outValueDateTime = outValue[0];
@@ -171,15 +164,12 @@ public class TimeController : SingletonBehaviour<TimeController>
     {
         DateTime inGameTime = new DateTime(1900, 12, 12).AddHours(latestDecimalTime);
         DateTime latestDateTime = DateTime.Now;
-
         long[] timeStamps = new long[] { latestDateTime.ToFileTime(), inGameTime.ToFileTime()};
-
-        //timeStamps.SetValue(latestDateTime.ToFileTime(), 0);
-        //timeStamps.SetValue(inGameTime.ToFileTime(), 1);
 
         GameFileSystem.SaveToFile(FILE_InGameTime, timeStamps);
     }
 
+    /// <summary>Resets the time.</summary>
     public void ResetDateTime()
     {
         resetActive = true;

@@ -1,12 +1,12 @@
-﻿using GameStudio.GeldZeker.Player;
+﻿using BWolf.Behaviours.SingletonBehaviours;
+using GameStudio.GeldZeker.Player;
+using GameStudio.GeldZeker.SceneTransitioning;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class TimeController : MonoBehaviour
+public class TimeController : SingletonBehaviour<TimeController>
 {
     [SerializeField]
     public static TimeController instance;
@@ -25,6 +25,8 @@ public class TimeController : MonoBehaviour
     [SerializeField]
     private bool timerGoing;
 
+    private bool resetActive;
+
     public TimeSpan dayNightCycleTime;
 
     private double elapsedSecondsRL;
@@ -35,25 +37,46 @@ public class TimeController : MonoBehaviour
 
     private double latestDecimalTime;
 
-    private const string FILE_DateTime = "Time/DateTimeClosed";
+    private const string FILE_InGameTime = "ProgressSaves/Time/TimeInGameClosed";
 
-    private const string FILE_InGameTime = "Time/TimeInGameClosed";
-
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
+        if (isDuplicate)
+        {
+            return;
+        }
+
         instance = this;
     }
 
     private void Start()
     {
-        LoadDateTimeClosed();
-        timeCounter = "00:00";
         timerGoing = false;
+    }
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        EndTimer();
+    }
+
+    private void OnApplicationQuit()
+    {
+        base.OnDestroy();
+        EndTimer();
     }
 
     /// <summary>Starts the timer.</summary>
     public void BeginTimer()
     {
+        if (timerGoing)
+        {
+            return;
+        }
+
+        LoadDateTimeClosed();
         timerGoing = true;
         elapsedTime = (float)((3600 * elapsedHoursIG) + 0f);
 
@@ -77,13 +100,16 @@ public class TimeController : MonoBehaviour
             string dayNightCycleStr = "Time: " + dayNightCycleTime.ToString("hh':'mm");
             timeCounter = dayNightCycleStr;
 
-            if(dayNightCycleStr != prevFrameTime)
+            if (dayNightCycleStr != prevFrameTime)
             {
-                double decimalTime = TimeStringToDouble(dayNightCycleStr, 1, 2);
                 //Debug.Log(timeCounter);
+
+                double decimalTime = TimeStringToDouble(dayNightCycleStr, 1, 2);
+
                 latestDecimalTime = decimalTime;
 
                 string currentDayNightCyclePart;
+
                 if (6 < decimalTime && decimalTime < 22) currentDayNightCyclePart = "d";
                 else currentDayNightCyclePart = "n";
 
@@ -111,27 +137,42 @@ public class TimeController : MonoBehaviour
     /// <summary>Loads the latest datatime from file on previous app close.</summary>
     private void LoadDateTimeClosed()
     {
-        if (GameFileSystem.LoadFromFile(FILE_DateTime, out long outValueDateTime))
+        if (GameFileSystem.LoadFromFile(FILE_InGameTime, out long[] outValue))
         {
-            DateTime lastDateTimeClosed = DateTime.FromFileTime(outValueDateTime);
-            elapsedSecondsRL = (DateTime.Now - lastDateTimeClosed).TotalSeconds;
+            long outValueDateTime = outValue[0];
+            long outValueInGameTime = outValue[1];
+
+            elapsedSecondsRL = (DateTime.Now - DateTime.FromFileTime(outValueDateTime)).TotalSeconds;
+
+            if (!resetActive)
+            {
+                DateTime lastInGameTimeClosed = DateTime.FromFileTime(outValueInGameTime).AddMinutes(elapsedSecondsRL);
+                double decimalIG = TimeStringToDouble(lastInGameTimeClosed.TimeOfDay.ToString(), 0, 1);
+
+                elapsedHoursIG = decimalIG;
+
+            } else
+            {
+                elapsedHoursIG = 7;
+                resetActive = false;
+            }
         }
-
-        if (GameFileSystem.LoadFromFile(FILE_InGameTime, out double outValueInGameTime))
-        {
-            TimeSpan convertedTime = TimeSpan.FromSeconds(elapsedSecondsRL * 60);
-            string convertedTimeStr = convertedTime.ToString("hh':'mm");
-            double decimalTime = TimeStringToDouble(convertedTimeStr, 0, 1);
-
-            elapsedHoursIG = outValueInGameTime + decimalTime;
-        } 
-        else elapsedHoursIG = 7;
     }
 
     /// <summary>Saves the current datatime as file time</summary>
     private void SaveDateTimeClosed()
     {
-        GameFileSystem.SaveToFile(FILE_DateTime, DateTime.Now.ToFileTime());
-        GameFileSystem.SaveToFile(FILE_InGameTime, latestDecimalTime);
+        DateTime inGameTime = new DateTime(1900, 12, 12).AddHours(latestDecimalTime);
+        DateTime latestDateTime = DateTime.Now;
+        long[] timeStamps = new long[] { latestDateTime.ToFileTime(), inGameTime.ToFileTime()};
+
+        GameFileSystem.SaveToFile(FILE_InGameTime, timeStamps);
+    }
+
+    /// <summary>Resets the time.</summary>
+    public void ResetDateTime()
+    {
+        resetActive = true;
+        EndTimer();
     }
 }

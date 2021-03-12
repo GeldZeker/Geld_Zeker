@@ -102,7 +102,7 @@ public class TimeController : SingletonBehaviour<TimeController>
 
             if (dayNightCycleStr != prevFrameTime)
             {
-                Debug.Log(timeCounter);
+                //Debug.Log(timeCounter);
 
                 double decimalTime = TimeStringToDouble(dayNightCycleStr, 1, 2);
 

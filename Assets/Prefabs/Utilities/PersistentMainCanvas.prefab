@@ -4299,7 +4299,7 @@ GameObject:
   - component: {fileID: 4092764755822693372}
   - component: {fileID: 5939048233849293514}
   - component: {fileID: 5092962315495060174}
-  - component: {fileID: 2695036826678436242}
+  - component: {fileID: 5907338652637292807}
   m_Layer: 5
   m_Name: AccountDisplay
   m_TagString: Untagged
@@ -4373,7 +4373,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366004182230146955}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -4391,7 +4391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeOnAwake: 0
   phoneScreen: 2
---- !u!114 &2695036826678436242
+--- !u!114 &5907338652637292807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4400,12 +4400,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1366004182230146955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 342d6182f5bbbd647aab35bcc6e903cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b8d8139157195d49a824a60ad93379e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 0
   moneyText: {fileID: 4351824604689572513}
-  MONEY_PATH: Player/Money
+  playerMoneyProperty: {fileID: 11400000, guid: cb3b179e5a1663d4f8a8f10dcfa95910,
+    type: 2}
 --- !u!1 &1387341616670221167
 GameObject:
   m_ObjectHideFlags: 0
@@ -26199,8 +26199,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2695036826678436242}
-        m_MethodName: addMoney
+      - m_Target: {fileID: 5907338652637292807}
+        m_MethodName: DepositMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27816,8 +27816,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2695036826678436242}
-        m_MethodName: removeMoney
+      - m_Target: {fileID: 5907338652637292807}
+        m_MethodName: WithdrawMoney
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

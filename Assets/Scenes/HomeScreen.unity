@@ -286,6 +286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff780f119d9521f489fd97023257fc78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeCounter: 
+  elapsedTime: 0
+  latestDayNightCyclePart: 
+  timerGoing: 0
 --- !u!4 &197650886
 Transform:
   m_ObjectHideFlags: 0
@@ -1762,6 +1766,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1545057990151925982, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1545057990151925982, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2025015712833018638, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2126,6 +2140,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 3.7900085
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570341721536410921, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4570341721536410921, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4768481293721602939, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
@@ -2782,7 +2806,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.2999878
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8554216107299238435, guid: 47d6496ccd6a8474e8174b1e3c3777ae, type: 3}
+    - {fileID: 708294903337284858, guid: 47d6496ccd6a8474e8174b1e3c3777ae, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 47d6496ccd6a8474e8174b1e3c3777ae, type: 3}
 --- !u!1001 &6314089285781853502
 PrefabInstance:

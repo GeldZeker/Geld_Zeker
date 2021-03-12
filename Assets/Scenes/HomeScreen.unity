@@ -1334,6 +1334,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1958839495 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2658762131008647554, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4768481293783644329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8d8139157195d49a824a60ad93379e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2131378432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,11 +1782,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1958839495}
     - target: {fileID: 1545057990151925982, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: WithdrawMoney
       objectReference: {fileID: 0}
     - target: {fileID: 2025015712833018638, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
@@ -2145,11 +2157,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1958839495}
     - target: {fileID: 4570341721536410921, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: DepositMoney
       objectReference: {fileID: 0}
     - target: {fileID: 4768481293721602939, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}

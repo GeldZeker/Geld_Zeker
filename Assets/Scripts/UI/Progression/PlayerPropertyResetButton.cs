@@ -39,6 +39,7 @@ namespace GameStudio.GeldZeker.UI.Progression
         {
             //reset all player properties
             PlayerPropertyManager.Instance.ResetProgression();
+            TimeController.instance.ResetDateTime();
             NotificationUtility.Instance.Notify(notifyMessage, NotificationStayTime.Short);
 
             if (SceneManager.GetActiveScene().name != NavigationSystem.NameOfHomeScreen)

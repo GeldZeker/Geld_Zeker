@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 375af48da914b2a499faae4d1f38193d, type: 3}
   m_Name: KitchenIntro
   m_EditorClassIdentifier: 
-  finished: 1
+  finished: 0
   introducables:
   - tagName: Breakfast
     fromIndex: 2

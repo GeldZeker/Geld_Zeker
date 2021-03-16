@@ -67,8 +67,6 @@ namespace GameStudio.GeldZeker.UI
         protected override void OnDestroy()
         {
             base.OnDestroy();
-            // Move save functions!
-            PlayerMoney.instance.SaveMoneyOnExit();
             SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 

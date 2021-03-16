@@ -58,6 +58,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         {
             if (!isToggling)
             {
+                OpenScreen(CellPhoneScreen.Home);
                 StartCoroutine(ToggleEnumerator());
             }
         }

@@ -16,7 +16,7 @@ MonoBehaviour:
   type: 1
   minigameMode: 0
   progression:
-    IsCompletedInStoryMode: 1
+    IsCompletedInStoryMode: 0
     DifficultySettings:
     - Type: 0
       Completed: 0

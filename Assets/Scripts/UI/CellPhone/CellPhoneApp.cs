@@ -5,6 +5,7 @@
     {
         Home,
         BankAppointment,
-        BankAccount
+        BankAccount,
+        BankAppointmentSet
     }
 }

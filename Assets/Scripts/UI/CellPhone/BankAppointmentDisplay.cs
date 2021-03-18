@@ -1,5 +1,7 @@
-﻿using BWolf.Utilities.PlayerProgression.Quests;
+﻿using BWolf.Utilities;
+using BWolf.Utilities.PlayerProgression.Quests;
 using GameStudio.GeldZeker.Player.Properties;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +24,13 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         [SerializeField]
         private Quest createbankAccountQuest = null;
 
+        public GameObject magnifierGameObject = null;
+
+        public GameObject magnifierGameObjectZoom = null;
+
+        [SerializeField]
+        private RectTransform documentTransform = null;
+
         protected override void Awake()
         {
             base.Awake();
@@ -42,6 +51,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             {
                 //update player property and task related to action
                 appointmentProperty.UpdateAppointment(BankAppointmentType.CreateAccount);
+                magnifierGameObject.SetActive(true);
 
                 DoOnceTask orderMailTask = createbankAccountQuest.GetTask<DoOnceTask>("BankAfspraak");
                 orderMailTask.SetDoneOnce();
@@ -67,6 +77,50 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             else
             {
                 btnMakeAppointment.interactable = createbankAccountQuest.IsActive && !createbankAccountQuest.GetTask("BankAfspraak").IsDone;
+            }
+
+        }
+
+        public void MagnifyDocument()
+        {
+            magnifierGameObject.SetActive(false);
+            magnifierGameObjectZoom.SetActive(false);
+            StartCoroutine(MagnifyEnumerator());
+        }
+
+        private IEnumerator MagnifyEnumerator()
+        {
+            float offsetStretch;
+            float offsetMoveUp;
+
+            switch (Screen.height)
+            {
+                case 1440:
+                    {
+                        offsetStretch = Screen.height * 0.25f;
+                        offsetMoveUp = Screen.height * 0.01f;
+                    }
+                    break;
+                default:
+                    {
+                        offsetStretch = 450;
+                        offsetMoveUp = 50;
+                    }
+                    break;
+            }
+
+            LerpValue<float> stretch = new LerpValue<float>(0, offsetStretch, 1.1f, LerpSettings.Cosine);
+            LerpValue<float> moveup = new LerpValue<float>(0, offsetMoveUp, 1.1f, LerpSettings.Cosine);
+            while (stretch.Continue() && moveup.Continue())
+            {
+                Vector2 size = new Vector2(Mathf.Lerp(stretch.start, stretch.end, stretch.perc), Mathf.Lerp(stretch.start, stretch.end, stretch.perc));
+                documentTransform.sizeDelta = size;
+
+
+                Vector2 position = new Vector2(documentTransform.anchoredPosition.x, Mathf.Lerp(moveup.start, moveup.end, moveup.perc));
+                documentTransform.anchoredPosition = position;
+
+                yield return null;
             }
         }
 

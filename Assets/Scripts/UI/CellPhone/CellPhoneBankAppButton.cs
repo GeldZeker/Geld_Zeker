@@ -1,4 +1,5 @@
-﻿using GameStudio.GeldZeker.Player.Properties;
+﻿using BWolf.Utilities.PlayerProgression.Quests;
+using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.Utilities;
 using UnityEngine;
 
@@ -9,7 +10,10 @@ namespace GameStudio.GeldZeker.UI.CellPhone
     {
         [Header("References")]
         [SerializeField]
-        private BooleanProperty hasAccountProperty = null;
+        public BooleanProperty hasAccountProperty = null;
+
+        [SerializeField]
+        private BankAppointmentProperty appointmentProperty = null;
 
         protected override void Awake()
         {
@@ -27,7 +31,17 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         private void OnAppClicked()
         {
-            MainCanvasManager.Instance.OpenCellPhoneScreen(hasAccountProperty.Value ? CellPhoneScreen.BankAccount : CellPhoneScreen.BankAppointment);
+            hasAccountProperty = (BooleanProperty)PlayerPropertyManager.Instance.GetProperty("Heeft Bankrekening");
+            appointmentProperty = PlayerPropertyManager.Instance.GetProperty<BankAppointmentProperty>("BankAfspraak");
+
+            if (appointmentProperty.Value.ToString().Equals("CreateAccount"))
+            {
+                MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.BankAppointmentSet);
+            }
+            else
+            {
+                MainCanvasManager.Instance.OpenCellPhoneScreen(hasAccountProperty.Value ? CellPhoneScreen.BankAccount : CellPhoneScreen.BankAppointment);
+            }
         }
     }
 }

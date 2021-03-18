@@ -1,0 +1,4 @@
+var class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_load_mini_game_after_dialogue =
+[
+    [ "OnDialogueFinish", "class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_settings_1_1_load_mini_game_after_dialogue.html#afd8bd3cbd89ebd676d0f2c9d9fb89a13", null ]
+];

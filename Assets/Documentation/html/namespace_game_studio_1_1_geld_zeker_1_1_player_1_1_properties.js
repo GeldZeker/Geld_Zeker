@@ -1,0 +1,12 @@
+var namespace_game_studio_1_1_geld_zeker_1_1_player_1_1_properties =
+[
+    [ "BankAppointmentProperty", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_bank_appointment_property.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_bank_appointment_property" ],
+    [ "BooleanProperty", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_boolean_property.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_boolean_property" ],
+    [ "GroceryProperty", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_grocery_property.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_grocery_property" ],
+    [ "PlayerGenderProperty", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_gender_property.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_gender_property" ],
+    [ "PlayerMailProperty", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_mail_property.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_mail_property" ],
+    [ "PlayerProperties", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_properties.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_properties" ],
+    [ "PlayerProperty", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_property.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_property" ],
+    [ "PlayerPropertyManager", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_property_manager.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_player_property_manager" ],
+    [ "TamagotchiElementProperty", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_tamagotchi_element_property.html", "class_game_studio_1_1_geld_zeker_1_1_player_1_1_properties_1_1_tamagotchi_element_property" ]
+];

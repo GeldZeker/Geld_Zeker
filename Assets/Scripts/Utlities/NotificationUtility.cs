@@ -156,7 +156,7 @@ namespace GameStudio.GeldZeker.Utilities
                 yield return null;
             }
 
-            yield return new WaitForSeconds(stayTime);
+            yield return new WaitForSeconds(stayTime + 4f);
 
             LerpValue<float> moveup = new LerpValue<float>(-notificationTopSpacing, offset, notifySpeed, LerpSettings.Cosine);
             while (moveup.Continue())

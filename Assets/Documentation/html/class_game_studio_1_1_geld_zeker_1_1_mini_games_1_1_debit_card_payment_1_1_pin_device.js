@@ -1,0 +1,4 @@
+var class_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_debit_card_payment_1_1_pin_device =
+[
+    [ "PayProcessScreen", "struct_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_debit_card_payment_1_1_pin_device_1_1_pay_process_screen.html", "struct_game_studio_1_1_geld_zeker_1_1_mini_games_1_1_debit_card_payment_1_1_pin_device_1_1_pay_process_screen" ]
+];

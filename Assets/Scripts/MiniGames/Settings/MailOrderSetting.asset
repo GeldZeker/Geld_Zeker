@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfScene: MailOrderingGame
   type: 1
-  minigameMode: 1
+  minigameMode: 0
   progression:
     IsCompletedInStoryMode: 0
     DifficultySettings:
@@ -24,8 +24,8 @@ MonoBehaviour:
       Completed: 0
     - Type: 2
       Completed: 0
-  difficulty: 1
-  easyStartDelay: 1.25
+  difficulty: 0
+  easyStartDelay: 10
   easyReverseDelay: 0.5
   easyTurnTime: 0.75
   mediumStartDelay: 1

@@ -22,6 +22,8 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         [SerializeField]
         private Quest createbankAccountQuest = null;
 
+        public GameObject magnifierGameObject = null;
+
         protected override void Awake()
         {
             base.Awake();
@@ -42,6 +44,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             {
                 //update player property and task related to action
                 appointmentProperty.UpdateAppointment(BankAppointmentType.CreateAccount);
+                magnifierGameObject.SetActive(true);
 
                 DoOnceTask orderMailTask = createbankAccountQuest.GetTask<DoOnceTask>("BankAfspraak");
                 orderMailTask.SetDoneOnce();
@@ -68,6 +71,12 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             {
                 btnMakeAppointment.interactable = createbankAccountQuest.IsActive && !createbankAccountQuest.GetTask("BankAfspraak").IsDone;
             }
+
+        }
+
+        public void MagnifyDocument()
+        {
+            Debug.Log("Magnifier clicked!");
         }
 
         /// <summary>Tries going back to the start screen. Returns if it did succesfully</summary>

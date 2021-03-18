@@ -28,6 +28,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
             foreach (CellPhoneDisplay display in displays)
             {
+                Debug.Log(display.name);
                 displaypairs.Add(display.PhoneScreen, display);
             }
 

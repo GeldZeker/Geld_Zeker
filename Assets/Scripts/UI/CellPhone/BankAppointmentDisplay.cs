@@ -76,6 +76,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         public void MagnifyDocument()
         {
+            // Magnify Event
             Debug.Log("Magnifier clicked!");
         }
 

@@ -785,6 +785,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dde3bf0e04c62c42ae3904258b3aa5d, type: 3}
+--- !u!114 &841514939 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7416151604710812727, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4768481293783644329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80c89abd26d6415498a9f65f7eb0f0cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &931490647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,6 +2805,16 @@ PrefabInstance:
       propertyPath: magnifierGameObject
       value: 
       objectReference: {fileID: 1159595719}
+    - target: {fileID: 7417205472694706616, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: displays.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7417205472694706616, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: displays.Array.data[3]
+      value: 
+      objectReference: {fileID: 841514939}
     - target: {fileID: 7463946599622610515, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_AnchorMin.y

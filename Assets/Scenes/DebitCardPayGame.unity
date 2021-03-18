@@ -557,7 +557,7 @@ GameObject:
   - component: {fileID: 1061886225}
   - component: {fileID: 1061886224}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonReplayDialogue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

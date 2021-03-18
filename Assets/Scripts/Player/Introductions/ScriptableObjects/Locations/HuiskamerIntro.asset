@@ -29,5 +29,8 @@ MonoBehaviour:
   - tagName: ChildScenes
     fromIndex: 6
     ToIndex: 7
+  - tagName: Dialogue
+    fromIndex: 6
+    ToIndex: 7
   monologue: {fileID: 11400000, guid: 3834e427be7e8274cbf5f96572062f19, type: 2}
   nameOfScene: Living Room

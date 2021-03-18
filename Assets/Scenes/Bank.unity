@@ -169,9 +169,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 130872486}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c8071a491e3a24e935eb83c7e222c7, type: 3}
+  m_Script: {fileID: 11500000, guid: ad34a600cd706e7488031899ed8c7add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appointmentProperty: {fileID: 11400000, guid: 93163bcc4ca599043847e53ebf80f0b6,
+    type: 2}
+  mailProperty: {fileID: 11400000, guid: 9b83b8991d1a57c46b246c99e977ee9b, type: 2}
+  createbankAccountQuest: {fileID: 11400000, guid: b95ea90a5007e6d47bf027f66c8b6edd,
+    type: 2}
+  appointments:
+  - AppointmentType: 1
+    AppointmentDialogue: {fileID: 11400000, guid: eaa0d78632eb2c84b975f480922cd5ee,
+      type: 2}
 --- !u!114 &130872489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,9 +317,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 196728595}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77c8071a491e3a24e935eb83c7e222c7, type: 3}
+  m_Script: {fileID: 11500000, guid: ad34a600cd706e7488031899ed8c7add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  appointmentProperty: {fileID: 11400000, guid: 93163bcc4ca599043847e53ebf80f0b6,
+    type: 2}
+  mailProperty: {fileID: 11400000, guid: 9b83b8991d1a57c46b246c99e977ee9b, type: 2}
+  createbankAccountQuest: {fileID: 11400000, guid: b95ea90a5007e6d47bf027f66c8b6edd,
+    type: 2}
+  appointments:
+  - AppointmentType: 1
+    AppointmentDialogue: {fileID: 11400000, guid: eaa0d78632eb2c84b975f480922cd5ee,
+      type: 2}
 --- !u!114 &196728600
 MonoBehaviour:
   m_ObjectHideFlags: 0

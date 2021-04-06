@@ -8,7 +8,7 @@ namespace GameStudio.GeldZeker.MiniGames.Settings
     {
         public const int PINCODE_LENGTH = 4;
         private string[] pincode = new string[] { "0", "0", "0", "0" };
-
+        
         public string[] GenerateRandomPincode()
         {
             for (int i = 0; i < PINCODE_LENGTH; i++)

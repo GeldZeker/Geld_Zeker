@@ -1,4 +1,5 @@
 ﻿using BWolf.Utilities;
+using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.Utilities;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +22,12 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         private RectTransform rectTransform;
         private bool isToggling;
         private bool hasFocus;
+
+        [SerializeField]
+        private DigiDProperty hasDigiDAccountProperty = null;
+        [SerializeField]
+        private GameObject digidAppObject = null;
+
 
         private void Awake()
         {
@@ -45,6 +52,8 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         /// <summary>Toggles the display state of the cellphone if only one touch is recorded</summary>
         public void OnCellPhoneButtonClick()
         {
+            hasDigiDAccountProperty = PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD");
+
             if (Application.platform == RuntimePlatform.Android && Input.touchCount != 1)
             {
                 return;
@@ -56,8 +65,14 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         /// <summary>Toggles the display state of the cellphone</summary>
         public void ToggleCellPhone()
         {
+            hasDigiDAccountProperty = PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD");
+
             if (!isToggling)
             {
+                // Set App Icons active to false if not available yet.
+                //if (!hasDigiDAccountProperty) digidAppObject.SetActive(false);
+
+
                 OpenScreen(CellPhoneScreen.Home);
                 StartCoroutine(ToggleEnumerator());
             }

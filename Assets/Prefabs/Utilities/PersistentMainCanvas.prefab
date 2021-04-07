@@ -16684,7 +16684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: '*'
+  m_Text: 
 --- !u!1 &4563443183000952677
 GameObject:
   m_ObjectHideFlags: 0
@@ -20882,7 +20882,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: '*'
+  m_Text: 
 --- !u!1 &5643612546053986931
 GameObject:
   m_ObjectHideFlags: 0
@@ -23490,10 +23490,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   setting: {fileID: 11400000, guid: 5adee940bcc0a554091ec381fa92b716, type: 2}
-  Input1: {fileID: 5641375082467796526}
-  Input2: {fileID: 7435099827490133200}
-  Input3: {fileID: 7146753082245132735}
-  Input4: {fileID: 4557225295440570740}
   keyboard: {fileID: 2258850481564156284}
   pinHelper: {fileID: 3683113351316174022}
 --- !u!1 &6380144477489783680
@@ -24339,6 +24335,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6506316df20a53a469e9d470b5cd2e4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Input1: {fileID: 5641375082467796526}
+  Input2: {fileID: 7435099827490133200}
+  Input3: {fileID: 7146753082245132735}
+  Input4: {fileID: 4557225295440570740}
 --- !u!1 &6599592311039989397
 GameObject:
   m_ObjectHideFlags: 0
@@ -25657,7 +25657,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: '*'
+  m_Text: 
 --- !u!1 &7169564143077033506
 GameObject:
   m_ObjectHideFlags: 0
@@ -26411,7 +26411,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: '*'
+  m_Text: 
 --- !u!1 &7440240827134545606
 GameObject:
   m_ObjectHideFlags: 0

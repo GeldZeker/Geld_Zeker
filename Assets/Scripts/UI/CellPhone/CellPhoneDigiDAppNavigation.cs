@@ -38,8 +38,11 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         public void PinLoginCorrect()
         {
+            hasDigiDAccountProperty = PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD");
+
             pinHelper.SetActive(false);
-            MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneral);
+            if (hasDigiDAccountProperty) { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneral); }
+            else { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneralEmpty); }
         }
 
         public void AllowancesButtonClicked()

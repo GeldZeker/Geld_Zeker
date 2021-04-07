@@ -18,6 +18,19 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
         public bool IsActive { get; private set; }
         private WaitForFixedUpdate waitFixed = new WaitForFixedUpdate();
 
+        [Header("References")]
+        [SerializeField]
+        private GameObject Input1 = null;
+
+        [SerializeField]
+        private GameObject Input2 = null;
+
+        [SerializeField]
+        private GameObject Input3 = null;
+
+        [SerializeField]
+        private GameObject Input4 = null;
+
         private void Awake()
         {
             keys = GetComponentsInChildren<PinKeyboardKey>();
@@ -44,7 +57,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             {
                 foreach (string pin in input)
                 {
-                    Debug.Log(String.Join(", ", input.ToArray()));
+                    AddStarInInput();
                 }
                 
                 yield return waitFixed;
@@ -75,6 +88,29 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             }
         }
 
+        private void AddStarInInput()
+        {
+            switch (input.Count)
+            {
+                case 1: Input1.GetComponent<UnityEngine.UI.Text>().text = "*";
+                    break;
+                case 2: Input2.GetComponent<UnityEngine.UI.Text>().text = "*";
+                    break;
+                case 3: Input3.GetComponent<UnityEngine.UI.Text>().text = "*";
+                    break;
+                case 4: Input4.GetComponent<UnityEngine.UI.Text>().text = "*";
+                    break;
+                default:
+                    {
+                        Input1.GetComponent<UnityEngine.UI.Text>().text = "";
+                        Input2.GetComponent<UnityEngine.UI.Text>().text = "";
+                        Input3.GetComponent<UnityEngine.UI.Text>().text = "";
+                        Input4.GetComponent<UnityEngine.UI.Text>().text = "";
+                    }
+                    break;
+            }
+        }
+
         /// <summary>checks the current pincode input with helper pincode and returns whether it is equal</summary>
         private bool CheckForContinue()
         {
@@ -100,10 +136,25 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
         /// <summary>Trims the last input from the current input pincode if possible</summary>
         private void Trim()
         {
+            GameObject element = null;
             if (input.Count != 0)
             {
                 input.RemoveAt(input.Count - 1);
             }
+
+            switch (input.Count + 1)
+            {
+                case 1: element = Input1;
+                    break;
+                case 2: element = Input2;
+                    break;
+                case 3: element = Input3;
+                    break;
+                case 4: element = Input4;
+                    break;
+                default: break;
+            }
+            if (element) element.GetComponent<UnityEngine.UI.Text>().text = "";
         }
 
         /// <summary>Tries adding a key to the pincode input</summary>
@@ -118,6 +169,10 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
         public void ResetInput()
         {
             input.Clear();
+            Input1.GetComponent<UnityEngine.UI.Text>().text = "";
+            Input2.GetComponent<UnityEngine.UI.Text>().text = "";
+            Input3.GetComponent<UnityEngine.UI.Text>().text = "";
+            Input4.GetComponent<UnityEngine.UI.Text>().text = "";
         }
     }
 }

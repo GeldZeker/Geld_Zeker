@@ -17,36 +17,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
     /// <summary>A behaviour for simulating a contactless payment process using a Debit Card</summary>
     public class Pin : MonoBehaviour
     {
-        [Header("Settings")]
-        [SerializeField]
-        private LoginCodeSetting setting = null;
-
         [Header("References")]
         [SerializeField]
-        private GameObject Input1 = null;
-
-        [SerializeField]
-        private GameObject Input2 = null;
-
-        [SerializeField]
-        private GameObject Input3 = null;
-
-        [SerializeField]
-        private GameObject Input4 = null;
-
-        [SerializeField]
         private PinKeyboard keyboard = null;
-
-        [SerializeField]
-        private GameObject pinHelper = null;
-
-        [SerializeField]
-        //private PayProcessScreen screen;
-
-        private void Awake()
-        {
-
-        }
 
         private void Update()
         {
@@ -54,17 +27,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             CheckPin();
         }
 
-        private void OnDestroy()
-        {
-            
-        }
-
         private IEnumerator PinRoutine()
         {
-
             yield return keyboard.WaitForPinRoutine();
-
-            //StartCoroutine(ProcessRoutine());
         }
 
         private void CheckPin()

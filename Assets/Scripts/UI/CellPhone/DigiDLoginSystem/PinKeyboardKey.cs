@@ -31,7 +31,6 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
         {
             MusicPlayer.Instance.PlaySFXSound(SFXSound.DefaultButtonClick);
             OnClick(key);
-            Debug.Log(key);
         }
     }
 }

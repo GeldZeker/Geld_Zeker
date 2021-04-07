@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using System.Text;
+using System;
 
 namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
 {
@@ -13,7 +14,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
 
         private List<string> input = new List<string>(LoginCodeSetting.PIN_LENGTH);
 
-        private bool canContinue;
+        private bool canContinue = false;
         public bool IsActive { get; private set; }
         private WaitForFixedUpdate waitFixed = new WaitForFixedUpdate();
 
@@ -35,29 +36,24 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             }
         }
 
-        /// <summary>Returns a routine that waits for pincode input and updates given screen with key board input</summary>
         public IEnumerator WaitForPinRoutine()
         {
-            /*IsActive = true;
+            IsActive = true;
 
-            StringBuilder builder = new StringBuilder("Pin ");
-            int startLength = builder.Length;
             while (!canContinue)
             {
                 foreach (string pin in input)
                 {
-                    builder.Append('*');
+                    Debug.Log(String.Join(", ", input.ToArray()));
                 }
-                screen.SetText(builder.ToString());
-                builder.Remove(startLength, builder.Length - startLength);
+                
                 yield return waitFixed;
             }
 
             IsActive = false;
             canContinue = false;
-            screen.SetText(string.Empty);*/
-            yield return waitFixed;
         }
+
 
         private void OnKeyClicked(string key)
         {
@@ -72,15 +68,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
                     Trim();
                     break;
 
-                case "stop":
-                    break;
-
-                case "continue":
-                    canContinue = CheckForContinue();
-                    break;
-
                 default:
                     AddKey(key);
+                    canContinue = CheckForContinue();
                     break;
             }
         }
@@ -102,7 +92,8 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
                     return false;
                 }
             }
-
+            CellPhoneDigiDAppNavigation.instance.PinLoginCorrect();
+            ResetInput();
             return true;
         }
 
@@ -122,6 +113,11 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             {
                 input.Add(key);
             }
+        }
+
+        public void ResetInput()
+        {
+            input.Clear();
         }
     }
 }

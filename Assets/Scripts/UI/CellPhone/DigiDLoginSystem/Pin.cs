@@ -19,20 +19,26 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
     {
         [Header("Settings")]
         [SerializeField]
-        private float confirmationTime = 0.75f;
-
-        [SerializeField]
-        private float processTime = 1.0f;
-
-        [SerializeField]
         private LoginCodeSetting setting = null;
 
         [Header("References")]
         [SerializeField]
-        private RectTransform screenTransform = null;
+        private GameObject Input1 = null;
+
+        [SerializeField]
+        private GameObject Input2 = null;
+
+        [SerializeField]
+        private GameObject Input3 = null;
+
+        [SerializeField]
+        private GameObject Input4 = null;
 
         [SerializeField]
         private PinKeyboard keyboard = null;
+
+        [SerializeField]
+        private GameObject pinHelper = null;
 
         [SerializeField]
         //private PayProcessScreen screen;
@@ -53,13 +59,21 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             
         }
 
+        private IEnumerator PinRoutine()
+        {
+
+            yield return keyboard.WaitForPinRoutine();
+
+            //StartCoroutine(ProcessRoutine());
+        }
+
         private void CheckPin()
         {
             if (keyboard.IsActive)
             {
                 return;
             }
-
+            StartCoroutine(PinRoutine());
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BWolf.Utilities;
 using GameStudio.GeldZeker.Player.Properties;
+using GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem;
 using GameStudio.GeldZeker.Utilities;
 using System.Collections;
 using System.Collections.Generic;
@@ -25,8 +26,16 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         [SerializeField]
         private DigiDProperty hasDigiDAccountProperty = null;
+
         [SerializeField]
-        private GameObject digidAppObject = null;
+        private GameObject pinHelper = null;
+
+        [SerializeField]
+        private PinKeyboard keyboard = null;
+
+
+        //[SerializeField]
+        //private GameObject digidAppObject = null;
 
 
         private void Awake()
@@ -84,6 +93,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             {
                 OpenScreen(CellPhoneScreen.Home);
             }
+            ResetPinLoginPin();
         }
 
         public void GoBack()
@@ -92,6 +102,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             {
                 OpenScreen(CellPhoneScreen.Home);
             }
+            ResetPinLoginPin();
         }
 
         /// <summary>Returns an enumerator that either shows or hides the cellphone based on its current state</summary>
@@ -104,6 +115,8 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             LerpValue<float> moveYAxis = new LerpValue<float>(position.y, newYPosition, toggleTime);
 
             hasFocus = !hasFocus;
+
+            if (!hasFocus) ResetPinLoginPin();
 
             while (moveYAxis.Continue())
             {
@@ -126,6 +139,12 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
                 phoneScreenOpen = phoneScreen;
             }
+        }
+
+        public void ResetPinLoginPin()
+        {
+            if (pinHelper.activeSelf) pinHelper.SetActive(false);
+            keyboard.ResetInput();
         }
     }
 }

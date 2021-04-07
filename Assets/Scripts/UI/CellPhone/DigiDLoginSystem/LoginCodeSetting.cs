@@ -3,7 +3,8 @@
 namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
 {
     /// <summary>Setting representing pin login settings</summary>
-    public class LoginCodeSetting : MonoBehaviour
+    [CreateAssetMenu(menuName = "UI/CellPhone/DigiDLoginSystem/LoginCode")]
+    public class LoginCodeSetting : ScriptableObject
     {
         public const int PIN_LENGTH = 4;
         private string[] pin = new string[] { "0", "0", "0", "0" };

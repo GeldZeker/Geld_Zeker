@@ -3,7 +3,9 @@ guid: 789859e57130eb442ba3969811b674f9
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hasDigiDAccountProperty: {instanceID: 0}
+  - pinHelper: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

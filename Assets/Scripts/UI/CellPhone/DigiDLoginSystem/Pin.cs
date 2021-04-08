@@ -14,7 +14,7 @@ using UnityEngine.UI;
 
 namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
 {
-    /// <summary>A behaviour for simulating a contactless payment process using a Debit Card</summary>
+    /// <summary>A behaviour for simulating a Pin Login process using a Pin Code.</summary>
     public class Pin : MonoBehaviour
     {
         [Header("References")]
@@ -27,17 +27,16 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             CheckPin();
         }
 
+        /// <summary>A routine that starts when a Pin key is pressed.</summary>
         private IEnumerator PinRoutine()
         {
             yield return keyboard.WaitForPinRoutine();
         }
 
+        /// <summary>Function that calls a routine when checking the input on a keypress.</summary>
         private void CheckPin()
         {
-            if (keyboard.IsActive)
-            {
-                return;
-            }
+            if (keyboard.IsActive) { return; }
             StartCoroutine(PinRoutine());
         }
     }

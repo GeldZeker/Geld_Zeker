@@ -16,17 +16,20 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
 
         private Button button;
 
+        /// <summary>Adds the event listener to the Key when the objects are initialized.</summary>
         private void Awake()
         {
             button = GetComponent<Button>();
             button.onClick.AddListener(OnClicked);
         }
 
+        /// <summary>Removes the OnClick Listener when the Keys are destroyed.</summary>
         private void OnDestroy()
         {
             button.onClick.RemoveListener(OnClicked);
         }
 
+        /// <summary>OnClick event for the input key on the Pin keypad.</summary>
         public void OnClicked()
         {
             MusicPlayer.Instance.PlaySFXSound(SFXSound.DefaultButtonClick);

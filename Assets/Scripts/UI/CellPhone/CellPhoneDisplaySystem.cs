@@ -140,7 +140,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
                 phoneScreenOpen = phoneScreen;
             }
         }
-
+        /// <summary>Function to reset the Pin Login saved data when closing. Causes to fill the Pin again on reopening the DigiD App.</summary>
         public void ResetPinLoginPin()
         {
             if (pinHelper.activeSelf) pinHelper.SetActive(false);

@@ -3500,6 +3500,11 @@ PrefabInstance:
       propertyPath: displays.Array.data[8]
       value: 
       objectReference: {fileID: 4768481293783644330}
+    - target: {fileID: 7417205472694706616, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: pinHelper
+      value: 
+      objectReference: {fileID: 988836527}
     - target: {fileID: 7463946599622610515, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_AnchorMin.y

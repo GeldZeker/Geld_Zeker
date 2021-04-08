@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
 {
-    /// <summary>A behaviour showing pin text to players at the DigiD pin Login</summary>
+    /// <summary>A behaviour showing pin text to players at the DigiD Pin Login screen.</summary>
     public class PinHelper : MonoBehaviour
     {
         [SerializeField]
@@ -16,6 +16,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
         /// <summary>The static pin available in DigiD</summary>
         public static string[] Pin { get; private set; }
 
+        /// <summary>Random Pin gets generated and added to the object on initialization.</summary>
         private void Awake()
         {
             Pin = setting.GenerateRandomPin();

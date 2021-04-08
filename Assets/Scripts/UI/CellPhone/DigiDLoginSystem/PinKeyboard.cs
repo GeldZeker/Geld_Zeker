@@ -7,7 +7,7 @@ using System;
 
 namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
 {
-    /// <summary>A behaviour representing a keyboard on a Pin Device</summary>
+    /// <summary>A behaviour representing the keypad of the Pin Login.</summary>
     public class PinKeyboard : MonoBehaviour
     {
         private PinKeyboardKey[] keys;
@@ -35,18 +35,12 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
         {
             keys = GetComponentsInChildren<PinKeyboardKey>();
 
-            foreach (PinKeyboardKey key in keys)
-            {
-                key.OnClick += OnKeyClicked;
-            }
+            foreach (PinKeyboardKey key in keys) { key.OnClick += OnKeyClicked; }
         }
 
         private void OnDestroy()
         {
-            foreach (PinKeyboardKey key in keys)
-            {
-                key.OnClick -= OnKeyClicked;
-            }
+            foreach (PinKeyboardKey key in keys) { key.OnClick -= OnKeyClicked; }
         }
 
         public IEnumerator WaitForPinRoutine()
@@ -55,11 +49,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
 
             while (!canContinue)
             {
-                foreach (string pin in input)
-                {
-                    AddStarInInput();
-                }
-                
+                foreach (string pin in input) { AddStarInInput(); }
                 yield return waitFixed;
             }
 
@@ -67,18 +57,14 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             canContinue = false;
         }
 
-
+        /// <summary>Declares functions to type of keys.</summary>
         private void OnKeyClicked(string key)
         {
-            if (!IsActive)
-            {
-                return;
-            }
+            if (!IsActive) { return; }
 
             switch (key)
             {
-                case "back":
-                    Trim();
+                case "back": Trim();
                     break;
 
                 default:
@@ -88,6 +74,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             }
         }
 
+        /// <summary>Adds a star to the input UI-boxes based on the length of the Pin.</summary>
         private void AddStarInInput()
         {
             switch (input.Count)
@@ -111,36 +98,27 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             }
         }
 
-        /// <summary>checks the current pincode input with helper pincode and returns whether it is equal</summary>
+        /// <summary>Checks the current Pin input with PinHelper and returns whether it is equal.</summary>
         private bool CheckForContinue()
         {
             string[] pincode = PinHelper.Pin;
 
-            if (pincode.Length != input.Count)
-            {
-                return false;
-            }
+            if (pincode.Length != input.Count) { return false; }
 
             for (int i = 0; i < input.Count; i++)
             {
-                if (pincode[i] != input[i])
-                {
-                    return false;
-                }
+                if (pincode[i] != input[i]) { return false; }
             }
             CellPhoneDigiDAppNavigation.instance.PinLoginCorrect();
             ResetInput();
             return true;
         }
 
-        /// <summary>Trims the last input from the current input pincode if possible</summary>
+        /// <summary>Trims the last input from the current input Pin if possible.</summary>
         private void Trim()
         {
             GameObject element = null;
-            if (input.Count != 0)
-            {
-                input.RemoveAt(input.Count - 1);
-            }
+            if (input.Count != 0) { input.RemoveAt(input.Count - 1); }
 
             switch (input.Count + 1)
             {
@@ -157,15 +135,13 @@ namespace GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem
             if (element) element.GetComponent<UnityEngine.UI.Text>().text = "";
         }
 
-        /// <summary>Tries adding a key to the pincode input</summary>
+        /// <summary>Tries adding a key to the Pin input.</summary>
         private void AddKey(string key)
         {
-            if (input.Count != LoginCodeSetting.PIN_LENGTH)
-            {
-                input.Add(key);
-            }
+            if (input.Count != LoginCodeSetting.PIN_LENGTH) { input.Add(key); }
         }
 
+        /// <summary>Clears the input and the UI aspect of the Pin Login screen.</summary>
         public void ResetInput()
         {
             input.Clear();

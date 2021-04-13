@@ -208,6 +208,7 @@ namespace GameStudio.GeldZeker.MiniGames.MailOrdering
                 {
                     DoOnceTask orderMailTask = createbankAccountQuest.GetTask<DoOnceTask>("BankPostOrdering");
                     orderMailTask.SetDoneOnce();
+                    PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD").UpdateAccountValue(true, false);
                 }
             }
         }

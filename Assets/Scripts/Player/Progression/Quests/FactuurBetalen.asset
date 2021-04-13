@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 195678ec26eb04e489a5584e97e9770a, type: 3}
-  m_Name: BoodschappenDoen
+  m_Name: FactuurBetalen
   m_EditorClassIdentifier: 
-  description: Doe een keer boodschappen
-  isCompleted: 1
-  isActive: 0
+  description: Betaal een factuur
+  isCompleted: 0
+  isActive: 1
   level: 0
   tasks:
-  - {fileID: 11400000, guid: f01ba643b466d784f97765af824b9337, type: 2}
-  requiredQuest: {fileID: 0}
+  - {fileID: 11400000, guid: 91c594e2d84e9b342a86ba8023174466, type: 2}
+  requiredQuest: {fileID: 11400000, guid: b95ea90a5007e6d47bf027f66c8b6edd, type: 2}

@@ -17,7 +17,13 @@ MonoBehaviour:
   minigameMode: 0
   progression:
     IsCompletedInStoryMode: 0
-    DifficultySettings: []
+    DifficultySettings:
+    - Type: 0
+      Completed: 0
+    - Type: 1
+      Completed: 0
+    - Type: 2
+      Completed: 0
   difficulty: 0
   easyTimerSeconds: 30
   mediumTimerSeconds: 20

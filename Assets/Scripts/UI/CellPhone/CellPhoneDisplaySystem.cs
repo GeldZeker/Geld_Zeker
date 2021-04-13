@@ -1,4 +1,6 @@
 ﻿using BWolf.Utilities;
+using BWolf.Utilities.PlayerProgression.Quests;
+using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.UI.CellPhone.DigiDLoginSystem;
 using GameStudio.GeldZeker.Utilities;
@@ -10,6 +12,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 {
     public class CellPhoneDisplaySystem : MonoBehaviour
     {
+        [Header("Settings")]
         [SerializeField]
         private float toggleTime = 0.125f;
 
@@ -23,7 +26,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         private RectTransform rectTransform;
         private bool isToggling;
         private bool hasFocus;
+        private bool digidIntroActive = false;
 
+        [Header("DigiD App")]
         [SerializeField]
         private DigiDProperty hasDigiDAccountProperty = null;
 
@@ -33,10 +38,14 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         [SerializeField]
         private PinKeyboard keyboard = null;
 
+        [SerializeField]
+        private GameObject digidAppObject = null;
 
-        //[SerializeField]
-        //private GameObject digidAppObject = null;
+        [SerializeField]
+        private Introduction DigiDIntro = null;
 
+        [SerializeField]
+        private Quest digidBekijkenQuest = null;
 
         private void Awake()
         {
@@ -52,7 +61,8 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         private void Update()
         {
-            if (hasFocus && (RectTransformExtensions.PressOutsideTransform(rectTransform) || RectTransformExtensions.PressOutsideTransform(rectTransform)))
+            if (DigiDIntro.Finished) digidIntroActive = false;
+            if (hasFocus && (RectTransformExtensions.PressOutsideTransform(rectTransform) || RectTransformExtensions.PressOutsideTransform(rectTransform)) && !digidIntroActive)
             {
                 ToggleCellPhone();
             }
@@ -79,8 +89,17 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             if (!isToggling)
             {
                 // Set App Icons active to false if not available yet.
-                //if (!hasDigiDAccountProperty) digidAppObject.SetActive(false);
-
+                if (!hasDigiDAccountProperty.Value) digidAppObject.SetActive(false);
+                else
+                {
+                    digidAppObject.SetActive(true);
+                    if (!digidBekijkenQuest.IsCompleted)
+                    {
+                        digidIntroActive = true;
+                        DigiDIntro.Restore();
+                        DigiDIntro.Start();
+                    }
+                }
 
                 OpenScreen(CellPhoneScreen.Home);
                 StartCoroutine(ToggleEnumerator());
@@ -130,7 +149,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         public void OpenScreen(CellPhoneScreen phoneScreen)
         {
-            if (hasFocus && !isToggling)
+            if (hasFocus && !isToggling && !digidIntroActive)
             {
                 displaypairs[phoneScreenOpen].SetActive(false);
 

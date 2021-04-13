@@ -207,9 +207,10 @@ GameObject:
   - component: {fileID: 75808522}
   - component: {fileID: 75808521}
   - component: {fileID: 75808524}
+  - component: {fileID: 75808525}
   m_Layer: 5
   m_Name: ButtonReplayDialogue
-  m_TagString: Untagged
+  m_TagString: Introducable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -339,6 +340,24 @@ MonoBehaviour:
   sound: 0
   introToStart: {fileID: 11400000, guid: b9b1f3ab7d0ce8d4ab97ef6f0e63653a, type: 2}
   forceStart: 1
+--- !u!114 &75808525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75808519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f854b73bd02ad8144b3068c6a8a0b681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intoTagName: ReplayButton
+  type: 0
+  relativeArrowPosition: 0
+  introArrowSpacing: 0
+  prefabIntroArrow: {fileID: 3250980964189753913, guid: b9880f2a1b3e9684986e6e5b4cf9bcc3,
+    type: 3}
 --- !u!1001 &106768409
 PrefabInstance:
   m_ObjectHideFlags: 0

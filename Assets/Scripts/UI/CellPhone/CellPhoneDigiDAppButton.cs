@@ -1,4 +1,5 @@
 ﻿using BWolf.Utilities.PlayerProgression.Quests;
+using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.Utilities;
 using System.Collections;
@@ -15,6 +16,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         [SerializeField]
         private GameObject LoginUnPwAnimationObject = null;
+        
         [SerializeField]
         private GameObject LoginUnPwButtonObject = null;
 
@@ -34,7 +36,6 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         private void OnAppClicked()
         {
-            // Develop Phase
             LoginUnPwAnimationObject.SetActive(false);
             hasDigiDAccountProperty = PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD");
 

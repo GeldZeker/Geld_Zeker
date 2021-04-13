@@ -1,4 +1,5 @@
-﻿using GameStudio.GeldZeker.Player.Properties;
+﻿using BWolf.Utilities.PlayerProgression.Quests;
+using GameStudio.GeldZeker.Player.Properties;
 using UnityEngine;
 
 namespace GameStudio.GeldZeker.UI.CellPhone
@@ -15,6 +16,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         [SerializeField]
         private GameObject pinHelper = null;
+
+        [SerializeField]
+        private Quest digidBekijkenQuest = null;
 
         private void Awake()
         {
@@ -34,7 +38,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             hasDigiDAccountProperty = PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD");
 
             pinHelper.SetActive(false);
-            if (!hasDigiDAccountProperty) { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneral); }
+            if (hasDigiDAccountProperty.Value) { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneral); }
             else { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneralEmpty); }
         }
 
@@ -42,6 +46,11 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         public void AllowancesButtonClicked()
         {
             MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDAllowances);
+            if (digidBekijkenQuest.IsUpdatable)
+            {
+                DoOnceTask watchAllowancesTask = digidBekijkenQuest.GetTask<DoOnceTask>("1KeerToeslagenBekijken");
+                watchAllowancesTask.SetDoneOnce();
+            }
         }
     }
 }

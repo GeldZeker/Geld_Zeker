@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BankrekeningAanvraag
   m_EditorClassIdentifier: 
   description: Vraag een bankrekening aan
-  isCompleted: 1
+  isCompleted: 0
   isActive: 0
   level: 0
   tasks:

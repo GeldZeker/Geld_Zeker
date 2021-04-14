@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 375af48da914b2a499faae4d1f38193d, type: 3}
-  m_Name: BankIntro
+  m_Script: {fileID: 11500000, guid: cd690dae349f43549aec84a1472b01de, type: 3}
+  m_Name: GameHallInvoiceDraggingIntro
   m_EditorClassIdentifier: 
   finished: 0
   introducables: []
-  monologue: {fileID: 11400000, guid: ed6fc3d2c9f86ed4a8cb7d45c89444c5, type: 2}
-  nameOfScene: Bank
+  monologue: {fileID: 11400000, guid: 28253e8e21c6d0d49b45ac1d2b1222ed, type: 2}

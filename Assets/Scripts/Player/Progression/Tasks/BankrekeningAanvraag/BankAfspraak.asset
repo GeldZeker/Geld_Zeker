@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: BankAfspraak
   m_EditorClassIdentifier: 
   description: Maak de afspraak via de telefoon
-  isDoneOnce: 1
+  isDoneOnce: 0

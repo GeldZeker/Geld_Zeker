@@ -20,12 +20,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
 
     public bool IsDraggable { get; private set; } = true;
 
-    private Vector3 startPos;
-    private void Awake()
-    {
-        startPos = transform.localPosition;
-    }
-
     /// <summary> Method is called when the object begins beging dragged. </summary>
     public void OnBeginDrag (PointerEventData eventData)
      {
@@ -35,7 +29,6 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
             transform.SetParent(transform.parent);
             GetComponent<CanvasGroup>().alpha = .6f;
             GetComponent<CanvasGroup>().blocksRaycasts = false;
-            Debug.Log("Position: " + transform.position + ", Local: " + transform.localPosition);
         }
      }
 
@@ -48,22 +41,12 @@ public class DragDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDrag
     /// <summary> Method is called when the object stops being dragged. </summary>
     public void OnEndDrag (PointerEventData eventData)
      {
-        if (!itemSlot.isCorrect)
-        {
-            transform.localPosition = startPos;
-            transform.SetParent(parentToReturnTo);
-            GetComponent<CanvasGroup>().alpha = 1f;
-            GetComponent<CanvasGroup>().blocksRaycasts = true;
-        } 
-        if (itemSlot.isCorrect)
-        {
-            transform.SetParent(parentToReturnTo);
-            GetComponent<CanvasGroup>().alpha = 1f;
-            GetComponent<CanvasGroup>().blocksRaycasts = true;
-            transform.localPosition = Vector3.zero;
-            behaviour.itemsCorrectPlace();
-        }
-     }
+        transform.SetParent(parentToReturnTo);
+        GetComponent<CanvasGroup>().alpha = 1f;
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
+        transform.localPosition = Vector3.zero;
+        behaviour.itemsCorrectPlace();
+    }
 
     /// <summary> Sets whether this image is draggable or not. </summary>
     public void SetDraggability(bool value)

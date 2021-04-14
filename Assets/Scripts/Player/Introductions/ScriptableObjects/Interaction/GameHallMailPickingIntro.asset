@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd690dae349f43549aec84a1472b01de, type: 3}
   m_Name: GameHallMailPickingIntro
   m_EditorClassIdentifier: 
-  finished: 1
+  finished: 0
   introducables: []
   monologue: {fileID: 11400000, guid: b36f76521a886a24eaa9285698bc1aeb, type: 2}

@@ -1405,6 +1405,7 @@ MonoBehaviour:
   nameOfTransition: Fade
   loadSceneMode: 1
   disableOnClick: 1
+  cellPhoneDisplaySystem: {fileID: 0}
 --- !u!114 &1889149507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,6 +1449,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2076379696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7417205472694706616, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4768481293783644329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae0606310bd28a940849183d81d44449, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2131378432
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,6 +3727,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8195122838260243690, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: cellPhoneDisplaySystem
+      value: 
+      objectReference: {fileID: 2076379696}
     - target: {fileID: 8383722432022770864, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_SizeDelta.x

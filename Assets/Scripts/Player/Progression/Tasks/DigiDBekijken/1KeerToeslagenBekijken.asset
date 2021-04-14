@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 1KeerToeslagenBekijken
   m_EditorClassIdentifier: 
   description: Bekijk de toeslagen.
-  isDoneOnce: 0
+  isDoneOnce: 1

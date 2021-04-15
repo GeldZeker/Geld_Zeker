@@ -7,6 +7,7 @@ using GameStudio.GeldZeker.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace GameStudio.GeldZeker.UI.CellPhone
 {
@@ -46,6 +47,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         [SerializeField]
         private Quest digidBekijkenQuest = null;
+
+        [SerializeField]
+        private GameObject payInvoiceButton = null;
 
         private void Awake()
         {
@@ -89,10 +93,15 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             if (!isToggling)
             {
                 // Set App Icons active to false if not available yet.
-                if (!hasDigiDAccountProperty.Value) digidAppObject.SetActive(false);
+                if (!hasDigiDAccountProperty.Value)
+                {
+                    digidAppObject.SetActive(false);
+                    payInvoiceButton.SetActive(false);
+                }
                 else
                 {
                     digidAppObject.SetActive(true);
+                    payInvoiceButton.SetActive(true);
                     if (!digidBekijkenQuest.IsCompleted)
                     {
                         digidIntroActive = true;

@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: 1KeerContactloosBetalen
   m_EditorClassIdentifier: 
   description: Keren betaald bij de kassa
-  isDoneOnce: 0
+  isDoneOnce: 1

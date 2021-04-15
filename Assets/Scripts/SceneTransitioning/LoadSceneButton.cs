@@ -1,5 +1,6 @@
 ﻿using GameStudio.GeldZeker.MiniGames;
 using GameStudio.GeldZeker.UI;
+using GameStudio.GeldZeker.UI.CellPhone;
 using GameStudio.GeldZeker.UI.Navigation;
 using GameStudio.GeldZeker.Utilities;
 using System;
@@ -25,6 +26,9 @@ namespace GameStudio.GeldZeker.SceneTransitioning
         private bool disableOnClick = true;
 
         public event Action Clicked;
+
+        [SerializeField]
+        private CellPhoneDisplaySystem cellPhoneDisplaySystem = null;
 
         public string NameOfSceneLoading
         {
@@ -78,6 +82,12 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                             {
                                 if (TimeController.instance.latestDayNightCyclePart == "n") SceneTransitionSystem.Instance.Transition(nameOfTransition, "ShopClosed", loadSceneMode);
                                 else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                            }
+                            break;
+                        case "InvoiceDraggingGame":
+                            {
+                                cellPhoneDisplaySystem.ToggleCellPhone();
+                                SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
                             }
                             break;
                         default: SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);

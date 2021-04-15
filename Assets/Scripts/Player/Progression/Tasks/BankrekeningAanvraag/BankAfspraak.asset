@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c155382fa853514381b5082cdd56bc4, type: 3}
   m_Name: BankAfspraak
   m_EditorClassIdentifier: 
-  description: Maak de afspraak via de telefoon
-  isDoneOnce: 1
+  description: Maak een afspraak met de telefoon.
+  isDoneOnce: 0

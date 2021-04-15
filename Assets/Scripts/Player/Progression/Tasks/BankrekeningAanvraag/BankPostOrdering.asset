@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c155382fa853514381b5082cdd56bc4, type: 3}
   m_Name: BankPostOrdering
   m_EditorClassIdentifier: 
-  description: Orden de post van de bank
-  isDoneOnce: 1
+  description: Sorteer de post van de bank.
+  isDoneOnce: 0

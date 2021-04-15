@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DigiDBekijken
   m_EditorClassIdentifier: 
   description: Bekijk DigiD App
-  isCompleted: 1
+  isCompleted: 0
   isActive: 0
   level: 0
   tasks:

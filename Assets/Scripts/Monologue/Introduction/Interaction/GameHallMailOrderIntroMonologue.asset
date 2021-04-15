@@ -15,5 +15,6 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 87294bbd4f3e3ad4fa8cfc3fc10dcbf6, type: 2}
   lines:
   - In dit spel plaats je jouw post in een map.
-  - Gebruik je vinger om de post te pakken.
-  - Laat de post boven de map los om hem te plaatsen.
+  - Druk op de post om het te pakken.
+  - Laat de post boven de map los.
+  - Zo plaats je de post in de map.

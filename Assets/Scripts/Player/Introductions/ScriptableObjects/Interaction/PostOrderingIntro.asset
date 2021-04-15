@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd690dae349f43549aec84a1472b01de, type: 3}
   m_Name: PostOrderingIntro
   m_EditorClassIdentifier: 
-  finished: 1
+  finished: 0
   introducables:
   - tagName: MailOrdering
     fromIndex: 0

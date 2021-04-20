@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShopClosed.unity
     guid: f0707ca11c2e08d4a8020f07b8b17ef7
+  - enabled: 1
+    path: Assets/Scenes/InvoiceDraggingGame.unity
+    guid: 597b1a4b5498f6049a452cffa597029d
   m_configObjects: {}

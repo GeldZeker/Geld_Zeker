@@ -15,4 +15,4 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 87294bbd4f3e3ad4fa8cfc3fc10dcbf6, type: 2}
   lines:
   - In dit spel zoek je een envelop.
-  - Gebruik je vinger om enveloppen te verplaatsen.
+  - 'Sleep de enveloppen om ze te verplaatsen. '

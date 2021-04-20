@@ -6,6 +6,11 @@
         Home,
         BankAppointment,
         BankAccount,
-        BankAppointmentSet
+        BankAppointmentSet,
+        DigiDGeneralEmpty,
+        DigiDGeneral,
+        DigiDAllowances,
+        DigiDLoginPin,
+        DigiDLoginUnPw,
     }
 }

@@ -7,6 +7,7 @@ namespace GameStudio.GeldZeker.MiniGames.Settings
     {
         DebitCardPayment,
         MailOrdering,
-        MailPicking
+        MailPicking,
+        InvoiceDragging
     }
 }

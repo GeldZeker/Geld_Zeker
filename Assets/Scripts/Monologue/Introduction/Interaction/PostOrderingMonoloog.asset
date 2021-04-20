@@ -15,4 +15,4 @@ MonoBehaviour:
   character: {fileID: 11400000, guid: 997f4a337cda98749ab746e3a249db1e, type: 2}
   lines:
   - Er is post om te sorteren!
-  - De oranje knop begint het spel.
+  - Druk op de oranje knop om het spel te starten.

@@ -46,6 +46,7 @@ namespace GameStudio.GeldZeker.Interaction.Supermarket
                 SetActiveStateOfMiniGameButton();
                 TryStartConveyerBeltAnimation();
             }
+            StartCoroutine(CheckReplayDialogue());
         }
 
         private void OnDestroy()
@@ -96,7 +97,6 @@ namespace GameStudio.GeldZeker.Interaction.Supermarket
             SetActiveStateOfMiniGameButton();
             TryStartConveyerBeltAnimation();
             IntroductionManager.Instance.IntroFinished -= OnIntroFinish;
-            StartCoroutine(CheckReplayDialogue());
         }
         private IEnumerator CheckReplayDialogue()
         {

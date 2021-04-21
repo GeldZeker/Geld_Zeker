@@ -1,4 +1,6 @@
-﻿using GameStudio.GeldZeker.Player.Properties;
+﻿using BWolf.Utilities.PlayerProgression.Quests;
+using GameStudio.GeldZeker.Player.Introductions;
+using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.SceneTransitioning;
 using GameStudio.GeldZeker.UI.Navigation;
 using GameStudio.GeldZeker.Utilities;
@@ -7,15 +9,15 @@ using UnityEngine.SceneManagement;
 
 namespace GameStudio.GeldZeker.UI.Progression
 {
-    /// <summary>A behaviour used for resetting player progress</summary>
-    public class PlayerPropertyResetButton : AudableButton
+    /// <summary>A behaviour used for resetting the game elements</summary>
+    public class GameResetButton : AudableButton
     {
-        [Header("Settings")]
+        [Header("Settings")] 
         [SerializeField]
-        private string notifyMessage = "Personage is hersteld";
+        private string notifyMessage = "De game is hersteld";
 
         [SerializeField]
-        private string verifyMessage = "Weet u zeker dat u uw personage wilt herstellen?";
+        private string verifyMessage = "Weet u zeker dat u de game wilt herstellen?";
 
         protected override void Awake()
         {
@@ -32,14 +34,23 @@ namespace GameStudio.GeldZeker.UI.Progression
         /// <summary>Called when the reset button has been clicked to start the reset progress verification process</summary>
         private void OnClick()
         {
-            NotificationUtility.Instance.Verify(verifyMessage, ResetProgress);
+            NotificationUtility.Instance.Verify(verifyMessage, ResetAllElements);
         }
 
-        private void ResetProgress()
+        /// <summary>Resets all the game elments</summary>
+        private void ResetAllElements()
         {
-            //reset all player properties
+            NotificationUtility.Instance.Notify(notifyMessage, NotificationStayTime.Short);
+
+            /// <summary>Resets the Quests</summary>
+            QuestManager.Instance.ResetProgress();
+            /// <summary>Resets the Introduction</summary>
+            IntroductionManager.Instance.RestoreIntroductions();
+            /// <summary>Resets the PlayerProperties</summary>
             PlayerPropertyManager.Instance.ResetProgression();
+            /// <summary>Resets the Time</summary>
             TimeController.instance.ResetDateTime();
+
             NotificationUtility.Instance.Notify(notifyMessage, NotificationStayTime.Short);
 
             if (SceneManager.GetActiveScene().name != NavigationSystem.NameOfHomeScreen)

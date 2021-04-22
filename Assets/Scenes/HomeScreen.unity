@@ -1940,6 +1940,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 478457656324956098, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: happiness
+      value: 
+      objectReference: {fileID: 11400000, guid: 9aa579c9db5275e43bca4c6cb0456a74,
+        type: 2}
     - target: {fileID: 582581479054554322, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_AnchorMin.y

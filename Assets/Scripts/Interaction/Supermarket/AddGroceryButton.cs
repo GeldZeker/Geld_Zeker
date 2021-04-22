@@ -41,6 +41,7 @@ namespace GameStudio.GeldZeker.Interaction.Supermarket
 
         private void AddGrocery()
         {
+            /// <summary>Finish grocery fetching task.</summary>
             if (boodschappenPakkenQuest.IsUpdatable && !boodschappenPakkenQuest.IsCompleted)
             {
                 DoOnceTask grabGrocery = boodschappenPakkenQuest.GetTask<DoOnceTask>("1KeerBoodschappenPakken");

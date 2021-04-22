@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Boodschappen pakken en betalen bij de kassa.
   isDoneOnce: 0
+  isCellPhoneRequiredOnce: 0

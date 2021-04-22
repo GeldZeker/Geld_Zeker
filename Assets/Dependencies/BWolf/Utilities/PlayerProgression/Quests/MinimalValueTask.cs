@@ -49,6 +49,14 @@ namespace BWolf.Utilities.PlayerProgression.Quests
             }
         }
 
+        public override bool isCellphoneRequired
+        {
+            get
+            {
+                return isCellphoneRequired;
+            }
+        }
+
         public override void LoadFromFile()
         {
             string path = $"{FOLDER_PATH}/{nameof(MinimalValueTask)}/{name}";

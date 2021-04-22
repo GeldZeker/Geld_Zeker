@@ -1111,7 +1111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5b8ad985ab89e41ad1a0ddf2b76228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameOfScene: Kitchen
+  nameOfScene: 
   nameOfTransition: Fade
   loadSceneMode: 1
   introduction: {fileID: 11400000, guid: b9b1f3ab7d0ce8d4ab97ef6f0e63653a, type: 2}

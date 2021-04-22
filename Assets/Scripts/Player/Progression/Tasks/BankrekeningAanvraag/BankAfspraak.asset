@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Maak een afspraak met de telefoon.
   isDoneOnce: 0
+  isCellPhoneRequiredOnce: 1

@@ -19,6 +19,8 @@ namespace BWolf.Utilities.PlayerProgression.Quests
 
         public abstract bool IsDone { get; }
 
+        public abstract bool isCellphoneRequired { get; }
+
         public abstract string TaskDescription { get; }
         public abstract string ProgressString { get; }
         public abstract float Progress { get; }

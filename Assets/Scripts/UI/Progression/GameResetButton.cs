@@ -40,8 +40,6 @@ namespace GameStudio.GeldZeker.UI.Progression
         /// <summary>Resets all the game elments</summary>
         private void ResetAllElements()
         {
-            NotificationUtility.Instance.Notify(notifyMessage, NotificationStayTime.Short);
-
             /// <summary>Resets the Quests</summary>
             QuestManager.Instance.ResetProgress();
             /// <summary>Resets the Introduction</summary>

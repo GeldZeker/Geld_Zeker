@@ -209,9 +209,10 @@ GameObject:
   - component: {fileID: 52794682}
   - component: {fileID: 52794681}
   - component: {fileID: 52794685}
+  - component: {fileID: 52794686}
   m_Layer: 5
   m_Name: Fruit
-  m_TagString: Untagged
+  m_TagString: Introducable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,6 +252,8 @@ MonoBehaviour:
   groceryType: 2
   shoppingTrolley: {fileID: 1242712246}
   grocerySupermarketProperty: {fileID: 11400000, guid: 804332c8509b1d84f8e6d08b518c3cfc,
+    type: 2}
+  boodschappenPakkenQuest: {fileID: 11400000, guid: 697b55930c9192b4a8e6f9734316213e,
     type: 2}
 --- !u!114 &52794682
 MonoBehaviour:
@@ -350,6 +353,24 @@ MonoBehaviour:
   rotate: 0
   rotation: 1
   rotateSpeed: 15
+--- !u!114 &52794686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52794679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f854b73bd02ad8144b3068c6a8a0b681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intoTagName: Apple
+  type: 0
+  relativeArrowPosition: 1
+  introArrowSpacing: 100
+  prefabIntroArrow: {fileID: 3250980964189753913, guid: b9880f2a1b3e9684986e6e5b4cf9bcc3,
+    type: 3}
 --- !u!1 &177458379
 GameObject:
   m_ObjectHideFlags: 0

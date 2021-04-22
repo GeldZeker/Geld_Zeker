@@ -18,10 +18,10 @@ MonoBehaviour:
     fromIndex: 2
     ToIndex: 3
   - tagName: Happiness
-    fromIndex: 3
-    ToIndex: 4
-  - tagName: Hunger
     fromIndex: 4
     ToIndex: 5
+  - tagName: Hunger
+    fromIndex: 5
+    ToIndex: 6
   monologue: {fileID: 11400000, guid: 3393c9b002029a64094c3953295be495, type: 2}
   nameOfScene: Kitchen

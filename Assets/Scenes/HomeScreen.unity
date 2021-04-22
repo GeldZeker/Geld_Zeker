@@ -1282,6 +1282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c89abd26d6415498a9f65f7eb0f0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1657126540 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5849308216061623063, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4768481293783644329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1768624437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 407706580283107691, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
@@ -2681,6 +2687,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DigiDLoginAnimation
+      objectReference: {fileID: 0}
+    - target: {fileID: 3806608935429444494, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: cellPhoneRequired
+      value: 
+      objectReference: {fileID: 1657126540}
+    - target: {fileID: 3835343837491588490, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000022888184
       objectReference: {fileID: 0}
     - target: {fileID: 3858149314156874007, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}

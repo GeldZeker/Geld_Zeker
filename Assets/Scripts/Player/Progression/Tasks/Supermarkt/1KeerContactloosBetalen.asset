@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c155382fa853514381b5082cdd56bc4, type: 3}
   m_Name: 1KeerContactloosBetalen
   m_EditorClassIdentifier: 
-  description: Boodschappen pakken en betalen bij de kassa.
+  description: Betaal bij de kassa.
   isDoneOnce: 0

@@ -49,6 +49,14 @@ namespace BWolf.Utilities.PlayerProgression.Quests
             }
         }
 
+        public override bool isCellphoneRequired
+        {
+            get
+            {
+                return isCellphoneRequired;
+            }
+        }
+
         /// <summary>Increments the count on this task by one</summary>
         public void Increment()
         {

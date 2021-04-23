@@ -28,8 +28,13 @@ namespace GameStudio.GeldZeker.SceneTransitioning
 
         public event Action Clicked;
 
+        [Header("CellPhone Display")]
         [SerializeField]
         private CellPhoneDisplaySystem cellPhoneDisplaySystem = null;
+
+        [Header("Options Screen")]
+        [SerializeField]
+        private GameObject optionsScreen = null;
 
         public string NameOfSceneLoading
         {
@@ -99,6 +104,7 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                                 string scene = "HomeScreen";
                                 if (nameOfActiveScene == "GameHall") scene = BackToScene.instance.backScene;
                                 finalizedScene = scene;
+                                optionsScreen.SetActive(false);
                             }
                             break;
                         default: break;

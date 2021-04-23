@@ -14,6 +14,9 @@ namespace BWolf.Utilities.PlayerProgression.Quests
         [SerializeField]
         private bool isDoneOnce = false;
 
+        [SerializeField]
+        private bool isCellPhoneRequiredOnce = false;
+
         public override string TaskDescription
         {
             get
@@ -41,6 +44,11 @@ namespace BWolf.Utilities.PlayerProgression.Quests
             {
                 return string.Format("({0}/1)", isDoneOnce ? 1 : 0);
             }
+        }
+
+        public override bool isCellphoneRequired 
+        { 
+            get { return isCellPhoneRequiredOnce; }
         }
 
         public override void LoadFromFile()

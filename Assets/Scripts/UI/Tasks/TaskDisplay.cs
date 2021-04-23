@@ -51,6 +51,7 @@ namespace GameStudio.GeldZeker.UI.Tasks
 
                 display.description = task.TaskDescription;
                 display.progress = task.ProgressString;
+                display.cellphone = task.isCellphoneRequired;
                 display.SetActive(true);
 
                 if (!bolded && task.Progress != 1.0f)
@@ -80,6 +81,9 @@ namespace GameStudio.GeldZeker.UI.Tasks
             [SerializeField]
             private Text Progress;
 
+            [SerializeField]
+            private GameObject cellPhone;
+
 #pragma warning restore 0649
 
             public string description
@@ -90,6 +94,11 @@ namespace GameStudio.GeldZeker.UI.Tasks
             public string progress
             {
                 set { Progress.text = value; }
+            }
+
+            public bool cellphone
+            {
+                set { cellPhone.SetActive(value); }
             }
 
             public void SetBolded(bool value)

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Bekijk de toeslagen.
   isDoneOnce: 0
+  isCellPhoneRequiredOnce: 1

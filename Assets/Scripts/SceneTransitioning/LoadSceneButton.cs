@@ -27,8 +27,13 @@ namespace GameStudio.GeldZeker.SceneTransitioning
 
         public event Action Clicked;
 
+        [Header("CellPhone Display")]
         [SerializeField]
         private CellPhoneDisplaySystem cellPhoneDisplaySystem = null;
+
+        [Header("Options Screen")]
+        [SerializeField]
+        private GameObject optionsScreen = null;
 
         public string NameOfSceneLoading
         {
@@ -87,6 +92,12 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                         case "InvoiceDraggingGame":
                             {
                                 cellPhoneDisplaySystem.ToggleCellPhone();
+                                SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                            }
+                            break;
+                        case "HomeScreen":
+                            {
+                                optionsScreen.SetActive(false);
                                 SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
                             }
                             break;

@@ -8,10 +8,11 @@ using UnityEngine;
 
 namespace Assets.Scripts.SceneTransitioning
 {
-    class BackToScene : SingletonBehaviour<BackToScene>
+    /// <summary>Behaviour to provide a specific scene to return to.</summary>
+    class GameHallBackToScene : SingletonBehaviour<GameHallBackToScene>
     {
         [SerializeField]
-        public static BackToScene instance;
+        public static GameHallBackToScene instance;
 
         [Header("Settings")]
         [SerializeField]

@@ -96,15 +96,15 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                             break;
                         case "GameHall":
                             {
-                                BackToScene.instance.backScene = nameOfActiveScene;
+                                GameHallBackToScene.instance.backScene = nameOfActiveScene;
                             }
                             break;
                         case "HomeScreen":
                             {
                                 string scene = "HomeScreen";
-                                if (nameOfActiveScene == "GameHall") scene = BackToScene.instance.backScene;
+                                if (nameOfActiveScene == "GameHall") scene = GameHallBackToScene.instance.backScene;
+                                else optionsScreen.SetActive(false);
                                 finalizedScene = scene;
-                                optionsScreen.SetActive(false);
                             }
                             break;
                         default: break;

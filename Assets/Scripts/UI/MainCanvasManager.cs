@@ -145,10 +145,9 @@ namespace GameStudio.GeldZeker.UI
             normalModeButtonGroup.alpha = active ? 1.0f : 0.0f;
             normalModeButtonGroup.interactable = active;
             normalModeButtonGroup.blocksRaycasts = active;
-            if (contactlessPaymentQuest.IsCompleted)
-            {
-                gameHallButton.SetActive(true);
-            }
+
+            if (contactlessPaymentQuest.IsCompleted) gameHallButton.SetActive(true);
+            else gameHallButton.SetActive(false);
         }
 
         /// <summary>Sets the active state of minigame mode buttons using the CanvasGroup to set alpha, interactable and blocksraycasts values</summary>

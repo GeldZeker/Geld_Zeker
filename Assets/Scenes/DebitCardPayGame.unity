@@ -727,6 +727,12 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3053044987822091358, guid: 6e8438930b64c9843a100371b76363fa,
+        type: 3}
+      propertyPath: gameHallIntroduction
+      value: 
+      objectReference: {fileID: 11400000, guid: f39b089f15eb13945813d21fd70fe963,
+        type: 2}
     - target: {fileID: 4242662212955964192, guid: 6e8438930b64c9843a100371b76363fa,
         type: 3}
       propertyPath: m_AnchorMin.y

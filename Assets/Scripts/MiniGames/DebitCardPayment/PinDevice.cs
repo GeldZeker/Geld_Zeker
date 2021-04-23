@@ -3,6 +3,7 @@ using BWolf.Utilities.PlayerProgression.Quests;
 using GameStudio.GeldZeker.Audio;
 using GameStudio.GeldZeker.MiniGames.Settings;
 using GameStudio.GeldZeker.Player;
+using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.SceneTransitioning;
 using GameStudio.GeldZeker.UI;
@@ -45,6 +46,9 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
 
         [SerializeField]
         private CreditCardSlot cardSlot = null;
+
+        [SerializeField]
+        private Introduction gameHallIntroduction = null;
 
         [Header("Quests")]
         [SerializeField]
@@ -303,6 +307,7 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                 MainCanvasManager.Instance.StartDialogue(finishDialogue, () =>
                 {
                     SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, sceneToLoadOnComplete, UnityEngine.SceneManagement.LoadSceneMode.Additive);
+                    gameHallIntroduction.Start();
                 });
             }
         }

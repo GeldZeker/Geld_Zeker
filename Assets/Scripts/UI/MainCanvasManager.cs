@@ -11,6 +11,7 @@ using GameStudio.GeldZeker.Player.Tamagotchi;
 using System.Linq;
 using GameStudio.GeldZeker.MiniGames;
 using GameStudio.GeldZeker.MiniGames.Settings;
+using BWolf.Utilities.PlayerProgression.Quests;
 
 namespace GameStudio.GeldZeker.UI
 {
@@ -31,6 +32,9 @@ namespace GameStudio.GeldZeker.UI
         [SerializeField]
         private CanvasGroup minigameModeButtonGroup = null;
 
+        [SerializeField]
+        private GameObject gameHallButton = null;
+
         [Header("Systems")]
         [SerializeField]
         private DialogueSystem dialogueSystem = null;
@@ -49,6 +53,9 @@ namespace GameStudio.GeldZeker.UI
 
         [SerializeField]
         private ShowTamagotchiElements tamagotchiElements = null;
+
+        [SerializeField]
+        private Quest contactlessPaymentQuest = null;
 
         /// <summary>Returns whether the current active scene is one in which the persistantUICanvas can be active in</summary>
         public bool IsInAnInActiveScene
@@ -138,6 +145,9 @@ namespace GameStudio.GeldZeker.UI
             normalModeButtonGroup.alpha = active ? 1.0f : 0.0f;
             normalModeButtonGroup.interactable = active;
             normalModeButtonGroup.blocksRaycasts = active;
+
+            if (contactlessPaymentQuest.IsCompleted) gameHallButton.SetActive(true);
+            else gameHallButton.SetActive(false);
         }
 
         /// <summary>Sets the active state of minigame mode buttons using the CanvasGroup to set alpha, interactable and blocksraycasts values</summary>

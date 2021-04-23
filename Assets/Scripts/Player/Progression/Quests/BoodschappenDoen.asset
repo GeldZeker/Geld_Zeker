@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Doe een keer boodschappen
   isCompleted: 0
-  isActive: 1
+  isActive: 0
   level: 0
   tasks:
   - {fileID: 11400000, guid: a9bf8b16172b85c4699cbba5a908b039, type: 2}

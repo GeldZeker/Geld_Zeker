@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: StudeerKamerInto
   m_EditorClassIdentifier: 
   finished: 0
-  introducables: []
+  introducables:
+  - tagName: RewardShelf
+    fromIndex: 2
+    ToIndex: 3
   monologue: {fileID: 11400000, guid: 1f002449ae2d1a443910f9743423352d, type: 2}
   nameOfScene: StudyRoom

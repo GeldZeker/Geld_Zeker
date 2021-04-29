@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 1KeerBoodschappenPakken
   m_EditorClassIdentifier: 
   description: Pak boodschappen.
-  isDoneOnce: 0
+  isDoneOnce: 1
   isCellPhoneRequiredOnce: 0

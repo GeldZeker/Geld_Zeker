@@ -1,11 +1,15 @@
-﻿using BWolf.Utilities;
+﻿using Assets.Scripts.Player.Properties;
+using BWolf.Utilities;
 using BWolf.Utilities.PlayerProgression.Quests;
 using GameStudio.GeldZeker.Audio;
+using GameStudio.GeldZeker.MiniGames.Settings;
 using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.Utilities;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 namespace GameStudio.GeldZeker.MiniGames.MailOrdering
 {
@@ -53,6 +57,12 @@ namespace GameStudio.GeldZeker.MiniGames.MailOrdering
         [SerializeField]
         private PlayerMailProperty mailProperty = null;
 
+        [SerializeField]
+        private PlayerRewardProperty rewardCollection = null;
+
+        [SerializeField]
+        private MailOrderSetting setting = null;
+
         [Header("Quests")]
         [SerializeField]
         private Quest createbankAccountQuest = null;
@@ -62,9 +72,14 @@ namespace GameStudio.GeldZeker.MiniGames.MailOrdering
         private bool touch;
         private bool canPlace;
 
+        private string rewardName = "MailOrdering";
+
         private void Awake()
         {
             animator = GetComponent<FolderAnimator>();
+
+            //imports PlayerRewardObject
+            rewardCollection = PlayerPropertyManager.Instance.GetProperty<PlayerRewardProperty>("Reward");
         }
 
         private void Start()
@@ -189,11 +204,17 @@ namespace GameStudio.GeldZeker.MiniGames.MailOrdering
             {
                 //set difficulty played as completed
                 animator.Setting.SetCurrentDifficultyCompleted();
+
+                //add reward according to minigame difficulty if the player succeded the game
+                if (result.succesfull) rewardCollection.AddRewardThroughDifficulty(rewardName, setting.Difficulty);
             }
             else
             {
                 //if not in minigame mode update properties
                 mailProperty.OrdenMail(MailPlacing);
+
+                //Add bronze reward since in normal mode
+                rewardCollection.AddReward(rewardName, RewardType.Bronze);
 
                 if (result.succesfull)
                 {
@@ -211,6 +232,9 @@ namespace GameStudio.GeldZeker.MiniGames.MailOrdering
                     PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD").UpdateAccountValue(true, false);
                 }
             }
+
+            //printing rewardcollection for testing purposes
+            rewardCollection.PrintRewardCollection();
         }
 
         private void SetPlaceability(bool enter)

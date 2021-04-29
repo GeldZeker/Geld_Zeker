@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BoodschappenDoen
   m_EditorClassIdentifier: 
   description: Doe een keer boodschappen
-  isCompleted: 0
+  isCompleted: 1
   isActive: 0
   level: 0
   tasks:

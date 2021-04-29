@@ -1,4 +1,5 @@
-﻿using BWolf.Utilities.CharacterDialogue;
+﻿using Assets.Scripts.Player.Properties;
+using BWolf.Utilities.CharacterDialogue;
 using BWolf.Utilities.PlayerProgression.Quests;
 using GameStudio.GeldZeker.Audio;
 using GameStudio.GeldZeker.MiniGames.Settings;
@@ -66,6 +67,11 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
         [Space]
         [SerializeField]
         private Dialogue finishDialogue = null;
+        
+        [Space]
+        [SerializeField]
+        private PlayerRewardProperty rewardCollection = null;
+        private string rewardName = "DebitCardPayment";
 
         private bool inPaymentProcess;
         private bool hasCompletedPayment;
@@ -95,6 +101,9 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
             {
                 cardSlot.OnInsertion += OnCardInserted;
             }
+
+            //imports PlayerRewardObject
+            rewardCollection = PlayerPropertyManager.Instance.GetProperty<PlayerRewardProperty>("Reward");
         }
 
         private void Update()
@@ -282,6 +291,9 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                 setting.SetCurrentDifficultyCompleted();
 
                 SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, NavigationSystem.NameOfGameHall, UnityEngine.SceneManagement.LoadSceneMode.Additive);
+
+                //add reward according to minigame difficulty 
+                rewardCollection.AddRewardThroughDifficulty(rewardName, setting.Difficulty);
             }
             else
             {
@@ -298,6 +310,9 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                     DoOnceTask payContactlessOnceTask = contactlessPaymentQuest.GetTask<DoOnceTask>("1KeerContactloosBetalen");
                     payContactlessOnceTask.SetDoneOnce();
                 }
+                
+                //Add bronze reward since in normal mode
+                rewardCollection.AddReward(rewardName, RewardType.Bronze);
 
                 //and start dialogue with cassiere to transition back home
                 MainCanvasManager.Instance.StartDialogue(finishDialogue, () =>
@@ -305,6 +320,9 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                     SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, sceneToLoadOnComplete, UnityEngine.SceneManagement.LoadSceneMode.Additive);
                 });
             }
+
+            //printing rewardcollection for testing purposes
+            rewardCollection.PrintRewardCollection();
         }
 
         [System.Serializable]

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4915c6a70a4c34d8b6389258b74232, type: 3}
   m_Name: OwnedGroceries
   m_EditorClassIdentifier: 
-  groceries: 
+  groceries: 02000000
   prices: []

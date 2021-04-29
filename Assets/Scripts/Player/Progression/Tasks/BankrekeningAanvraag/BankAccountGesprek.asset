@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BankAccountGesprek
   m_EditorClassIdentifier: 
   description: Praat met een bankmedewerker.
-  isDoneOnce: 0
+  isDoneOnce: 1
   isCellPhoneRequiredOnce: 0

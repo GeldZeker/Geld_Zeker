@@ -1,4 +1,5 @@
-﻿using GameStudio.GeldZeker.MiniGames;
+﻿using Assets.Scripts.SceneTransitioning;
+using GameStudio.GeldZeker.MiniGames;
 using GameStudio.GeldZeker.UI;
 using GameStudio.GeldZeker.UI.CellPhone;
 using GameStudio.GeldZeker.UI.Navigation;
@@ -75,35 +76,41 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                 }
                 else
                 {
+                    string finalizedScene = null;
                     switch (nameOfScene)
                     {
                         case "Bank":
                             {
-                                if (TimeController.instance.latestDayNightCyclePart == "n") SceneTransitionSystem.Instance.Transition(nameOfTransition, "BankClosed", loadSceneMode);
-                                else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                                if (TimeController.instance.latestDayNightCyclePart == "n") finalizedScene = "BankClosed";
                             }
                             break;
                         case "FruitDepartment":
                             {
-                                if (TimeController.instance.latestDayNightCyclePart == "n") SceneTransitionSystem.Instance.Transition(nameOfTransition, "ShopClosed", loadSceneMode);
-                                else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                                if (TimeController.instance.latestDayNightCyclePart == "n") finalizedScene = "ShopClosed";
                             }
                             break;
                         case "InvoiceDraggingGame":
                             {
                                 cellPhoneDisplaySystem.ToggleCellPhone();
-                                SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                            }
+                            break;
+                        case "GameHall":
+                            {
+                                GameHallBackToScene.instance.backScene = nameOfActiveScene;
                             }
                             break;
                         case "HomeScreen":
                             {
-                                optionsScreen.SetActive(false);
-                                SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                                string scene = "HomeScreen";
+                                if (nameOfActiveScene == "GameHall") scene = GameHallBackToScene.instance.backScene;
+                                else optionsScreen.SetActive(false);
+                                finalizedScene = scene;
                             }
                             break;
-                        default: SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
-                            break;
+                        default: break;
                     }
+                    if (finalizedScene != null) SceneTransitionSystem.Instance.Transition(nameOfTransition, finalizedScene, loadSceneMode);
+                    else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
                 }
             }
         }

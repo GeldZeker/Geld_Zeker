@@ -17,8 +17,23 @@ namespace Assets.Scripts.Player.Properties
         [SerializeField]
         private List<Tuple<string, RewardType>> rewardCollection = null;
 
+        // ================================== section for debugging =================================
+       
+        // bool to switch debug logging on and off, true = print log, false = no log
+        private bool printDebug = true;
+
+        //method to log desired values for testing purposes, turned on and off with the bool "printDebug" declared at the top of this class
+        private void PrintDebugLogs(string printThis)
+        {
+            if (printDebug) Debug.Log(printThis);
+        }
+
+        //method to print all rewards into the debug console
         public void PrintRewardCollection()
         {
+            //stops the mothod from printing if debugging is not enabled
+            if (!printDebug) return;
+
             string result = "--------------- Begin RewardCollection ---------------" + "\n ";
             foreach (Tuple<string, RewardType> T in rewardCollection)
             {
@@ -27,24 +42,26 @@ namespace Assets.Scripts.Player.Properties
             }
             result += "--------------- End RewardCollection ---------------";
             Debug.Log(result);
-
         }
+        //====================================== end of debugging section ==========================
 
+
+        
         public void AddRewardThroughDifficulty(string name, MiniGameDifficulty difficulty)
         {
             switch (difficulty)
             {
                 case MiniGameDifficulty.Easy:
                     rewardCollection.Add(new Tuple<string, RewardType>(name, RewardType.Bronze));
-                    Debug.Log($"Added {RewardType.Bronze} reward for minigame {name}");
+                    PrintDebugLogs($"Added {RewardType.Bronze} reward for minigame {name}");
                     break;
                 case MiniGameDifficulty.Medium:
                     rewardCollection.Add(new Tuple<string, RewardType>(name, RewardType.Silver));
-                    Debug.Log($"Added {RewardType.Silver} reward for minigame {name}");
+                    PrintDebugLogs($"Added {RewardType.Silver} reward for minigame {name}");
                     break;
                 case MiniGameDifficulty.Hard:
                     rewardCollection.Add(new Tuple<string, RewardType>(name, RewardType.Gold));
-                    Debug.Log($"Added {RewardType.Gold} reward for minigame {name}");
+                    PrintDebugLogs($"Added {RewardType.Gold} reward for minigame {name}");
                     break;
             }
             SaveToFile();
@@ -53,7 +70,7 @@ namespace Assets.Scripts.Player.Properties
         public void AddReward(string name, RewardType type)
         {
             rewardCollection.Add(new Tuple<string, RewardType>(name, type));
-            Debug.Log($"Added {type} reward for normal gamemode {name}");
+            PrintDebugLogs($"Added {type} reward for normal gamemode {name}");
             SaveToFile();
         }
 
@@ -103,7 +120,7 @@ namespace Assets.Scripts.Player.Properties
         }
 
 
-        //abstract classes for propertyManager below
+        //abstract class constructors for propertyManager below
         //======================================================================================
         public void UpdateReward(List<Tuple<string, RewardType>> rewardList, bool fromSaveFile = false)
         {

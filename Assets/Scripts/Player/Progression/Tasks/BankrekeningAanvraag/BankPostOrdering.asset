@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: BankPostOrdering
   m_EditorClassIdentifier: 
   description: Sorteer de post van de bank.
-  isDoneOnce: 1
+  isDoneOnce: 0
   isCellPhoneRequiredOnce: 0

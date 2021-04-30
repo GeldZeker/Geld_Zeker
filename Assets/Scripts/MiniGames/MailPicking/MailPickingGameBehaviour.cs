@@ -133,7 +133,6 @@ namespace GameStudio.GeldZeker.MiniGames.MailPicking
 
             //imports PlayerRewardObject
             rewardCollection = PlayerPropertyManager.Instance.GetProperty<PlayerRewardProperty>("Reward");
-            Debug.Log("Start");
         }
 
         private void OnDestroy()

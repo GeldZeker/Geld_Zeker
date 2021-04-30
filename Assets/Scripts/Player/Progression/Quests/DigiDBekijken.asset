@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   description: Bekijk DigiD App
   isCompleted: 0
-  isActive: 1
+  isActive: 0
   level: 0
   tasks:
   - {fileID: 11400000, guid: 30e910831ba621d40b2a1babc9aaa8ce, type: 2}

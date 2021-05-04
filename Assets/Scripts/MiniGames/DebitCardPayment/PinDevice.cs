@@ -105,9 +105,6 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
             {
                 cardSlot.OnInsertion += OnCardInserted;
             }
-
-            //imports PlayerRewardObject
-            rewardCollection = PlayerPropertyManager.Instance.GetProperty<PlayerRewardProperty>("Reward");
         }
 
         private void Update()
@@ -294,10 +291,10 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                 //set difficulty played as completed
                 setting.SetCurrentDifficultyCompleted();
 
-                SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, NavigationSystem.NameOfGameHall, UnityEngine.SceneManagement.LoadSceneMode.Additive);
-
                 //add reward according to minigame difficulty 
                 rewardCollection.AddRewardThroughDifficulty(rewardName, setting.Difficulty);
+
+                SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, NavigationSystem.NameOfGameHall, UnityEngine.SceneManagement.LoadSceneMode.Additive);
             }
             else
             {
@@ -325,9 +322,6 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                     gameHallIntroduction.Start();
                 });
             }
-
-            //printing rewardcollection for testing purposes
-            rewardCollection.PrintRewardCollection();
         }
 
         [System.Serializable]

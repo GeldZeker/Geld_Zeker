@@ -77,9 +77,6 @@ namespace GameStudio.GeldZeker.MiniGames.MailOrdering
         private void Awake()
         {
             animator = GetComponent<FolderAnimator>();
-
-            //imports PlayerRewardObject
-            rewardCollection = PlayerPropertyManager.Instance.GetProperty<PlayerRewardProperty>("Reward");
         }
 
         private void Start()
@@ -232,9 +229,6 @@ namespace GameStudio.GeldZeker.MiniGames.MailOrdering
                     PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD").UpdateAccountValue(true, false);
                 }
             }
-
-            //printing rewardcollection for testing purposes
-            rewardCollection.PrintRewardCollection();
         }
 
         private void SetPlaceability(bool enter)

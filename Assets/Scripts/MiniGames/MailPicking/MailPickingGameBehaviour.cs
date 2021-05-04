@@ -130,9 +130,6 @@ namespace GameStudio.GeldZeker.MiniGames.MailPicking
             clickableLetter.GetComponent<Button>().onClick.AddListener(LetterFound);
             //Start game timer
             StartGameTimer();
-
-            //imports PlayerRewardObject
-            rewardCollection = PlayerPropertyManager.Instance.GetProperty<PlayerRewardProperty>("Reward");
         }
 
         private void OnDestroy()
@@ -290,8 +287,6 @@ namespace GameStudio.GeldZeker.MiniGames.MailPicking
                     //add reward according to minigame difficulty 
                     rewardCollection.AddRewardThroughDifficulty(rewardName, setting.Difficulty);
                 }
-                //print rewardCollection for testing purposes
-                rewardCollection.PrintRewardCollection();
             }
             else
             {

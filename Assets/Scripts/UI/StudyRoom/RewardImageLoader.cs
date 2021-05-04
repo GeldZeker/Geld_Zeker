@@ -41,9 +41,6 @@ namespace Assets.Scripts.UI.StudyRoom
         {
             RewardType rewardToSet = rewardCollection.GetHighestReward(rewardName);
 
-            rewardCollection.PrintRewardCollection();
-            Debug.Log(rewardToSet);
-
             switch (rewardCollection.GetHighestReward(rewardName))
             {
                 case RewardType.Bronze:

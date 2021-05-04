@@ -318,9 +318,8 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                 //and start dialogue with cassiere to transition back home
                 MainCanvasManager.Instance.StartDialogue(finishDialogue, () =>
                 {
-                    SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, sceneToLoadOnComplete, UnityEngine.SceneManagement.LoadSceneMode.Additive);
-                    gameHallIntroduction.Start();
-                });
+                    SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, sceneToLoadOnComplete, UnityEngine.SceneManagement.LoadSceneMode.Additive, () => gameHallIntroduction.Start());
+            });
             }
         }
 

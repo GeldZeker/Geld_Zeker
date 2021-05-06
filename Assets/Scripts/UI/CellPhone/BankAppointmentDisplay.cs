@@ -24,8 +24,6 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         [SerializeField]
         private Quest createbankAccountQuest = null;
 
-        public GameObject magnifierGameObject = null;
-
         public GameObject magnifierGameObjectZoom = null;
 
         [SerializeField]
@@ -51,11 +49,12 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             {
                 //update player property and task related to action
                 appointmentProperty.UpdateAppointment(BankAppointmentType.CreateAccount);
-                magnifierGameObject.SetActive(true);
 
                 DoOnceTask orderMailTask = createbankAccountQuest.GetTask<DoOnceTask>("BankAfspraak");
                 orderMailTask.SetDoneOnce();
             }
+            MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.BankAppointmentSet);
+            magnifierGameObjectZoom.SetActive(true);
         }
 
         /// <summary>Sets the display state by either showing the appointment screen with the appointment button or appointment finished screen</summary>
@@ -83,7 +82,6 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
         public void MagnifyDocument()
         {
-            magnifierGameObject.SetActive(false);
             magnifierGameObjectZoom.SetActive(false);
             StartCoroutine(MagnifyEnumerator());
         }

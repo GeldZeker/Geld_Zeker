@@ -1,4 +1,5 @@
 ﻿using BWolf.Utilities.PlayerProgression.Quests;
+using GameStudio.GeldZeker.MiniGames.Settings;
 using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.SceneTransitioning;
@@ -18,6 +19,10 @@ namespace GameStudio.GeldZeker.UI.Progression
 
         [SerializeField]
         private string verifyMessage = "Weet u zeker dat u de game wilt herstellen?";
+
+        [Header("Assets to restore")]
+        [SerializeField]
+        private MiniGameSettingAsset miniGameSetting = null;
 
         protected override void Awake()
         {
@@ -50,6 +55,8 @@ namespace GameStudio.GeldZeker.UI.Progression
             TimeController.instance.ResetDateTime();
 
             NotificationUtility.Instance.Notify(notifyMessage, NotificationStayTime.Short);
+
+            miniGameSetting.Restore();
 
             if (SceneManager.GetActiveScene().name != NavigationSystem.NameOfHomeScreen)
             {

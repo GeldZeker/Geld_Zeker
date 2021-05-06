@@ -54,6 +54,8 @@ namespace GameStudio.GeldZeker.UI.CellPhone
                 orderMailTask.SetDoneOnce();
             }
             MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.BankAppointmentSet);
+            documentTransform.sizeDelta = new Vector2();
+            documentTransform.anchoredPosition = new Vector2();
             magnifierGameObjectZoom.SetActive(true);
         }
 

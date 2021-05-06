@@ -19383,7 +19383,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound: 0
   hasAccountProperty: {fileID: 11400000, guid: fa98a9b95e138004ca84651964aee60c, type: 2}
-  appointmentProperty: {fileID: 0}
+  appointmentProperty: {fileID: 11400000, guid: 93163bcc4ca599043847e53ebf80f0b6,
+    type: 2}
+  appointmentDisplay: {fileID: 1593060033553733607}
+  magnifierGameObjectZoom: {fileID: 7737104775687672291}
 --- !u!1 &5321050523871307232
 GameObject:
   m_ObjectHideFlags: 0

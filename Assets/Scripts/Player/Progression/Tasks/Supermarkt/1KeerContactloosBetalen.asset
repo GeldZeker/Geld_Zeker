@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: 1KeerContactloosBetalen
   m_EditorClassIdentifier: 
   description: Betaal bij de kassa.
-  isDoneOnce: 1
+  isDoneOnce: 0
   isCellPhoneRequiredOnce: 0

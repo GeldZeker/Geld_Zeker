@@ -1,4 +1,5 @@
-﻿using GameStudio.GeldZeker.Audio;
+﻿using Assets.Scripts.Player.Properties;
+using GameStudio.GeldZeker.Audio;
 using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.Utilities;
@@ -100,6 +101,10 @@ namespace GameStudio.GeldZeker.MiniGames.MailPicking
 
         [SerializeField]
         private float gameDuration = 5f;
+
+        [SerializeField]
+        private PlayerRewardProperty rewardCollection = null;
+        private string rewardName = "MailPicking";
 
         private bool isAnimating;
         private bool isFound;
@@ -274,6 +279,13 @@ namespace GameStudio.GeldZeker.MiniGames.MailPicking
                 if (!setting.MinigameMode)
                 {
                     happiness.AddValue(happinessOnCompletion);
+
+                    //Add bronze reward since in normal mode
+                    rewardCollection.AddReward(rewardName, RewardType.Bronze);
+                } else
+                {
+                    //add reward according to minigame difficulty 
+                    rewardCollection.AddRewardThroughDifficulty(rewardName, setting.Difficulty);
                 }
             }
             else

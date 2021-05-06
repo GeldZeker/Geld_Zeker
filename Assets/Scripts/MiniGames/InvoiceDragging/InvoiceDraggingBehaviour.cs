@@ -1,4 +1,5 @@
-﻿using BWolf.Utilities.PlayerProgression.Quests;
+﻿using Assets.Scripts.Player.Properties;
+using BWolf.Utilities.PlayerProgression.Quests;
 using GameStudio.GeldZeker.Audio;
 using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.Player.Properties;
@@ -69,6 +70,11 @@ namespace GameStudio.GeldZeker.MiniGames.InvoiceDragging
         [SerializeField]
         private Text timerSeconds = null;
 
+        [Header("Properties")]
+        [SerializeField]
+        private PlayerRewardProperty rewardCollection = null;
+        private string rewardName = "InvoiceDragging";
+
         private bool itemsCorrect = false;
         private float gameBusyDuration = 0f;
 
@@ -76,6 +82,9 @@ namespace GameStudio.GeldZeker.MiniGames.InvoiceDragging
         private void Start()
         {
             StartGameTimer();
+
+            //imports PlayerRewardObject
+            rewardCollection = PlayerPropertyManager.Instance.GetProperty<PlayerRewardProperty>("Reward");
         }
 
         /// <summary> Start the game timer depending on introduction. </summary>
@@ -151,6 +160,13 @@ namespace GameStudio.GeldZeker.MiniGames.InvoiceDragging
                 {
                     happiness.AddValue(happinessOnCompletion);
                     playerMoneyProperty.RemoveMoney(moneyToRemove);
+
+                    //Add bronze reward since in normal mode
+                    rewardCollection.AddReward(rewardName, RewardType.Bronze);
+                } else
+                {
+                    //add reward according to minigame difficulty 
+                    rewardCollection.AddRewardThroughDifficulty(rewardName, setting.Difficulty);
                 }
             }
             else

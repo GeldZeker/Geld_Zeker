@@ -1615,6 +1615,7 @@ MonoBehaviour:
   loadSceneMode: 1
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
+  optionsScreen: {fileID: 0}
 --- !u!114 &1200741864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2374,6 +2375,7 @@ MonoBehaviour:
   feedbackMessage: {fileID: 2048390470}
   winEffects: {fileID: 646781790}
   timerSeconds: {fileID: 943292004}
+  rewardCollection: {fileID: 11400000, guid: 8df95e0c54684bb4b9e93891162ceef7, type: 2}
 --- !u!1001 &1583758841
 PrefabInstance:
   m_ObjectHideFlags: 0

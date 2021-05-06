@@ -4203,6 +4203,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5305422811853976438, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: miniGameSettingAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b1b160c49e072441aed92131ca61388,
+        type: 2}
+    - target: {fileID: 5305422811853976438, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: miniGameSetting
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b1b160c49e072441aed92131ca61388,
+        type: 2}
     - target: {fileID: 5376727852770666113, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_AnchorMin.y

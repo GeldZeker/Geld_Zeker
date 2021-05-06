@@ -49,6 +49,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         private Quest digidBekijkenQuest = null;
 
         [SerializeField]
+        private Quest payInvoiceQuest = null;
+
+        [SerializeField]
         private GameObject payInvoiceButton = null;
 
         private void Awake()
@@ -107,6 +110,10 @@ namespace GameStudio.GeldZeker.UI.CellPhone
                         digidIntroActive = true;
                         DigiDIntro.Restore();
                         DigiDIntro.Start();
+                    }
+                    if (payInvoiceQuest.IsCompleted)
+                    {
+                        payInvoiceButton.GetComponent<Button>().interactable = false;
                     }
                 }
 

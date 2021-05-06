@@ -91,7 +91,10 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                             break;
                         case "InvoiceDraggingGame":
                             {
-                                cellPhoneDisplaySystem.ToggleCellPhone();
+                                if (nameOfActiveScene != "GameHall")
+                                {
+                                    cellPhoneDisplaySystem.ToggleCellPhone();
+                                }
                             }
                             break;
                         case "GameHall":

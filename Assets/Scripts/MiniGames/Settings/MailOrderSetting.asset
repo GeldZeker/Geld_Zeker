@@ -25,7 +25,7 @@ MonoBehaviour:
     - Type: 2
       Completed: 0
   difficulty: 0
-  easyStartDelay: 10
+  easyStartDelay: 1.25
   easyReverseDelay: 0.5
   easyTurnTime: 0.75
   mediumStartDelay: 1

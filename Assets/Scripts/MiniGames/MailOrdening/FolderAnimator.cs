@@ -1,5 +1,6 @@
 ﻿using BWolf.Utilities;
 using GameStudio.GeldZeker.MiniGames.Settings;
+using GameStudio.GeldZeker.Player.Introductions;
 using System;
 using System.Collections;
 using UnityEngine;
@@ -65,8 +66,30 @@ namespace GameStudio.GeldZeker.MiniGames.MailOrdering
             }
         }
 
+        // Start is called before the first frame update
         private void Start()
         {
+            StartPaperMovement();
+        }
+
+        /// <summary> A method to start the paper movement after the introduction has been read. </summary>
+        private void StartPaperMovement()
+        {
+            //start paper movement in map after introduction if it is active
+            if (IntroductionManager.Instance.IsActive)
+            {
+                IntroductionManager.Instance.IntroFinished += OnIntroFinished;
+            }
+            else
+            {
+                StartCoroutine(AnimateAll());
+            }
+        }
+
+        /// <summary> Check if introduction is finished.  </summary>
+        private void OnIntroFinished(Introduction introduction)
+        {
+            IntroductionManager.Instance.IntroFinished -= OnIntroFinished;
             StartCoroutine(AnimateAll());
         }
 

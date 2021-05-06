@@ -44,7 +44,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         {
             hasDigiDAccountProperty = PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD");
 
-            pinHelper.SetActive(false);
+            if (pinHelper.activeSelf) pinHelper.SetActive(false);
             if (hasDigiDAccountProperty.Value) { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneral); }
             else { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneralEmpty); }
         }

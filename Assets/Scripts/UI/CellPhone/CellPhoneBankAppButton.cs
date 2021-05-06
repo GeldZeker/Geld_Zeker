@@ -15,6 +15,12 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         [SerializeField]
         private BankAppointmentProperty appointmentProperty = null;
 
+        [SerializeField]
+        private GameObject appointmentDisplay = null;
+
+        [SerializeField]
+        private GameObject magnifierGameObjectZoom = null;
+
         protected override void Awake()
         {
             base.Awake();
@@ -36,6 +42,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone
 
             if (appointmentProperty.Value.ToString().Equals("CreateAccount"))
             {
+                appointmentDisplay.GetComponent<RectTransform>().sizeDelta = new Vector2();
+                appointmentDisplay.GetComponent<RectTransform>().anchoredPosition = new Vector2();
+                magnifierGameObjectZoom.SetActive(true);
                 MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.BankAppointmentSet);
             }
             else

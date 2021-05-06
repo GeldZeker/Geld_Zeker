@@ -4869,7 +4869,8 @@ PrefabInstance:
         type: 3}
       propertyPath: hasAccountProperty
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: fa98a9b95e138004ca84651964aee60c,
+        type: 2}
     - target: {fileID: 8694380375109047936, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_FontData.m_FontSize

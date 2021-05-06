@@ -604,7 +604,7 @@ GameObject:
   - component: {fileID: 4760388259689383193}
   - component: {fileID: 8512265508084146808}
   - component: {fileID: 8297126400107856624}
-  - component: {fileID: 9045770554499617794}
+  - component: {fileID: 2525360122416341880}
   m_Layer: 5
   m_Name: PayInvoiceButton
   m_TagString: Untagged
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &9045770554499617794
+--- !u!114 &2525360122416341880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -720,7 +720,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 191676431721705163}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 70d543a5df72dae428e5f7e006b273e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 956f3a145ac37bc478c327b63231e861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 0
@@ -730,6 +730,9 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 7417205472694706616}
   optionsScreen: {fileID: 0}
+  difficulty: 0
+  minigameMode: 0
+  setting: {fileID: 11400000, guid: 30ba11c29f466334591d579b5a714642, type: 2}
 --- !u!1 &201944715706247561
 GameObject:
   m_ObjectHideFlags: 0
@@ -8317,7 +8320,6 @@ MonoBehaviour:
     type: 2}
   createbankAccountQuest: {fileID: 11400000, guid: b95ea90a5007e6d47bf027f66c8b6edd,
     type: 2}
-  magnifierGameObject: {fileID: 0}
   magnifierGameObjectZoom: {fileID: 7737104775687672291}
   documentTransform: {fileID: 8473660178124502517}
 --- !u!225 &8161736117824853043
@@ -33225,12 +33227,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 131720e4f116e294bbe24094ccb23899, type: 3}
---- !u!224 &3379962244480384566 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6093055684012355348, guid: 131720e4f116e294bbe24094ccb23899,
-    type: 3}
-  m_PrefabInstance: {fileID: 8819992128588812578}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3806608935429444494 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5671477465476661932, guid: 131720e4f116e294bbe24094ccb23899,
@@ -33243,3 +33239,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6594c044376ef24a898db6cc1aa05b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &3379962244480384566 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6093055684012355348, guid: 131720e4f116e294bbe24094ccb23899,
+    type: 3}
+  m_PrefabInstance: {fileID: 8819992128588812578}
+  m_PrefabAsset: {fileID: 0}

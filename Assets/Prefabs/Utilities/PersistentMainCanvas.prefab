@@ -20426,8 +20426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hasDigiDAccountProperty: {fileID: 11400000, guid: 15ef401628bdbbc4b972566a792fb910,
     type: 2}
-  pinHelper: {fileID: 0}
-  digidBekijkenQuest: {fileID: 0}
+  pinHelper: {fileID: 3683113351316174022}
+  digidBekijkenQuest: {fileID: 11400000, guid: 1336f5c8dc5354a4384778bbb7bb3d8a, type: 2}
   happiness: {fileID: 0}
   happinessOnCompletion: 10
 --- !u!1 &5604522009155244151

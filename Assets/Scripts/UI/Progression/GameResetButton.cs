@@ -52,7 +52,7 @@ namespace GameStudio.GeldZeker.UI.Progression
             /// <summary>Resets the PlayerProperties</summary>
             PlayerPropertyManager.Instance.ResetProgression();
             /// <summary>Resets the Time</summary>
-            TimeController.instance.ResetDateTime();
+            TimeController.Instance.ResetDateTime();
 
             NotificationUtility.Instance.Notify(notifyMessage, NotificationStayTime.Short);
 

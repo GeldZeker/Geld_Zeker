@@ -13,6 +13,8 @@ public class ClockScript : MonoBehaviour
     private GameObject hourHand;
     [SerializeField]
     private bool timelapseMode = false;
+    [SerializeField]
+    private GameObject progressBar = null;
 
     private bool timelapseGoing;
 
@@ -25,7 +27,7 @@ public class ClockScript : MonoBehaviour
 
     void Update()
     {
-        inGameTime = TimeController.instance.dayNightCycleTime;
+        inGameTime = TimeController.Instance.dayNightCycleTime;
         string seconds = inGameTime.ToString("ss");
 
         if (seconds != oldSeconds) UpdateTimer();
@@ -45,6 +47,9 @@ public class ClockScript : MonoBehaviour
         {
             if (timelapseGoing == false && animationInitiate == true)
             {
+                //progressBar.StartAnimation("sport");
+                if (progressBar) progressBar.GetComponent<VolunteerWorkProgressBar>().StartAnimation("sport");
+
                 timelapseGoing = true;
                 StartCoroutine(Timelapse());
             }

@@ -13,7 +13,7 @@ public class CycleImageScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (TimeController.instance.latestDayNightCyclePart == "d")
+        if (TimeController.Instance.latestDayNightCyclePart == "d")
         {
             dayImage.SetActive(true);
             nightImage.SetActive(false);

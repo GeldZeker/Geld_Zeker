@@ -81,12 +81,12 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                     {
                         case "Bank":
                             {
-                                if (TimeController.instance.latestDayNightCyclePart == "n") finalizedScene = "BankClosed";
+                                if (TimeController.Instance.latestDayNightCyclePart == "n") finalizedScene = "BankClosed";
                             }
                             break;
                         case "FruitDepartment":
                             {
-                                if (TimeController.instance.latestDayNightCyclePart == "n") finalizedScene = "ShopClosed";
+                                if (TimeController.Instance.latestDayNightCyclePart == "n") finalizedScene = "ShopClosed";
                             }
                             break;
                         case "InvoiceDraggingGame":

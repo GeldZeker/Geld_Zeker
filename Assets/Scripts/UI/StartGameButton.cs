@@ -47,7 +47,7 @@ namespace GameStudio.GeldZeker.UI
         /// <summary>Called when the button has been clicked to transition to a new scene</summary>
         private void OnClick()
         {
-            TimeController.instance.BeginTimer();
+            TimeController.Instance.BeginTimer();
             if (!string.IsNullOrEmpty(nameOfGameScene))
             {
                 MusicPlayer.Instance.PlaySFXSound(SFXSound.StartButtonClick);

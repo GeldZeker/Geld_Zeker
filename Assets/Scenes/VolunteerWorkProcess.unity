@@ -507,6 +507,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df99fb86d4c8424f8836e1a4802d0ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrow1: {fileID: 582707332}
+  arrow2: {fileID: 386624665}
+  house: {fileID: 1130047562}
+  bicycle: {fileID: 1616869397}
+  sport: {fileID: 762361942}
+  coffee: {fileID: 2001804883}
+  nature: {fileID: 888111817}
 --- !u!1 &725635961
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1130047563
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1095,7 +1102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1616869398
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1387,6 +1394,7 @@ MonoBehaviour:
   minuteHand: {fileID: 725635961}
   hourHand: {fileID: 1719305900}
   timelapseMode: 1
+  progressBar: {fileID: 599866018}
 --- !u!1 &2001804883
 GameObject:
   m_ObjectHideFlags: 0

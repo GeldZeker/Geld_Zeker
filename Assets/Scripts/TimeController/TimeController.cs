@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class TimeController : SingletonBehaviour<TimeController>
 {
     [SerializeField]
-    public static TimeController instance;
+    public static TimeController Instance;
 
     [Header("In-game Time")]
     [SerializeField]
@@ -48,7 +48,7 @@ public class TimeController : SingletonBehaviour<TimeController>
             return;
         }
 
-        instance = this;
+        Instance = this;
     }
 
     private void Start()

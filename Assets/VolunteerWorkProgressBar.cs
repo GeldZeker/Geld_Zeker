@@ -18,14 +18,38 @@ public class VolunteerWorkProgressBar : MonoBehaviour
     [SerializeField]
     private GameObject sport = null;
     [SerializeField]
+    private GameObject sportStockImage = null;
+    [SerializeField]
     private GameObject coffee = null;
     [SerializeField]
+    private GameObject coffeeStockImage = null;
+    [SerializeField]
     private GameObject nature = null;
+    [SerializeField]
+    private GameObject natureStockImage = null;
 
 
     public void StartAnimation(string animationName)
     {
         bicycle.SetActive(true);
+        switch (animationName)
+        {
+            case "sport":
+                {
+                    sportStockImage.SetActive(true);
+                }
+                break;
+            case "coffee":
+                {
+                    coffeeStockImage.SetActive(true);
+                }
+                break;
+            case "nature":
+                {
+                    natureStockImage.SetActive(true);
+                }
+                break;
+        }
         StartCoroutine(followUpAnimation(animationName));
     }
 
@@ -38,16 +62,19 @@ public class VolunteerWorkProgressBar : MonoBehaviour
             case "sport":
                 {
                     sport.SetActive(true);
+                    sportStockImage.SetActive(false);
                 }
                 break;
             case "coffee":
                 {
                     coffee.SetActive(true);
+                    coffeeStockImage.SetActive(false);
                 }
                 break;
             case "nature":
                 {
                     nature.SetActive(true);
+                    natureStockImage.SetActive(false);
                 }
                 break;
         }

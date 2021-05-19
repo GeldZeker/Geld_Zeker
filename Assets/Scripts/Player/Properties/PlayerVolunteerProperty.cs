@@ -37,6 +37,11 @@ namespace Assets.Scripts.Player.Properties
             nameOfWork = type;
         }
 
+        public VolunteerType GetVolunteerName()
+        {
+            return nameOfWork;
+        }
+
 
         //abstract class constructors for propertyManager below
         //======================================================================================

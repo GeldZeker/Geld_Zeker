@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Player.Properties;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,8 @@ public class ClockScript : MonoBehaviour
     private bool timelapseMode = false;
     [SerializeField]
     private GameObject progressBar = null;
+    [SerializeField]
+    private PlayerVolunteerProperty volunteerProperty = null;
 
     private bool timelapseGoing;
 
@@ -47,8 +50,10 @@ public class ClockScript : MonoBehaviour
         {
             if (timelapseGoing == false && animationInitiate == true)
             {
-                //progressBar.StartAnimation("sport");
-                if (progressBar) progressBar.GetComponent<VolunteerWorkProgressBar>().StartAnimation("sport");
+                volunteerProperty.SetVolunteerName(VolunteerType.Nature);
+                string volunteerWork = volunteerProperty.GetVolunteerName().ToString().ToLower();
+
+                if (progressBar && volunteerProperty) progressBar.GetComponent<VolunteerWorkProgressBar>().StartAnimation(volunteerWork);
 
                 timelapseGoing = true;
                 StartCoroutine(Timelapse());

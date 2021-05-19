@@ -1768,6 +1768,7 @@ MonoBehaviour:
   hourHand: {fileID: 1719305900}
   timelapseMode: 1
   progressBar: {fileID: 599866018}
+  volunteerProperty: {fileID: 11400000, guid: 9fd69826a35845d4da80e48e4d011528, type: 2}
 --- !u!1 &2001804883
 GameObject:
   m_ObjectHideFlags: 0

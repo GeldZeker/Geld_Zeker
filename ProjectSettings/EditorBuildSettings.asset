@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InvoiceDraggingGame.unity
     guid: 597b1a4b5498f6049a452cffa597029d
+  - enabled: 1
+    path: Assets/Scenes/VolunteerChoosingScene.unity
+    guid: 56f90febffd782441aed483506dcac80
   m_configObjects: {}

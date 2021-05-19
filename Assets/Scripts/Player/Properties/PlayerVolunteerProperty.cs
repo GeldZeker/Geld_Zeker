@@ -23,6 +23,7 @@ namespace Assets.Scripts.Player.Properties
         public void PlusWorkedShift()
         {
             timesWorked++;
+            SaveToFile();
         }
 
         public bool TimeForPayment()
@@ -35,6 +36,7 @@ namespace Assets.Scripts.Player.Properties
         public void SetVolunteerName(VolunteerType type)
         {
             nameOfWork = type;
+            SaveToFile();
         }
 
 

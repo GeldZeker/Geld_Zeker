@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 0
-  nameOfScene: Hallway
+  nameOfScene: VolunteerWorkProcess
   nameOfTransition: Fade
   loadSceneMode: 1
   disableOnClick: 1
@@ -803,7 +803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 0
-  nameOfScene: Hallway
+  nameOfScene: VolunteerWorkProcess
   nameOfTransition: Fade
   loadSceneMode: 1
   disableOnClick: 1
@@ -956,7 +956,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sound: 0
-  nameOfScene: Hallway
+  nameOfScene: VolunteerWorkProcess
   nameOfTransition: Fade
   loadSceneMode: 1
   disableOnClick: 1

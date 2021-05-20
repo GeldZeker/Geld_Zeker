@@ -1,19 +1,25 @@
 ﻿using Assets.Scripts.Player.Properties;
+using GameStudio.GeldZeker.SceneTransitioning;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>A MonoBehaviour object that represents the script for the clock.</summary>
 public class ClockScript : MonoBehaviour
 {
     [SerializeField]
-    private GameObject secondHand;
+    private GameObject secondHand = null;
     [SerializeField]
-    private GameObject minuteHand;
+    private GameObject minuteHand = null;
     [SerializeField]
-    private GameObject hourHand;
+    private GameObject hourHand = null;
     [SerializeField]
     private bool timelapseMode = false;
+    [SerializeField]
+    private string timelapseForwardScene = "";
+    [SerializeField]
+    private bool volunteerWork = false;
     [SerializeField]
     private GameObject progressBar = null;
     [SerializeField]
@@ -28,9 +34,10 @@ public class ClockScript : MonoBehaviour
 
     private TimeSpan inGameTime = new TimeSpan();
 
+    /// <summary>Update Clock functionality.</summary>
     void Update()
     {
-        inGameTime = TimeController.Instance.dayNightCycleTime;
+        inGameTime = TimeController.instance.dayNightCycleTime;
         string seconds = inGameTime.ToString("ss");
 
         if (seconds != oldSeconds) UpdateTimer();
@@ -38,6 +45,7 @@ public class ClockScript : MonoBehaviour
         oldSeconds = seconds;
     }
 
+    /// <summary>Update state of the Clock UI.</summary>
     void UpdateTimer()
     {
         int secondsInt = int.Parse(inGameTime.ToString("ss"));
@@ -50,7 +58,6 @@ public class ClockScript : MonoBehaviour
         {
             if (timelapseGoing == false && animationInitiate == true)
             {
-                volunteerProperty.SetVolunteerName(VolunteerType.Nature);
                 string volunteerWork = volunteerProperty.GetVolunteerName().ToString().ToLower();
 
                 if (progressBar && volunteerProperty) progressBar.GetComponent<VolunteerWorkProgressBar>().StartAnimation(volunteerWork);
@@ -77,6 +84,7 @@ public class ClockScript : MonoBehaviour
         }
     }
 
+    /// <summary>Coroutine for Timelapse. Execute certain functions when timelapse is over.</summary>
     private IEnumerator Timelapse()
     {
         float timer = 0.0f;
@@ -85,8 +93,6 @@ public class ClockScript : MonoBehaviour
         {
             timer += Time.deltaTime;
             int seconds = (int)(timer % 60);
-
-            Debug.Log(seconds);
 
             if (seconds == 10)
             {
@@ -99,9 +105,23 @@ public class ClockScript : MonoBehaviour
         }
     }
 
+    /// <summary>Stop Timelapse UI. Reroutes if timelapse is used for volunteerWork.</summary>
     private void StopTimer()
     {
         timelapseGoing = false;
         animationInitiate = false;
+
+        if (volunteerWork) OnVolunteerWorkEnd();
+        // This can be expanded in the future for more use-cases outside Volunteer Work with a string(instead of a boolean) and a switch-case.
+    }
+
+    /// <summary>Method is executed after Timelapse if Volunteer Work.</summary>
+    private void OnVolunteerWorkEnd()
+    {
+        if (!timelapseForwardScene.Equals(""))
+        {
+            SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, timelapseForwardScene, UnityEngine.SceneManagement.LoadSceneMode.Additive);
+        }
+        // Add additional payout route to function.
     }
 }

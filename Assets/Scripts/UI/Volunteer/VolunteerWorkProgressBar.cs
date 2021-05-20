@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>A Monobehaviour object that represents a progress bar.</summary>
 public class VolunteerWorkProgressBar : MonoBehaviour
 {
     [SerializeField]
     public static VolunteerWorkProgressBar Instance;
-
     [SerializeField]
     private GameObject arrow1 = null;
     [SerializeField]
@@ -28,7 +28,7 @@ public class VolunteerWorkProgressBar : MonoBehaviour
     [SerializeField]
     private GameObject natureStockImage = null;
 
-
+    /// <summary>Start the pure UI Animation of the progressbar. It picks other icons based on the parameter. This is can be seen as a Start function.</summary>
     public void StartAnimation(string animationName)
     {
         bicycle.SetActive(true);
@@ -52,7 +52,7 @@ public class VolunteerWorkProgressBar : MonoBehaviour
         }
         StartCoroutine(followUpAnimation(animationName));
     }
-
+    /// <summary>The Couritine function that follows after the StartAnimation is called. Based on parameter it picks a path to animate certain images.</summary>
     private IEnumerator followUpAnimation(string animationName)
     {
         yield return new WaitForSeconds(3.5f);

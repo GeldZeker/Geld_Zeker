@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82957ff589d75684d8a9bd249b221ccc, type: 3}
   m_Name: Volunteer
   m_EditorClassIdentifier: 
+  timesWorked: 0
+  nameOfWork: 0
   PaymentInterval: 0

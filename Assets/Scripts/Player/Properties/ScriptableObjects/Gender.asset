@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15db824144e205e429c25abd6734c929, type: 3}
   m_Name: Gender
   m_EditorClassIdentifier: 
-  gender: 0
+  gender: 2

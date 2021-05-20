@@ -15,7 +15,7 @@ namespace Assets.Scripts.UI.Volunteer
     {
         [Header("Button settings")]
         [SerializeField]
-        private VolunteerType volunteerType= VolunteerType.None;
+        private VolunteerType volunteerType = VolunteerType.None;
 
         [Header("Button settings")]
         [SerializeField]

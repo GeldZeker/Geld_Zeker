@@ -25,8 +25,6 @@ namespace Assets.Scripts.UI.Volunteer
         {
             volunteerProporty.LoadFromFile();
             volunteerProporty.SetVolunteerName(volunteerType);
-
-            Debug.Log("Set to: " + volunteerType);
         }
 
         protected override void Awake()

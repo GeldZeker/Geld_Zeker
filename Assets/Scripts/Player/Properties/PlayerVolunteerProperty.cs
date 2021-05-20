@@ -19,6 +19,10 @@ namespace Assets.Scripts.Player.Properties
         [SerializeField]
         private int PaymentInterval;
 
+        public void Awake()
+        {
+            LoadFromFile();
+        }
 
         public void PlusWorkedShift()
         {

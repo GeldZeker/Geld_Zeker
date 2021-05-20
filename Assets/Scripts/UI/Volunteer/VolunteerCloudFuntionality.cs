@@ -1,27 +1,49 @@
 ﻿using Assets.Scripts.Player.Properties;
-using GameStudio.GeldZeker.Player;
+using Assets.Scripts.SceneTransitioning;
+using GameStudio.GeldZeker.MiniGames;
+using GameStudio.GeldZeker.UI;
+using GameStudio.GeldZeker.UI.CellPhone;
+using GameStudio.GeldZeker.UI.Navigation;
+using GameStudio.GeldZeker.Utilities;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.UI.Volunteer
 {
-    public class VolunteerCloudFuntionality : MonoBehaviour
+    public class VolunteerCloudFuntionality : AudableButton
     {
+        [Header("Button settings")]
         [SerializeField]
-        private VolunteerType name = VolunteerType.None;
+        private VolunteerType volunteerType= VolunteerType.None;
 
+        [Header("Button settings")]
         [SerializeField]
-        private PlayerVolunteerProperty volunteerP = null;
+        private PlayerVolunteerProperty volunteerProporty = null;
 
-        public void SetVolunteerType(VolunteerType type)
+        private void SetVolunteerType()
         {
-            volunteerP.LoadFromFile();
-            volunteerP.SetVolunteerName(type);
-            Debug.Log("type set!!!");
+            volunteerProporty.LoadFromFile();
+            volunteerProporty.SetVolunteerName(volunteerType);
+
+            Debug.Log("Set to: " + volunteerType);
+        }
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            button.onClick.AddListener(SetVolunteerType);
+        }
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            button.onClick.RemoveListener(SetVolunteerType);
+        }
+        public void SetInteractable(bool value)
+        {
+            button.interactable = value;
         }
     }
 }

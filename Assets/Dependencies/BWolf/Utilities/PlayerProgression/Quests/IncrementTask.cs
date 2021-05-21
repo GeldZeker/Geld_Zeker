@@ -17,6 +17,9 @@ namespace BWolf.Utilities.PlayerProgression.Quests
         [SerializeField]
         private int goal = 0;
 
+        [SerializeField]
+        private bool isCellphoneRequiredIncrement = false;
+
         public override string TaskDescription
         {
             get
@@ -53,7 +56,7 @@ namespace BWolf.Utilities.PlayerProgression.Quests
         {
             get
             {
-                return isCellphoneRequired;
+                return isCellphoneRequiredIncrement;
             }
         }
 

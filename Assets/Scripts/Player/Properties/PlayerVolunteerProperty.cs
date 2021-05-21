@@ -8,41 +8,48 @@ using UnityEngine;
 namespace Assets.Scripts.Player.Properties
 {
     [CreateAssetMenu(menuName = "Player/Properties/Volunteer")]
-    class PlayerVolunteerProperty : PlayerProperty
+    public class PlayerVolunteerProperty : PlayerProperty
     {
         [SerializeField]
-        private int timesWorked;
+        public int timesWorked;
 
         [SerializeField]
         private VolunteerType nameOfWork;
-
-        [SerializeField]
-        private int PaymentInterval;
 
         public void Awake()
         {
             LoadFromFile();
         }
 
+        /// <summary> Add 1 hour to timesWorked and check if player has worked more then 8 times. </summary>
         public void PlusWorkedShift()
         {
             timesWorked++;
+            CheckHours(timesWorked);
             SaveToFile();
         }
 
-        public bool TimeForPayment()
+        /// <summary> Method to check if player has worked more then 8 times. </summary>
+        public bool CheckHours(int hoursToCheck)
         {
-            if (timesWorked % PaymentInterval == 0)
+            if (hoursToCheck >= 8)
+            {
                 return true;
-            return false;
+            }
+            else
+            {
+                return false;
+            }
         }
 
+        /// <summary> Method to set the type of volunteer work player has chosen. </summary>
         public void SetVolunteerName(VolunteerType type)
         {
             nameOfWork = type;
             SaveToFile();
         }
 
+        /// <summary> Method to get the type of volunteer work player has chosen. </summary>
         public VolunteerType GetVolunteerName()
         {
             return nameOfWork;
@@ -67,8 +74,8 @@ namespace Assets.Scripts.Player.Properties
         //Loads value from local storage
         public override void LoadFromFile()
         {
-            string path = $"{FOLDER_NAME}/{nameof(PlayerRewardProperty)}/{name}";
-            string path2 = $"{FOLDER_NAME}/{nameof(PlayerRewardProperty)}/{name + "nameOfWork"}";
+            string path = $"{FOLDER_NAME}/{nameof(PlayerVolunteerProperty)}/{name}";
+            string path2 = $"{FOLDER_NAME}/{nameof(PlayerVolunteerProperty)}/{name + "nameOfWork"}";
 
             if (GameFileSystem.LoadFromFile(path, out int outValue) &&
                 GameFileSystem.LoadFromFile(path2, out VolunteerType outValue2))
@@ -88,10 +95,10 @@ namespace Assets.Scripts.Player.Properties
         //Saves value to local storage
         protected override void SaveToFile()
         {
-            string path = $"{FOLDER_NAME}/{nameof(PlayerRewardProperty)}/{name}";
+            string path = $"{FOLDER_NAME}/{nameof(PlayerVolunteerProperty)}/{name}";
             GameFileSystem.SaveToFile(path, timesWorked);
 
-            string path2 = $"{FOLDER_NAME}/{nameof(PlayerRewardProperty)}/{name + "nameOfWork"}";
+            string path2 = $"{FOLDER_NAME}/{nameof(PlayerVolunteerProperty)}/{name + "nameOfWork"}";
             GameFileSystem.SaveToFile(path2, nameOfWork);
         }
     }

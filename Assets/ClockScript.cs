@@ -1,4 +1,6 @@
 ﻿using Assets.Scripts.Player.Properties;
+using BWolf.Utilities.PlayerProgression.Quests;
+using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.SceneTransitioning;
 using System;
 using System.Collections;
@@ -22,15 +24,31 @@ public class ClockScript : MonoBehaviour
     private bool volunteerWork = false;
     [SerializeField]
     private GameObject progressBar = null;
+
+    [Header("Player Properties")]
     [SerializeField]
     private PlayerVolunteerProperty volunteerProperty = null;
+    [SerializeField]
+    private PlayerMoneyProperty playerMoneyProperty = null;
+    [SerializeField]
+    private double moneyToReceive = 180.00;
+
+    [Header("Quest settings")]
+    [SerializeField]
+    private Quest volunteerWorkQuest = null;
+
+    [Header("Tamagotchi")]
+    [SerializeField]
+    private TamagotchiElementProperty happiness = null;
+
+    [SerializeField]
+    private int happinessOnCompletion = 10;
 
     private bool timelapseGoing;
 
     private bool animationInitiate = true;
 
     private string oldSeconds = null;
-    
 
     private TimeSpan inGameTime = new TimeSpan();
 
@@ -122,6 +140,30 @@ public class ClockScript : MonoBehaviour
         {
             SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, timelapseForwardScene, UnityEngine.SceneManagement.LoadSceneMode.Additive);
         }
-        // Add additional payout route to function.
+        // Add 1 hour to timesWorked for every worked shift.
+        volunteerProperty.PlusWorkedShift();
+        if (volunteerWorkQuest.IsUpdatable)
+        {
+            // Update volunteer work task.
+            IncrementTask volunteerWork = volunteerWorkQuest.GetTask<IncrementTask>("VolunteerWork");
+            volunteerWork.Increment();
+            // If volunteer work quest is done add happiness.
+            if (volunteerWork.IsDone)
+            {
+                happiness.AddValue(happinessOnCompletion);
+            }
+        }
+        // Check if player has worked more then 8 times, if so pay the player money.
+        if (volunteerProperty.CheckHours(volunteerProperty.timesWorked))
+        {
+            TimeForPayment();
+        }
+    }
+
+    /// <summary> Method to check if player needs to be payed for working as a volunteer. </summary>
+    private void TimeForPayment()
+    {
+        playerMoneyProperty.AddMoney(moneyToReceive);
+        volunteerProperty.Restore();
     }
 }

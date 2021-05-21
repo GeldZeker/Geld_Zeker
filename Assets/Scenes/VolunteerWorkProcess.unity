@@ -1771,6 +1771,12 @@ MonoBehaviour:
   volunteerWork: 1
   progressBar: {fileID: 599866018}
   volunteerProperty: {fileID: 11400000, guid: 9fd69826a35845d4da80e48e4d011528, type: 2}
+  playerMoneyProperty: {fileID: 11400000, guid: cb3b179e5a1663d4f8a8f10dcfa95910,
+    type: 2}
+  moneyToReceive: 180
+  volunteerWorkQuest: {fileID: 11400000, guid: c02d910755f0db94891c4d51dd6039eb, type: 2}
+  happiness: {fileID: 11400000, guid: 9aa579c9db5275e43bca4c6cb0456a74, type: 2}
+  happinessOnCompletion: 10
 --- !u!1 &2001804883
 GameObject:
   m_ObjectHideFlags: 0

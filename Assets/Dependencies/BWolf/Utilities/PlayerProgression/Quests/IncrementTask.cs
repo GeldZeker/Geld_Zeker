@@ -103,5 +103,10 @@ namespace BWolf.Utilities.PlayerProgression.Quests
             string path = $"{FOLDER_PATH}/{nameof(IncrementTask)}/{name}";
             GameFileSystem.SaveToFile(path, count);
         }
+
+        public void HardComplete()
+        {
+            count = goal;
+        }
     }
 }

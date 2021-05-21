@@ -98,5 +98,10 @@ namespace BWolf.Utilities.PlayerProgression.Quests
                 SaveToFile();
             }
         }
+
+        public void HardComplete()
+        {
+            currentValue = minimalValue;
+        }
     }
 }

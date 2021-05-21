@@ -195,6 +195,47 @@ namespace BWolf.Utilities.PlayerProgression.Quests
 #endif
         }
 
+        /// <summary>Cycles through tasks of quest to complete them.</summary>
+        // WARNING: Do not use this in any Production version of the game!
+        // Game not representable when this function is called. Certain game elements are not called.
+        public void DevComplete(string stopAtTask)
+        {
+#if UNITY_EDITOR
+            for (int i = 0; i < tasks.Length; i++)
+            {
+                string compareTaskType = "";
+                string taskTypeStr = tasks[i].GetType().ToString();
+                int taskType = taskTypeStr.LastIndexOf('.');
+                if (taskType != -1) compareTaskType = taskTypeStr.Substring(taskType + 1);
+
+                if (tasks[i].name == stopAtTask) return;
+
+                switch (compareTaskType)
+                {
+                    case "DoOnceTask":
+                        {
+                            DoOnceTask doOnce = this.GetTask<DoOnceTask>(tasks[i].name);
+                            doOnce.SetDoneOnce();
+                        }
+                        break;
+                    case "IncrementTask":
+                        {
+                            IncrementTask increment = this.GetTask<IncrementTask>(tasks[i].name);
+                            increment.HardComplete();
+                        }
+                        break;
+                    case "MinimalValueTask":
+                        {
+                            MinimalValueTask minimal = this.GetTask<MinimalValueTask>(tasks[i].name);
+                            minimal.HardComplete();
+                        }
+                        break;
+                }
+
+            }
+#endif
+        }
+
         /// <summary>Saves the active state of this quest to local storage</summary>
         public void SaveActiveStateToFile()
         {

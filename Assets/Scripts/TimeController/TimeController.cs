@@ -16,7 +16,7 @@ public class TimeController : SingletonBehaviour<TimeController>
     private string timeCounter;
 
     [SerializeField]
-    private float elapsedTime;
+    public float elapsedTime;
 
     [SerializeField]
     public string latestDayNightCyclePart;

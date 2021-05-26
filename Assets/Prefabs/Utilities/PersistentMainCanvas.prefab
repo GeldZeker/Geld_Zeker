@@ -462,6 +462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: c02d910755f0db94891c4d51dd6039eb, type: 2}
   toHideGameObject: {fileID: 4792546586568411232}
+  introduction: {fileID: 11400000, guid: a96d6567274e2224da1bf5fb95d4b8b0, type: 2}
 --- !u!1 &138130210249903285
 GameObject:
   m_ObjectHideFlags: 0

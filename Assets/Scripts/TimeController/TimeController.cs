@@ -39,6 +39,8 @@ public class TimeController : SingletonBehaviour<TimeController>
 
     private const string FILE_InGameTime = "ProgressSaves/Time/TimeInGameClosed";
 
+    private int daySeconds = 86399;
+
     protected override void Awake()
     {
         base.Awake();
@@ -80,6 +82,11 @@ public class TimeController : SingletonBehaviour<TimeController>
         timerGoing = true;
         elapsedTime = (float)((3600 * elapsedHoursIG) + 0f);
 
+        if (elapsedTime > daySeconds)
+        {
+            elapsedTime = elapsedTime - (elapsedTime / daySeconds) * daySeconds;
+        }
+
         StartCoroutine(UpdateTimer());
     }
 
@@ -95,6 +102,8 @@ public class TimeController : SingletonBehaviour<TimeController>
     {
         while (timerGoing)
         {
+            if (elapsedTime > daySeconds) elapsedTime = 0;
+
             elapsedTime += Time.deltaTime * 60;
             dayNightCycleTime = TimeSpan.FromSeconds(elapsedTime);
             string dayNightCycleStr = "Time: " + dayNightCycleTime.ToString("hh':'mm");

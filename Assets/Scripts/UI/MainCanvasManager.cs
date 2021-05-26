@@ -93,6 +93,11 @@ namespace GameStudio.GeldZeker.UI
                     SetNormalModeButtonState(false);
                     SetMinigameModeButtonState(true);
                 }
+                else if (name == "VolunteerWorkProcess")
+                {
+                    SetNormalModeButtonState(false);
+                    SetMinigameModeButtonState(false);
+                }
                 else
                 {
                     SetNormalModeButtonState(true);

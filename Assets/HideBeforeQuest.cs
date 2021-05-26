@@ -19,14 +19,15 @@ public class HideBeforeQuest : MonoBehaviour
         int index = timeStr.IndexOf(':');
         int hours = Int32.Parse(timeStr.Substring(0, index));
 
-        if (quest.IsActive)
+
+        if (quest.IsActive || quest.IsCompleted)
         {
             toHideGameObject.SetActive(true);
             toHideGameObject.GetComponent<Button>().interactable = true;
         }
         if (!quest.IsActive && !quest.IsCompleted) toHideGameObject.SetActive(false);
 
-        if (6 < hours && hours < 10 && toHideGameObject.activeInHierarchy) toHideGameObject.GetComponent<Button>().interactable = true;
+        if (5 < hours && hours < 11 && toHideGameObject.activeInHierarchy) toHideGameObject.GetComponent<Button>().interactable = true;
         else toHideGameObject.GetComponent<Button>().interactable = false;
     }
 }

@@ -82,8 +82,6 @@ public class ClockScript : MonoBehaviour
                 minuteHand.transform.Rotate(0, 0, minutesInt * 6 * -1);
                 // Fetch Volunteer work type
                 string volunteerWork = volunteerProperty.GetVolunteerName().ToString().ToLower();
-                //Debug.Log(TimeSpan.FromSeconds(TimeController.Instance.elapsedTime));
-                //Debug.Log(TimeSpan.FromSeconds(TimeController.Instance.elapsedTime + 36000));
 
                 if (progressBar && volunteerProperty) progressBar.GetComponent<VolunteerWorkProgressBar>().StartAnimation(volunteerWork);
 

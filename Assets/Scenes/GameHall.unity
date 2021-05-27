@@ -218,6 +218,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
   difficulty: 0
   minigameMode: 0
   setting: {fileID: 0}
@@ -1376,6 +1377,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
   difficulty: 1
   minigameMode: 0
   setting: {fileID: 0}
@@ -1618,7 +1620,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4b681a3680719b4408138b2da88bac50,
+      objectReference: {fileID: 21300000, guid: 5a23d328381c35a419b96fedd1032fa7,
         type: 3}
     - target: {fileID: 4216819568720306690, guid: ba99f80a85057f14a8a519291384c484,
         type: 3}
@@ -1629,6 +1631,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 15.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398361942790626994, guid: ba99f80a85057f14a8a519291384c484,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba99f80a85057f14a8a519291384c484, type: 3}
@@ -3832,6 +3839,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
   difficulty: 2
   minigameMode: 0
   setting: {fileID: 0}
@@ -5332,7 +5340,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4b681a3680719b4408138b2da88bac50,
+      objectReference: {fileID: 21300000, guid: 5a23d328381c35a419b96fedd1032fa7,
         type: 3}
     - target: {fileID: 4216819568720306690, guid: ba99f80a85057f14a8a519291384c484,
         type: 3}
@@ -5353,6 +5361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4398361942790626994, guid: ba99f80a85057f14a8a519291384c484,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba99f80a85057f14a8a519291384c484, type: 3}

@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>Monobehaviour object that helps to hide a GameObject based on progress of a Quest.</summary>
+/*                                  -=-=-=-=-=-=- WARNING! -=-=-=-=-=-=-
+    This Script is NOT generic, for now it can only be used for the one button that is used for now!*/
 public class HideBeforeQuest : MonoBehaviour
 {
     [SerializeField]

@@ -238,9 +238,10 @@ GameObject:
   - component: {fileID: 341329239}
   - component: {fileID: 341329242}
   - component: {fileID: 341329243}
+  - component: {fileID: 341329244}
   m_Layer: 5
   m_Name: ButtonSport
-  m_TagString: Untagged
+  m_TagString: Introducable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,6 +378,25 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
+--- !u!114 &341329244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341329237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f854b73bd02ad8144b3068c6a8a0b681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intoTagName: CloudSport
+  type: 0
+  relativeArrowPosition: 0
+  introArrowSpacing: 50
+  prefabIntroArrow: {fileID: 3250980964189753913, guid: b9880f2a1b3e9684986e6e5b4cf9bcc3,
+    type: 3}
 --- !u!1 &723824261
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,9 +690,10 @@ GameObject:
   - component: {fileID: 1613165553}
   - component: {fileID: 1613165552}
   - component: {fileID: 1613165556}
+  - component: {fileID: 1613165557}
   m_Layer: 5
   m_Name: ButtonCoffee
-  m_TagString: Untagged
+  m_TagString: Introducable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -809,6 +830,25 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
+--- !u!114 &1613165557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613165550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f854b73bd02ad8144b3068c6a8a0b681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intoTagName: CloudCoffee
+  type: 0
+  relativeArrowPosition: 0
+  introArrowSpacing: 50
+  prefabIntroArrow: {fileID: 3250980964189753913, guid: b9880f2a1b3e9684986e6e5b4cf9bcc3,
+    type: 3}
 --- !u!1 &1778734247
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,9 +863,10 @@ GameObject:
   - component: {fileID: 1778734249}
   - component: {fileID: 1778734252}
   - component: {fileID: 1778734253}
+  - component: {fileID: 1778734254}
   m_Layer: 5
   m_Name: ButtonNature
-  m_TagString: Untagged
+  m_TagString: Introducable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -962,6 +1003,25 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
+--- !u!114 &1778734254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778734247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f854b73bd02ad8144b3068c6a8a0b681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intoTagName: CloudNature
+  type: 0
+  relativeArrowPosition: 0
+  introArrowSpacing: 40
+  prefabIntroArrow: {fileID: 3250980964189753913, guid: b9880f2a1b3e9684986e6e5b4cf9bcc3,
+    type: 3}
 --- !u!1 &1970345821
 GameObject:
   m_ObjectHideFlags: 0

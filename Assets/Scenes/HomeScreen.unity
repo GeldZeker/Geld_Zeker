@@ -1882,6 +1882,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1223118764 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4792546586568411232, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 4768481293783644329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1257223326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2312,6 +2318,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!114 &1889149507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3526,6 +3533,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2672936580005893721, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
+        type: 3}
+      propertyPath: volunteerButton
+      value: 
+      objectReference: {fileID: 1223118764}
     - target: {fileID: 2828976356258867815, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -4294,7 +4306,7 @@ PrefabInstance:
     - target: {fileID: 4792546586568411232, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4893737075167063556, guid: 47d6496ccd6a8474e8174b1e3c3777ae,
         type: 3}

@@ -462,7 +462,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quest: {fileID: 11400000, guid: c02d910755f0db94891c4d51dd6039eb, type: 2}
   toHideGameObject: {fileID: 4792546586568411232}
-  introduction: {fileID: 11400000, guid: a96d6567274e2224da1bf5fb95d4b8b0, type: 2}
 --- !u!1 &138130210249903285
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +746,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 7417205472694706616}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
   difficulty: 0
   minigameMode: 0
   setting: {fileID: 11400000, guid: 30ba11c29f466334591d579b5a714642, type: 2}
@@ -2165,6 +2165,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!1 &545647757346098782
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,6 +4195,7 @@ MonoBehaviour:
   disableOnClick: 0
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!1 &1006344605931083549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4838,6 +4840,7 @@ MonoBehaviour:
   disableOnClick: 0
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 6406554206791090659}
+  introduction: {fileID: 0}
 --- !u!1 &1246367570978692622
 GameObject:
   m_ObjectHideFlags: 0
@@ -6357,6 +6360,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!225 &2813931478980396279
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -14743,6 +14747,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!225 &6645979311186784576
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -18188,6 +18193,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 11400000, guid: fd9f316e7f001f743bdf43e4bd066841, type: 2}
 --- !u!1 &4798968024837663222
 GameObject:
   m_ObjectHideFlags: 0
@@ -20879,6 +20885,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!225 &3062623553234509545
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -21387,6 +21394,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!1 &5657387220100751106
 GameObject:
   m_ObjectHideFlags: 0
@@ -23155,6 +23163,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!1 &6107953765266728491
 GameObject:
   m_ObjectHideFlags: 0
@@ -26545,6 +26554,7 @@ MonoBehaviour:
   disableOnClick: 0
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 0}
 --- !u!114 &1840199965446092939
 MonoBehaviour:
   m_ObjectHideFlags: 0

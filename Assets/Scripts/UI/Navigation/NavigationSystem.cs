@@ -34,6 +34,9 @@ namespace GameStudio.GeldZeker.UI.Navigation
         [SerializeField]
         private ChildSceneDisplay childSceneDisplay = null;
 
+        [SerializeField]
+        private GameObject volunteerButton = null;
+
         private RectTransform rectTransform;
         private bool isToggling;
         private bool hasFocus;
@@ -59,6 +62,7 @@ namespace GameStudio.GeldZeker.UI.Navigation
             {
                 navButton.Clicked += OnButtonClick;
             }
+            volunteerButton.SetActive(false);
         }
 
         private void Start()

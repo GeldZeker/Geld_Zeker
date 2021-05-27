@@ -1616,6 +1616,7 @@ MonoBehaviour:
   disableOnClick: 1
   cellPhoneDisplaySystem: {fileID: 0}
   optionsScreen: {fileID: 0}
+  introduction: {fileID: 11400000, guid: a96d6567274e2224da1bf5fb95d4b8b0, type: 2}
 --- !u!114 &1200741864
 MonoBehaviour:
   m_ObjectHideFlags: 0

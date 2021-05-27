@@ -71,11 +71,16 @@ public class ClockScript : MonoBehaviour
         int hoursInt = int.Parse(inGameTime.ToString("hh"));
         float hourDistance = (float)(minutesInt) / 60f;
         int time = 1;
+        if (hoursInt > 12) hoursInt = hoursInt - 12;
 
         if (timelapseMode)
         {
             if (timelapseGoing == false && animationInitiate == true)
             {
+                // Set Clock hands
+                hourHand.transform.Rotate(0, 0, (hoursInt + hourDistance) * 30 * -1);
+                minuteHand.transform.Rotate(0, 0, minutesInt * 6 * -1);
+                // Fetch Volunteer work type
                 string volunteerWork = volunteerProperty.GetVolunteerName().ToString().ToLower();
 
                 if (progressBar && volunteerProperty) progressBar.GetComponent<VolunteerWorkProgressBar>().StartAnimation(volunteerWork);
@@ -86,14 +91,12 @@ public class ClockScript : MonoBehaviour
             if (animationInitiate == true)
             {
                 iTween.RotateTo(minuteHand, iTween.Hash("z", -3600, "time", 10, "easetype", "linear"));
-                iTween.RotateTo(hourHand, iTween.Hash("z", -3600, "time", 100, "easetype", "linear"));
+                iTween.RotateTo(hourHand, iTween.Hash("z", -3600 - ((hoursInt + hourDistance) * 30 * -1), "time", 100, "easetype", "linear"));
             }
         } else
         {
             iTween.RotateTo(secondHand, iTween.Hash("z", secondsInt * 6 * -1, "time", time, "easetype", "easeOutQuint"));
             iTween.RotateTo(minuteHand, iTween.Hash("z", minutesInt * 6 * -1, "time", time, "easetype", "easeOutElastic"));
-
-            if (hoursInt > 12) hoursInt = hoursInt - 12;
 
             if (minutesInt == 0 || minutesInt == 12 || minutesInt == 24 || minutesInt == 36 || minutesInt == 48)
             {
@@ -128,9 +131,14 @@ public class ClockScript : MonoBehaviour
     {
         timelapseGoing = false;
         animationInitiate = false;
-
+        AddHoursToTime();
         if (volunteerWork) OnVolunteerWorkEnd();
         // This can be expanded in the future for more use-cases outside Volunteer Work with a string(instead of a boolean) and a switch-case.
+    }
+
+    private void AddHoursToTime()
+    {
+        TimeController.Instance.elapsedTime = TimeController.Instance.elapsedTime + 36000;
     }
 
     /// <summary>Method is executed after Timelapse if Volunteer Work.</summary>
@@ -140,7 +148,7 @@ public class ClockScript : MonoBehaviour
         {
             SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, timelapseForwardScene, UnityEngine.SceneManagement.LoadSceneMode.Additive);
         }
-        // Add 1 hour to timesWorked for every worked shift.
+        // Add 1 day to timesWorked for every worked shift.
         volunteerProperty.PlusWorkedShift();
         if (volunteerWorkQuest.IsUpdatable)
         {

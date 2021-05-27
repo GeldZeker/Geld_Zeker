@@ -1,5 +1,6 @@
 ﻿using Assets.Scripts.SceneTransitioning;
 using GameStudio.GeldZeker.MiniGames;
+using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.UI;
 using GameStudio.GeldZeker.UI.CellPhone;
 using GameStudio.GeldZeker.UI.Navigation;
@@ -28,13 +29,15 @@ namespace GameStudio.GeldZeker.SceneTransitioning
 
         public event Action Clicked;
 
-        [Header("CellPhone Display")]
+        [Header("References")]
         [SerializeField]
         private CellPhoneDisplaySystem cellPhoneDisplaySystem = null;
 
-        [Header("Options Screen")]
         [SerializeField]
         private GameObject optionsScreen = null;
+
+        [SerializeField]
+        private Introduction introduction = null;
 
         public string NameOfSceneLoading
         {
@@ -76,6 +79,7 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                 }
                 else
                 {
+                    Action actionIntro = null;
                     string finalizedScene = null;
                     switch (nameOfScene)
                     {
@@ -112,8 +116,12 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                             break;
                         default: break;
                     }
-                    if (finalizedScene != null) SceneTransitionSystem.Instance.Transition(nameOfTransition, finalizedScene, loadSceneMode);
-                    else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                    if (introduction != null) 
+                    {
+                        actionIntro = () => introduction.Start();
+                    }
+                    if (finalizedScene != null) SceneTransitionSystem.Instance.Transition(nameOfTransition, finalizedScene, loadSceneMode, actionIntro);
+                    else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode, actionIntro);
                 }
             }
         }

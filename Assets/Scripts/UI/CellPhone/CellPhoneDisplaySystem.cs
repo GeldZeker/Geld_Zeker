@@ -96,11 +96,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             if (!isToggling)
             {
                 // Set App Icons active to false if not available yet.
-                if (!hasDigiDAccountProperty.Value)
-                {
-                    digidAppObject.SetActive(false);
-                    payInvoiceButton.SetActive(false);
-                }
+                if (!hasDigiDAccountProperty.Value) digidAppObject.SetActive(false);
                 else
                 {
                     digidAppObject.SetActive(true);
@@ -111,10 +107,8 @@ namespace GameStudio.GeldZeker.UI.CellPhone
                         DigiDIntro.Restore();
                         DigiDIntro.Start();
                     }
-                    if (payInvoiceQuest.IsCompleted)
-                    {
-                        payInvoiceButton.GetComponent<Button>().interactable = false;
-                    }
+                    if (digidBekijkenQuest.IsCompleted && payInvoiceQuest.IsActive) payInvoiceButton.SetActive(true);
+                    if (payInvoiceQuest.IsCompleted) payInvoiceButton.GetComponent<Button>().interactable = false;
                 }
 
                 OpenScreen(CellPhoneScreen.Home);

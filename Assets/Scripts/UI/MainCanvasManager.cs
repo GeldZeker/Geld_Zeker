@@ -69,6 +69,8 @@ namespace GameStudio.GeldZeker.UI
         private void Start()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
+            // Disable screen dimming
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
         }
 
         protected override void OnDestroy()

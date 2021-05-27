@@ -100,6 +100,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
                 else
                 {
                     digidAppObject.SetActive(true);
+                    payInvoiceButton.SetActive(true);
                     if (!digidBekijkenQuest.IsCompleted && !hasFocus)
                     {
                         digidIntroActive = true;

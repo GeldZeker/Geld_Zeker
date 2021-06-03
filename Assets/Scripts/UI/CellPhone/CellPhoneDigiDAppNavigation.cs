@@ -20,6 +20,13 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         [SerializeField]
         private Quest digidBekijkenQuest = null;
 
+        [Header("Tamagotchi")]
+        [SerializeField]
+        private TamagotchiElementProperty happiness = null;
+
+        [SerializeField]
+        private int happinessOnCompletion = 10;
+
         private void Awake()
         {
             instance = this;
@@ -37,7 +44,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         {
             hasDigiDAccountProperty = PlayerPropertyManager.Instance.GetProperty<DigiDProperty>("DigiD");
 
-            pinHelper.SetActive(false);
+            if (pinHelper.activeSelf) pinHelper.SetActive(false);
             if (hasDigiDAccountProperty.Value) { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneral); }
             else { MainCanvasManager.Instance.OpenCellPhoneScreen(CellPhoneScreen.DigiDGeneralEmpty); }
         }
@@ -50,6 +57,7 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             {
                 DoOnceTask watchAllowancesTask = digidBekijkenQuest.GetTask<DoOnceTask>("1KeerToeslagenBekijken");
                 watchAllowancesTask.SetDoneOnce();
+                happiness.AddValue(happinessOnCompletion);
             }
         }
     }

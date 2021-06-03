@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameOfScene: DebitCardPayGame
   type: 0
-  minigameMode: 1
+  minigameMode: 0
   progression:
     IsCompletedInStoryMode: 0
     DifficultySettings:

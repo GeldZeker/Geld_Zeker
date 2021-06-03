@@ -17,5 +17,6 @@ MonoBehaviour:
   isActive: 0
   level: 0
   tasks:
+  - {fileID: 11400000, guid: a9bf8b16172b85c4699cbba5a908b039, type: 2}
   - {fileID: 11400000, guid: f01ba643b466d784f97765af824b9337, type: 2}
   requiredQuest: {fileID: 0}

@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 453510416}
   - component: {fileID: 453510415}
   - component: {fileID: 453510417}
+  - component: {fileID: 453510418}
   m_Layer: 5
   m_Name: Bread
   m_TagString: Untagged
@@ -231,8 +232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 29.4, y: 89.1}
-  m_SizeDelta: {x: 187.25, y: 89.6}
+  m_AnchoredPosition: {x: 62.4, y: 102.57}
+  m_SizeDelta: {x: 212.26782, y: 100.97463}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &453510413
 MonoBehaviour:
@@ -345,12 +346,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startOnAwake: 1
-  scaleAxis: 1
-  minScale: 0.97
+  scaleAxis: 3
+  minScale: 0.95
   scaleSpeed: 0.1
   rotate: 0
   rotation: 1
   rotateSpeed: 15
+--- !u!114 &453510418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 453510411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &607800758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1408,6 +1424,7 @@ GameObject:
   - component: {fileID: 1879958167}
   - component: {fileID: 1879958166}
   - component: {fileID: 1879958168}
+  - component: {fileID: 1879958169}
   m_Layer: 5
   m_Name: Dairy
   m_TagString: Untagged
@@ -1431,8 +1448,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -100, y: 153.6}
-  m_SizeDelta: {x: 56.4, y: 153.6}
+  m_AnchoredPosition: {x: -107.58, y: 198.34}
+  m_SizeDelta: {x: 71.56235, y: 198.34015}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1879958164
 MonoBehaviour:
@@ -1545,12 +1562,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startOnAwake: 1
-  scaleAxis: 1
-  minScale: 0.97
+  scaleAxis: 3
+  minScale: 0.95
   scaleSpeed: 0.1
   rotate: 0
   rotation: 1
   rotateSpeed: 15
+--- !u!114 &1879958169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879958162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1887896172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1638,6 +1670,7 @@ GameObject:
   - component: {fileID: 2117204475}
   - component: {fileID: 2117204474}
   - component: {fileID: 2117204476}
+  - component: {fileID: 2117204477}
   m_Layer: 5
   m_Name: Fruit
   m_TagString: Untagged
@@ -1661,8 +1694,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 169.9, y: 72.4}
-  m_SizeDelta: {x: 61.962585, y: 70.81439}
+  m_AnchoredPosition: {x: 224.6, y: 89.1}
+  m_SizeDelta: {x: 88.091415, y: 87.50748}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2117204472
 MonoBehaviour:
@@ -1775,12 +1808,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startOnAwake: 1
-  scaleAxis: 1
+  scaleAxis: 3
   minScale: 0.95
-  scaleSpeed: 0.15
+  scaleSpeed: 0.1
   rotate: 0
   rotation: 1
   rotateSpeed: 15
+--- !u!114 &2117204477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117204470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2125512258
 GameObject:
   m_ObjectHideFlags: 0

@@ -48,7 +48,7 @@ namespace GameStudio.GeldZeker.SceneTransitioning
         }
 
         /// <summary>Starts transition with given transitionName set by transition provider to a scene with given scene name and in given load mode</summary>
-        public void Transition(string transitionName, string sceneName, LoadSceneMode loadMode)
+        public void Transition(string transitionName, string sceneName, LoadSceneMode loadMode, Action onFinish = null)
         {
             if (IsTransitioning || !SceneIsLoadable(sceneName) || !providers.ContainsKey(transitionName))
             {
@@ -63,11 +63,11 @@ namespace GameStudio.GeldZeker.SceneTransitioning
             switch (loadMode)
             {
                 case LoadSceneMode.Single:
-                    StartCoroutine(LoadRoutine(sceneName, loadMode, provider));
+                    StartCoroutine(LoadRoutine(sceneName, loadMode, provider, onFinish));
                     break;
 
                 case LoadSceneMode.Additive:
-                    StartCoroutine(TransitionRoutine(sceneName, loadMode, provider));
+                    StartCoroutine(TransitionRoutine(sceneName, loadMode, provider, onFinish));
                     break;
             }
         }
@@ -113,7 +113,7 @@ namespace GameStudio.GeldZeker.SceneTransitioning
 
         /// <summary>Returns a routine for transitiong from the current active scene to a scene with given name in given load mode and
         /// with given provider</summary>
-        private IEnumerator TransitionRoutine(string sceneName, LoadSceneMode mode, ITransitionProvider provider)
+        private IEnumerator TransitionRoutine(string sceneName, LoadSceneMode mode, ITransitionProvider provider, Action onFinish = null)
         {
             IsTransitioning = true;
 
@@ -121,6 +121,7 @@ namespace GameStudio.GeldZeker.SceneTransitioning
             yield return LoadRoutine(sceneName, mode, provider);
 
             IsTransitioning = false;
+            onFinish?.Invoke();
         }
 
         /// <summary>Returns a routine that unloads the current active scene based on given provider</summary>
@@ -138,7 +139,7 @@ namespace GameStudio.GeldZeker.SceneTransitioning
 
         /// <summary>Returns a routine that loads a scene with given name in given load mode and
         /// with given provider</summary>
-        private IEnumerator LoadRoutine(string sceneName, LoadSceneMode mode, ITransitionProvider provider)
+        private IEnumerator LoadRoutine(string sceneName, LoadSceneMode mode, ITransitionProvider provider, Action onFinish = null)
         {
             AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneName, mode);
             while (!loadOperation.isDone)
@@ -153,6 +154,7 @@ namespace GameStudio.GeldZeker.SceneTransitioning
             yield return provider.Intro();
 
             TransitionCompleted?.Invoke(sceneLoaded, mode);
+            onFinish?.Invoke();
         }
 
         /// <summary>Returns a routine that loads the transition ui scene and stores its Transition providers</summary>

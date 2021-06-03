@@ -17,6 +17,9 @@ namespace BWolf.Utilities.PlayerProgression.Quests
         [SerializeField]
         private int goal = 0;
 
+        [SerializeField]
+        private bool isCellphoneRequiredIncrement = false;
+
         public override string TaskDescription
         {
             get
@@ -46,6 +49,14 @@ namespace BWolf.Utilities.PlayerProgression.Quests
             get
             {
                 return $"({count}/{goal})";
+            }
+        }
+
+        public override bool isCellphoneRequired
+        {
+            get
+            {
+                return isCellphoneRequiredIncrement;
             }
         }
 
@@ -91,6 +102,11 @@ namespace BWolf.Utilities.PlayerProgression.Quests
         {
             string path = $"{FOLDER_PATH}/{nameof(IncrementTask)}/{name}";
             GameFileSystem.SaveToFile(path, count);
+        }
+
+        public void HardComplete()
+        {
+            count = goal;
         }
     }
 }

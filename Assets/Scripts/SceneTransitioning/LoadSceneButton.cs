@@ -1,4 +1,6 @@
-﻿using GameStudio.GeldZeker.MiniGames;
+﻿using Assets.Scripts.SceneTransitioning;
+using GameStudio.GeldZeker.MiniGames;
+using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.UI;
 using GameStudio.GeldZeker.UI.CellPhone;
 using GameStudio.GeldZeker.UI.Navigation;
@@ -27,8 +29,15 @@ namespace GameStudio.GeldZeker.SceneTransitioning
 
         public event Action Clicked;
 
+        [Header("References")]
         [SerializeField]
         private CellPhoneDisplaySystem cellPhoneDisplaySystem = null;
+
+        [SerializeField]
+        private GameObject optionsScreen = null;
+
+        [SerializeField]
+        private Introduction introduction = null;
 
         public string NameOfSceneLoading
         {
@@ -70,29 +79,49 @@ namespace GameStudio.GeldZeker.SceneTransitioning
                 }
                 else
                 {
+                    Action actionIntro = null;
+                    string finalizedScene = null;
                     switch (nameOfScene)
                     {
                         case "Bank":
                             {
-                                if (TimeController.instance.latestDayNightCyclePart == "n") SceneTransitionSystem.Instance.Transition(nameOfTransition, "BankClosed", loadSceneMode);
-                                else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                                if (TimeController.instance.latestDayNightCyclePart == "n") finalizedScene = "BankClosed";
                             }
                             break;
                         case "FruitDepartment":
                             {
-                                if (TimeController.instance.latestDayNightCyclePart == "n") SceneTransitionSystem.Instance.Transition(nameOfTransition, "ShopClosed", loadSceneMode);
-                                else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                                if (TimeController.instance.latestDayNightCyclePart == "n") finalizedScene = "ShopClosed";
                             }
                             break;
                         case "InvoiceDraggingGame":
                             {
-                                cellPhoneDisplaySystem.ToggleCellPhone();
-                                SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                                if (nameOfActiveScene != "GameHall")
+                                {
+                                    cellPhoneDisplaySystem.ToggleCellPhone();
+                                }
                             }
                             break;
-                        default: SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode);
+                        case "GameHall":
+                            {
+                                GameHallBackToScene.instance.backScene = nameOfActiveScene;
+                            }
                             break;
+                        case "HomeScreen":
+                            {
+                                string scene = "HomeScreen";
+                                if (nameOfActiveScene == "GameHall") scene = GameHallBackToScene.instance.backScene;
+                                else optionsScreen.SetActive(false);
+                                finalizedScene = scene;
+                            }
+                            break;
+                        default: break;
                     }
+                    if (introduction != null) 
+                    {
+                        actionIntro = () => introduction.Start();
+                    }
+                    if (finalizedScene != null) SceneTransitionSystem.Instance.Transition(nameOfTransition, finalizedScene, loadSceneMode, actionIntro);
+                    else SceneTransitionSystem.Instance.Transition(nameOfTransition, nameOfScene, loadSceneMode, actionIntro);
                 }
             }
         }

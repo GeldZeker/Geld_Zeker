@@ -257,6 +257,8 @@ MonoBehaviour:
   nameOfTransition: Fade
   loadSceneMode: 1
   disableOnClick: 1
+  cellPhoneDisplaySystem: {fileID: 0}
+  optionsScreen: {fileID: 0}
 --- !u!1 &148238654
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +1903,8 @@ MonoBehaviour:
   paperToPlace: {fileID: 1105883195}
   happiness: {fileID: 11400000, guid: 9aa579c9db5275e43bca4c6cb0456a74, type: 2}
   mailProperty: {fileID: 11400000, guid: 9b83b8991d1a57c46b246c99e977ee9b, type: 2}
-  digidProperty: {fileID: 11400000, guid: 15ef401628bdbbc4b972566a792fb910, type: 2}
+  rewardCollection: {fileID: 11400000, guid: 8df95e0c54684bb4b9e93891162ceef7, type: 2}
+  setting: {fileID: 11400000, guid: 123f2bd6fa5d9ee46b4208a296ac1e2e, type: 2}
   createbankAccountQuest: {fileID: 11400000, guid: b95ea90a5007e6d47bf027f66c8b6edd,
     type: 2}
 --- !u!1 &1445665120

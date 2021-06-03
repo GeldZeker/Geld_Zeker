@@ -31,6 +31,8 @@ namespace GameStudio.GeldZeker.Interaction.Supermarket
 
         private bool canShowGroceries;
 
+        private bool checkReplay = true;
+
         private void Start()
         {
             canShowGroceries = groceryProperty.Groceries.Count != 0;
@@ -44,6 +46,7 @@ namespace GameStudio.GeldZeker.Interaction.Supermarket
                 SetActiveStateOfMiniGameButton();
                 TryStartConveyerBeltAnimation();
             }
+            StartCoroutine(CheckReplayDialogue());
         }
 
         private void OnDestroy()
@@ -52,6 +55,7 @@ namespace GameStudio.GeldZeker.Interaction.Supermarket
             {
                 IntroductionManager.Instance.IntroFinished -= OnIntroFinish;
             }
+            checkReplay = false;
         }
 
         private void TryStartConveyerBeltAnimation()
@@ -93,6 +97,21 @@ namespace GameStudio.GeldZeker.Interaction.Supermarket
             SetActiveStateOfMiniGameButton();
             TryStartConveyerBeltAnimation();
             IntroductionManager.Instance.IntroFinished -= OnIntroFinish;
+        }
+        private IEnumerator CheckReplayDialogue()
+        {
+            while (checkReplay)
+            {
+                if (IntroductionManager.Instance.IsActive)
+                {
+                    minigameButton.gameObject.SetActive(true);
+                }
+                else
+                {
+                    SetActiveStateOfMiniGameButton();
+                }
+                yield return null;
+            }
         }
     }
 }

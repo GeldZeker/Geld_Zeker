@@ -1,13 +1,16 @@
-﻿using BWolf.Utilities.CharacterDialogue;
+﻿using Assets.Scripts.Player.Properties;
+using BWolf.Utilities.CharacterDialogue;
 using BWolf.Utilities.PlayerProgression.Quests;
 using GameStudio.GeldZeker.Audio;
 using GameStudio.GeldZeker.MiniGames.Settings;
 using GameStudio.GeldZeker.Player;
+using GameStudio.GeldZeker.Player.Introductions;
 using GameStudio.GeldZeker.Player.Properties;
 using GameStudio.GeldZeker.SceneTransitioning;
 using GameStudio.GeldZeker.UI;
 using GameStudio.GeldZeker.UI.Navigation;
 using GameStudio.GeldZeker.Utilities;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -46,6 +49,9 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
         [SerializeField]
         private CreditCardSlot cardSlot = null;
 
+        [SerializeField]
+        private Introduction gameHallIntroduction = null;
+
         [Header("Quests")]
         [SerializeField]
         private Quest contactlessPaymentQuest = null;
@@ -66,6 +72,11 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
         [Space]
         [SerializeField]
         private Dialogue finishDialogue = null;
+        
+        [Space]
+        [SerializeField]
+        private PlayerRewardProperty rewardCollection = null;
+        private string rewardName = "DebitCardPayment";
 
         private bool inPaymentProcess;
         private bool hasCompletedPayment;
@@ -77,7 +88,7 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
             double displayPrice = 0.0d;
             if (setting.MinigameMode)
             {
-                displayPrice = Random.Range(1.0f, 10.0f);
+                displayPrice = UnityEngine.Random.Range(1.0f, 10.0f);
             }
             else
             {
@@ -281,10 +292,15 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                 //set difficulty played as completed
                 setting.SetCurrentDifficultyCompleted();
 
+                //add reward according to minigame difficulty 
+                rewardCollection.AddRewardThroughDifficulty(rewardName, setting.Difficulty);
+
                 SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, NavigationSystem.NameOfGameHall, UnityEngine.SceneManagement.LoadSceneMode.Additive);
             }
             else
             {
+                Action gameHallIntro = null;
+
                 //if not in minigame mode, add property values
                 happiness.AddValue(HappinessOnCompletion);
                 ownedGroceryProperty.AddGroceries(supermarketGroceryProperty.Groceries.ToArray());
@@ -297,13 +313,17 @@ namespace GameStudio.GeldZeker.MiniGames.DebitCardPayment
                 {
                     DoOnceTask payContactlessOnceTask = contactlessPaymentQuest.GetTask<DoOnceTask>("1KeerContactloosBetalen");
                     payContactlessOnceTask.SetDoneOnce();
+                    gameHallIntro = () => gameHallIntroduction.Start();
                 }
+                
+                //Add bronze reward since in normal mode
+                rewardCollection.AddReward(rewardName, RewardType.Bronze);
 
                 //and start dialogue with cassiere to transition back home
                 MainCanvasManager.Instance.StartDialogue(finishDialogue, () =>
                 {
-                    SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, sceneToLoadOnComplete, UnityEngine.SceneManagement.LoadSceneMode.Additive);
-                });
+                    SceneTransitionSystem.Instance.Transition(SceneTransitionSystem.DefaultTransition, sceneToLoadOnComplete, UnityEngine.SceneManagement.LoadSceneMode.Additive, gameHallIntro);
+            });
             }
         }
 

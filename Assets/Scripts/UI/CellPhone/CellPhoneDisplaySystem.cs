@@ -49,6 +49,9 @@ namespace GameStudio.GeldZeker.UI.CellPhone
         private Quest digidBekijkenQuest = null;
 
         [SerializeField]
+        private Quest payInvoiceQuest = null;
+
+        [SerializeField]
         private GameObject payInvoiceButton = null;
 
         private void Awake()
@@ -93,21 +96,19 @@ namespace GameStudio.GeldZeker.UI.CellPhone
             if (!isToggling)
             {
                 // Set App Icons active to false if not available yet.
-                if (!hasDigiDAccountProperty.Value)
-                {
-                    digidAppObject.SetActive(false);
-                    payInvoiceButton.SetActive(false);
-                }
+                if (!hasDigiDAccountProperty.Value) digidAppObject.SetActive(false);
                 else
                 {
                     digidAppObject.SetActive(true);
                     payInvoiceButton.SetActive(true);
-                    if (!digidBekijkenQuest.IsCompleted)
+                    if (!digidBekijkenQuest.IsCompleted && !hasFocus)
                     {
                         digidIntroActive = true;
                         DigiDIntro.Restore();
                         DigiDIntro.Start();
                     }
+                    if (digidBekijkenQuest.IsCompleted && payInvoiceQuest.IsActive) payInvoiceButton.SetActive(true);
+                    if (payInvoiceQuest.IsCompleted) payInvoiceButton.GetComponent<Button>().interactable = false;
                 }
 
                 OpenScreen(CellPhoneScreen.Home);
